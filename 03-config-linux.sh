@@ -21,6 +21,7 @@ echo "
 127.0.1.1 azeroth.localdomain azeroth" >> /etc/hosts
 
 # set root password
+echo "Setting root password"
 passwd
 
 # setup grub
@@ -35,6 +36,7 @@ pacman -S dosfstools e2fsprogs ntfs-3g networkmanager zsh sudo man-db man-pages 
 useradd -m -s /bin/zsh daniel
 
 # set user password
+echo "Setting user password"
 passwd daniel
 
 # add daniel ALL=(ALL) ALL to sudoers file

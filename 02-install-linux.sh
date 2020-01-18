@@ -10,5 +10,5 @@ pacstrap /mnt base linux linux-firmware vim
 
 # generate file system table on new disk, and chroot into the new file system
 genfstab -U /mnt >> /mnt/etc/fstab
-cp ~/arch-linux-install/03-config-linux.sh /mnt/root
+cp ~/arch-linux-install/03-config-linux.sh /mnt
 arch-chroot /mnt
