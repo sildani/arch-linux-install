@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # NOTE: assumes booting into Live Arch Linux ISO
 
 # connect to network, if necessary
@@ -106,6 +108,8 @@ ping google.com
 
 # install fonts, set console font
 sudo pacman -S gnu-free-fonts terminus-font
+sudo touch /etc/vconsole.conf
+sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # setup oh-my-zsh
