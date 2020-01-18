@@ -9,20 +9,20 @@
 
 # partition disk where Arch Linux is being installed
 fdisk -l
-parted /dev/sda mklabel gpt
-parted /dev/sda mkpart primary fat32 2048s 1050623s
-parted /dev/sda mkpart primary ext4 1050624s 29358079s
-parted /dev/sda mkpart primary linux-swap 29358080s 33554398s
-parted /dev/sda set 1 bios_grub on
+parted /dev/nvme1n1 mklabel gpt
+parted /dev/nvme1n1 mkpart primary fat32 2048s 1050623s
+parted /dev/nvme1n1 mkpart primary ext4 1050624s 1945135103s
+parted /dev/nvme1n1 mkpart primary linux-swap 1945135104s 1953525134s
+parted /dev/nvme1n1 set 1 bios_grub on
 
 # format partitions
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mkswap /dev/sda3
-swapon /dev/sda3
-mount /dev/sda2 /mnt
+mkfs.fat -F32 /dev/nvme1n1p1
+mkfs.ext4 /dev/nvme1n1p2
+mkswap /dev/nvme1n1p3
+swapon /dev/nvme1n1p3
+mount /dev/nvme1n1p2 /mnt
 mkdir /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount /dev/nvme1n1p1 /mnt/boot
 
 # verify partioning and formatting
 lsblk
