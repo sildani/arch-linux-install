@@ -19,7 +19,7 @@
 # setup the network
 systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
-ping google.com
+#ping google.com
 
 # install fonts, set console font
 sudo pacman -S gnu-free-fonts terminus-font
