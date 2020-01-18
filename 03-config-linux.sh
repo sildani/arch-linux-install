@@ -5,8 +5,7 @@ ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 hwclock --systohc
 
 # generate locale; look for and uncomment en_US.UTF8 UTF8 in locale.gen
-echo "
-en_US.UTF8 UTF8" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 
 # define LANG env variable (LANG=en_US.UTF-8) in locale.conf
