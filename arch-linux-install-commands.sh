@@ -88,10 +88,11 @@ reboot
 # Now log in as your new shiny sudo user and finish setting up your user. The key things to do:
 #
 # 0. Set up the network
-# 1. Set up oh-my-zsh
-# 2. Update pacman mirrorlist
-# 3. Set up the GUI
-# 4. Install desktop apps
+# 1. Set up fonts
+# 2. Set up oh-my-zsh
+# 3. Update pacman mirrorlist
+# 4. Set up the GUI
+# 5. Install desktop apps
 #    a. Chrome browser
 #    b. Code text editor
 #    c. Tilix terminal emulator
@@ -114,9 +115,11 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "
 ZSH_THEME=\"clean\"
 
-if [ `tput colors` != \"256\"]; then  
+if [ `tput colors` = \"256\"]; then  
   ZSH_THEME=\"robbyrussell\"  
-fi" >> ~/.zshrc
+fi
+
+source $ZSH/oh-my-zsh.sh" >> ~/.zshrc
 
 # install base devel, git, and update the mirrorlist
 sudo pacman -S base-devel git reflector
