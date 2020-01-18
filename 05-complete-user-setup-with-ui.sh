@@ -22,7 +22,7 @@ systemctl enable NetworkManager.service
 #ping google.com
 
 # install fonts, set console font
-sudo pacman -S gnu-free-fonts terminus-font
+sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
 sudo touch /etc/vconsole.conf
 sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
@@ -52,6 +52,13 @@ sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-u
 #lspci | grep -e VGA -e 3D
 #pacman -Ss xf86-video
 sudo pacman -S xf86-video-vmware
+
+# setup audio
+sudo pacman -S alsa alsa-utils pulseaudio
+
+# setup bluetooth
+sudo pacman -S bluez bluez-utils
+systemctl enable bluetooth.service
 
 # optionally run query to see if there are other vmware related packages you should install
 # install anything you like with sudo pacman -S package_name

@@ -22,7 +22,7 @@ systemctl enable NetworkManager.service
 #ping google.com
 
 # install fonts, set console font
-sudo pacman -S gnu-free-fonts terminus-font
+sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
 sudo touch /etc/vconsole.conf
 sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
@@ -53,6 +53,13 @@ sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-u
 #pacman -Ss xf86-video
 sudo pacman -S xf86-video-amdgpu
 
+# setup audio
+sudo pacman -S alsa alsa-utils pulseaudio
+
+# setup bluetooth
+sudo pacman -S bluez bluez-utils
+systemctl enable bluetooth.service
+
 # enable lightdm service
 systemctl enable lightdm.service
 
@@ -77,6 +84,10 @@ echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
+
+# mount the windows drive at login
+echo "
+sudo mount -o ro /dev/nvme0n1p4 /mnt/windows" >> ~/.zshrc
 
 # update the system
 sudo pacman -Syu
