@@ -103,10 +103,20 @@ systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
 ping google.com
 
+# install fonts, set console font
+sudo pacman -S gnu-free-fonts terminus-font
+setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
+
 # setup oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 . ~/.zshrc
+echo "
+ZSH_THEME=\"clean\"
+
+if [ `tput colors` != \"256\"]; then  
+  ZSH_THEME=\"robbyrussell\"  
+fi" >> ~/.zshrc
 
 # install base devel, git, and update the mirrorlist
 sudo pacman -S base-devel git reflector
