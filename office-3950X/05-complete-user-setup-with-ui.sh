@@ -67,15 +67,19 @@ mkdir ~/AUR && cd ~/AUR
 git clone https://aur.archlinux.org/google-chrome.git 
 cd google-chrome
 makepkg -si
+sudo ln -s /usr/bin/google-chrome-stable /usr/bin/chrome
 
-# install Code text editor and Tilix terminal emulator
-sudo pacman -S code tilix
+# install other programs
+sudo pacman -S code tilix htop
 
-# add tilix config to avoid errors
+# add source vte.sh from tilix to avoid errors
 echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
+
+# update the system
+sudo pacman -Syu
 
 # remove 05 script to leave a clean userspace
 rm ~/05-complete-user-setup-with-ui.sh
