@@ -81,6 +81,9 @@ if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
 
+# remove 05 script to leave a clean userspace
+rm ~/05-complete-user-setup-with-ui.sh
+
 # reboot
 reboot
 
