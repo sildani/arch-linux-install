@@ -41,5 +41,5 @@ passwd daniel
 # add daniel ALL=(ALL) ALL to sudoers file
 EDITOR=vim visudo
 
-# exit shell (chroot)
-exit
+# prompt user exit shell (chroot)
+echo "Type `exit` to exit chroot now"
