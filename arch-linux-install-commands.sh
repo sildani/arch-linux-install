@@ -9,10 +9,6 @@ ping google.com
 
 ## >><< ##
 
-
-umount -R /mnt
-reboot
-
 # Now log in as your new shiny sudo user and finish setting up your user. The key things to do:
 #
 # 0. Set up the network
