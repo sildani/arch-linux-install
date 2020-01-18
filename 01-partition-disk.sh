@@ -2,6 +2,11 @@
 
 # NOTE: assumes 16G disk, use fdisk to get proper device
 
+# connect to network, if necessary
+#ip link
+#ip link set enp0s3 up
+#ping google.com
+
 # partition disk where Arch Linux is being installed
 fdisk -l
 parted /dev/sda mklabel gpt

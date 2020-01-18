@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# NOTE: assumes booting into Live Arch Linux ISO
-
-# connect to network, if necessary
-ip link
-ip link set enp0s3 up
-ping google.com
-
 ## >><< ##
 
 # Now log in as your new shiny sudo user and finish setting up your user. The key things to do:
