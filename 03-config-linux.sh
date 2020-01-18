@@ -42,5 +42,9 @@ passwd daniel
 # add daniel ALL=(ALL) ALL to sudoers file
 EDITOR=vim visudo
 
+# prep 05 script to use on reboot and user account login
+cp /05-complete-user-setup-with-ui.sh /home/daniel/
+chown daniel:daniel /home/daniel/05-complete-user-setup-with-ui.sh
+
 # prompt user exit shell (chroot)
 echo "Type `exit` to exit chroot now"
