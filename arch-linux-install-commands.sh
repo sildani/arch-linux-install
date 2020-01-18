@@ -113,7 +113,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 . ~/.zshrc
 echo "
-ZSH_THEME=\"avit\"
+ZSH_THEME=\"daveverwer\"
 
 if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
