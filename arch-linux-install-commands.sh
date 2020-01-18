@@ -119,7 +119,7 @@ if [ \`tput colors\` = \"256\" ]; then
   ZSH_THEME=\"robbyrussell\"  
 fi
 
-source $ZSH/oh-my-zsh.sh" >> ~/.zshrc
+source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
 
 # install base devel, git, and update the mirrorlist
 sudo pacman -S base-devel git reflector
