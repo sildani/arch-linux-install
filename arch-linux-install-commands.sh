@@ -115,7 +115,7 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "
 ZSH_THEME=\"clean\"
 
-if [ `tput colors` = \"256\"]; then  
+if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
 fi
 
