@@ -1,6 +1,4 @@
-##############################################
-# assumes booting into Live Arch Linux ISO
-##############################################
+# NOTE: assumes booting into Live Arch Linux ISO
 
 # connect to network, if necessary
 ip link
@@ -12,26 +10,13 @@ timedatectl set-ntp true
 timedatectl status
 
 # partition disk where Arch Linux is being installed
+# assumes 16G disk, use fdisk to get proper device
 fdisk -l
-parted /dev/sda 
-
-##############################################
-# now you're in parted
-##############################################
-
-# commands here are for a 16GB VirtualBox virtual disk
-mklabel gpt
-unit s
-p free
-mkpart primary fat32 2048s 1050623s
-mkpart primary ext4 1050624s 29358079s
-mkpart primary linux-swap 29358080s 33554398s
-set 1 bios_grub on
-quit
-
-##############################################
-# now you're back in the shell
-##############################################
+parted /dev/sda mklabel gpt
+parted /dev/sda mkpart primary fat32 2048s 1050623s
+parted /dev/sda mkpart primary ext4 1050624s 29358079s
+parted /dev/sda mkpart primary linux-swap 29358080s 33554398s
+parted /dev/sda set 1 bios_grub on
 
 # format partitions
 mkfs.fat -F32 /dev/sda1
@@ -51,13 +36,9 @@ vim /etc/pacman.d/mirrorlist
 # install Arch Linux onto disk + other base packages
 pacstrap /mnt base linux linux-firmware vim amd-ucode
 
-# generate file system table on new disk, and chroot into the root of the new install
+# generate file system table on new disk, and chroot into the new file system
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-
-##############################################
-# now you're in the new file system
-##############################################
 
 # set the timezone
 ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
@@ -99,43 +80,33 @@ passwd daniel
 # add daniel ALL=(ALL) ALL to sudoers file
 EDITOR=vim visudo
 
-# get a copy of the commands run for future review and exit chroot
-history >> /root/install-cmds-chroot
+# exit chroot, unmount disk, and reboot
 exit
-
-##############################################
-# now you're back in the shell
-##############################################
-
-# get a copy of the commands run for future review, un-mount disk, and reboot
-history >> /mnt/root/install-cmds-root
 umount -R /mnt
 reboot
 
-##############################################
-# Now log in as your new shiny sudo user and
-# finish setting up your user. The key
-# things to do:
+# Now log in as your new shiny sudo user and finish setting up your user. The key things to do:
 #
 # 0. Set up the network
-# 1. Update pacman mirrorlist
-# 2. Set up the GUI
-# 3. Install desktop apps
+# 1. Set up oh-my-zsh
+# 2. Update pacman mirrorlist
+# 3. Set up the GUI
+# 4. Install desktop apps
 #    a. Chrome browser
 #    b. Code text editor
 #    c. Tilix terminal emulator
-# 4. Set up oh-my-zsh
-# 
-# When you first log in, you will be prompted
-# to set up zsh - ignore that, because you
-# will set up oh-my-zsh as part of the
-# initial config
-##############################################
+#
+# When you first log in, you will be prompted to set up zsh - ignore that, because you will set up oh-my-zsh as part of the initial config.
 
 # setup the network
 systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
 ping google.com
+
+# setup oh-my-zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+. ~/.zshrc
 
 # install base devel, git, and update the mirrorlist
 sudo pacman -S base-devel git reflector
@@ -149,6 +120,10 @@ sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-u
 lspci | grep -e VGA -e 3D
 pacman -Ss xf86-video
 sudo pacman -S xf86-video-vmware
+
+# optionally run query to see if there are other vmware related packages you should install
+# install anything you like with sudo pacman -S package_name
+pacman -Ss vmware
 
 # enable lightdm service
 systemctl enable lightdm.service
@@ -168,9 +143,11 @@ makepkg -si
 # install Code text editor and Tilix terminal emulator
 sudo pacman -S code tilix
 
-# setup oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+# add tilix config to avoid errors
+echo "
+if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi" >> ~/.zshrc
 
 # reboot
 reboot
