@@ -51,11 +51,7 @@ sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-u
 # list the devices then query packages for the right package
 #lspci | grep -e VGA -e 3D
 #pacman -Ss xf86-video
-sudo pacman -S xf86-video-vmware
-
-# optionally run query to see if there are other vmware related packages you should install
-# install anything you like with sudo pacman -S package_name
-#pacman -Ss vmware
+sudo pacman -S xf86-video-amdgpu
 
 # enable lightdm service
 systemctl enable lightdm.service
