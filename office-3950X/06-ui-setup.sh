@@ -52,3 +52,11 @@ See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
 # remove 06 script to leave a clean userspace
 rm ~/06-ui-setup.sh
+
+# prompt user exit shell (chroot)
+echo "#######################################
+#                                     #
+#  Type \`reboot\` to reboot now and  #
+#  launch your new UI. :)             #
+#                                     #
+#######################################"
