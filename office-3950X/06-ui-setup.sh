@@ -50,6 +50,14 @@ Some things I like to install / configure:
 
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
 # remove 06 script to leave a clean userspace
 rm ~/06-ui-setup.sh
 
