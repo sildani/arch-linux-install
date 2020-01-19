@@ -7,7 +7,6 @@ After getting into Arch Live CD, install Git, clone this repo, and start running
 pacman -Sy git
 git clone https://github.com/sildani/arch-linux-install.git
 cd arch-linux-install
-chmod +x ./*.sh
 ./00-time-setup.sh
 
 I suggest you edit /etc/pacman.d/mirrorlist to put some servers local to you up at the top. However, my scripts automatically update the mirrorlist, so this is not required for full setup.
