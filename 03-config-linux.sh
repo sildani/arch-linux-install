@@ -45,6 +45,9 @@ EDITOR=vim visudo
 # prep 05 script to use on reboot and user account login
 cp /05-complete-user-setup-with-ui.sh /home/daniel/
 chown daniel:daniel /home/daniel/05-complete-user-setup-with-ui.sh
+cp -R /other-scripts /home/daniel/
+chown -R daniel:daniel /home/daniel/other-scripts
+chmod +x /home/daniel/other-scripts/*.sh
 
 # prompt user exit shell (chroot)
 echo "Type `exit` to exit chroot now"

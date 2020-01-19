@@ -10,4 +10,4 @@ cd arch-linux-install
 chmod +x ./*.sh
 ./00-time-setup.sh
 
-This initial step might be slow because of the default mirrorlist. You can edit /etc/pacman.d/mirrorlist to put some servers local to you up at the top. However, my scripts automatically update the mirrorlist, so this is not required for full setup.
+I suggest you edit /etc/pacman.d/mirrorlist to put some servers local to you up at the top. However, my scripts automatically update the mirrorlist, so this is not required for full setup.

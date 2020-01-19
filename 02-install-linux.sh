@@ -12,4 +12,5 @@ pacstrap /mnt base linux linux-firmware vim
 genfstab -U /mnt >> /mnt/etc/fstab
 cp ~/arch-linux-install/03-config-linux.sh /mnt
 cp ~/arch-linux-install/05-complete-user-setup-with-ui.sh /mnt
+cp -R ~/arch-linux-install/other-scripts /mnt/
 arch-chroot /mnt
