@@ -24,8 +24,14 @@ ZSH_THEME=\"daveverwer\"
 
 if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
-fi
+fi" >> ~/.zshrc
 
+# add bin to path
+echo "
+export PATH=~/bin:\$PATH" >> ~/.zshrc
+
+# add one final sourcing of zshrc
+echo "
 source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
 
 # install base devel and update the mirrorlist
