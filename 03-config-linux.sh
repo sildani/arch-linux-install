@@ -43,11 +43,16 @@ passwd daniel
 EDITOR=vim visudo
 
 # prep 05 script to use on reboot and user account login
-cp /05-complete-user-setup-with-ui.sh /home/daniel/
-chown daniel:daniel /home/daniel/05-complete-user-setup-with-ui.sh
-cp -R /other-scripts /home/daniel/
-chown -R daniel:daniel /home/daniel/other-scripts
-chmod +x /home/daniel/other-scripts/*.sh
+cp /05-user-setup.sh /home/daniel/
+cp /06-ui-setup.sh /home/daniel/
+chown daniel:daniel /home/daniel/*..sh
+mkdir /home/daniel/bin
+cp -R /other-scripts /home/daniel/bin/
+chown -R daniel:daniel /home/daniel/bin/other-scripts
 
 # prompt user exit shell (chroot)
-echo "Type `exit` to exit chroot now"
+echo "####################################
+#                                  #
+#  Type `exit` to exit chroot now  #
+#                                  #
+####################################"
