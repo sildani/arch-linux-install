@@ -51,8 +51,9 @@ cp -R /other-scripts /home/daniel/bin/
 chown -R daniel:daniel /home/daniel/bin/other-scripts
 
 # prompt user exit shell (chroot)
-echo "####################################
-#                                  #
-#  Type `exit` to exit chroot now  #
-#                                  #
-####################################"
+echo "#######################################
+#                                     #
+#  Type \`exit\` to quit chroot now   #
+#  Run 04-umount-and-reboot.sh after  #
+#                                     #
+#######################################"
