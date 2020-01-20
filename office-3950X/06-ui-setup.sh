@@ -29,8 +29,8 @@ cd google-chrome
 makepkg -si
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
-# install Code text editor and Tilix terminal emulator
-sudo pacman -S code tilix
+# install Code text editor, Tilix terminal emulator, and htop monitor
+sudo pacman -S code tilix htop
 
 # add tilix config to avoid errors
 echo "
