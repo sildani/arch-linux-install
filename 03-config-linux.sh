@@ -45,7 +45,7 @@ EDITOR=vim visudo
 # prep 05 script to use on reboot and user account login
 cp /05-user-setup.sh /home/daniel/
 cp /06-ui-setup.sh /home/daniel/
-chown daniel:daniel /home/daniel/*..sh
+chown daniel:daniel /home/daniel/*.sh
 mkdir /home/daniel/bin
 cp -R /other-scripts /home/daniel/bin/
 chown -R daniel:daniel /home/daniel/bin/other-scripts
