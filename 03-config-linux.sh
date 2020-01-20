@@ -60,15 +60,16 @@ sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # setup oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-. ~/.zshrc
+git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
+cp /home/daniel/.oh-my-zsh/templates/zshrc.zsh-template /home/daniel/.zshrc
 echo "
 ZSH_THEME=\"daveverwer\"
 
 if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
-fi" >> ~/.zshrc
+fi" >> /home/daniel/.zshrc
+chown -R daniel:daniel /home/daniel/.oh-my-zsh
+chown daniel:daniel /home/daniel/.zshrc
 
 # prep scripts for use after reboot and user account login
 cp /05-user-setup.sh /home/daniel/
