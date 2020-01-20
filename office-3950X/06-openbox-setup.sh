@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # required packages for script - setup for amd gpu
-sudo pacman -S openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu
+sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix
 
 # setup display manager
 systemctl enable lightdm.service
@@ -25,6 +25,12 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </menu>
 
 </openbox_menu>" >> ~/.config/openbox/menu.xml
+
+# setup terminal
+echo "
+if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi" >> ~/.zshrc
 
 # NEED MORE STUFF BEFORE REST CAN BE USED (SEE OTHER UI SETUP SCRIPT), EXIT!
 exit
