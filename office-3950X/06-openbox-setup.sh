@@ -29,6 +29,7 @@ echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
+dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # NEED MORE STUFF BEFORE REST CAN BE USED (SEE OTHER UI SETUP SCRIPT), EXIT!
 exit
