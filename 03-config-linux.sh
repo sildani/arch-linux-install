@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install fonts, set console font
-sudo pacman -S sudo gnu-free-fonts terminus-font noto-fonts-emoji
+sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
 sudo touch /etc/vconsole.conf
 sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz

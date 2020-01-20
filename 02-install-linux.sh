@@ -6,7 +6,7 @@ sudo reflector --country "United States" --age 12 --protocol https --sort rate -
 
 # install Arch Linux onto disk + other base packages
 # add amd-ucode or intel-ucode if not running on a vm
-pacstrap /mnt base linux linux-firmware vim 
+pacstrap /mnt base linux linux-firmware vim sudo
 
 # generate file system table on new disk, and chroot into the new file system
 genfstab -U /mnt >> /mnt/etc/fstab
