@@ -62,7 +62,7 @@ mkdir /home/daniel/bin
 # prompt user exit shell (chroot)
 echo "#######################################
 #                                     #
-#  Type \`exit\` to quit chroot now   #
+#  Type \`exit\` to quit chroot now     #
 #  Run 04-umount-and-reboot.sh after  #
 #                                     #
 #######################################"
