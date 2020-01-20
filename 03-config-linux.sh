@@ -67,7 +67,9 @@ ZSH_THEME=\"dallas\"
 
 if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
-fi" >> /home/daniel/.zshrc
+fi
+
+source \$ZSH/oh-my-zsh.sh" >> /home/daniel/.zshrc
 chown -R daniel:daniel /home/daniel/.oh-my-zsh
 chown daniel:daniel /home/daniel/.zshrc
 

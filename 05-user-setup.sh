@@ -13,10 +13,6 @@ timedatectl status
 echo "
 export PATH=~/bin:\$PATH" >> ~/.zshrc
 
-# add one final sourcing of zshrc
-echo "
-source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
-
 # install base devel and update the mirrorlist
 sudo pacman -S base-devel reflector
 sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
