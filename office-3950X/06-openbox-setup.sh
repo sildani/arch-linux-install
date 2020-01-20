@@ -32,7 +32,7 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
-<openbox_menu xmlns="http://openbox.org/3.4/menu">
+<openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
 
 <menu id=\"root-menu\" label=\"Openbox 3\">
   <menu id=\"applications\" label=\"Applications\" execute=\"xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu\" />
