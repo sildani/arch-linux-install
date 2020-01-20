@@ -58,6 +58,7 @@ cp /05-user-setup.sh /home/daniel/
 cp /06-ui-setup.sh /home/daniel/
 chown daniel:daniel /home/daniel/*.sh
 mkdir /home/daniel/bin
+chown daniel:daniel /home/daniel/bin
 
 # prompt user exit shell (chroot)
 echo "#######################################
