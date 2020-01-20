@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# required packages for script - setup for amd gpu
+# required packages for script (assumes amd gpu)
 sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix htop
 
 # setup display manager
 systemctl enable lightdm.service
 
-# setup application menu (archlinux-xdg-menu)
+# setup application menu
 mkdir -p ~/.config/openbox
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
@@ -31,18 +31,20 @@ if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
 fi" >> ~/.zshrc
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
-# NEED MORE STUFF BEFORE REST CAN BE USED (SEE OTHER UI SETUP SCRIPT), EXIT!
-exit
-
-# theme
+# setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
-# is there a way to setup from command line? Otherwise run obconf, pick Triste-Froly theme
+# TODO - automate the staging of ~/triste-folly-theme-rc.xml
+cat ~/triste=folly-theme-rc.xml > ~/.config/openbox/rc.xml
 
-# task bar (tint2)
+# setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
 cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
-# is there a way to setup from command line? what configuration might we want to do?
+# TODO - add further configuration to tint2rc
+
+# setup session autostart
+echo "tint2 &
+nitrogen --restore" >> ~/.config/openbox/autostart
 
 # desktop wallpaper manager (nitrogen)
 # is there a way to setup from command line? Otherwise run nitrogen, add /usr/share/backgrounds, then configure an image, zoomed fill
@@ -50,15 +52,10 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 # theme gtk and qt windows (breeze and lxappearance)
 # is there a way to setup from command line? Otherwise, run lxappearance and configure manually
 
-# file manager (pcmanfm)
-# nothing to do to configure
-
 # window tiling manager (aka gtile ??????)
 # is there a way to setup from command line?
 
-# setup autostart every session
-echo "tint2 &
-nitrogen --restore" >> ~/.config/openbox/autostart
+# TODO - bring over other things we do from 06-ui-setup.sh
 
 ### NOT USED BELOW THIS LINE ###
 
