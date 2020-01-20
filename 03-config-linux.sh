@@ -63,7 +63,7 @@ setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
 cp /home/daniel/.oh-my-zsh/templates/zshrc.zsh-template /home/daniel/.zshrc
 echo "
-ZSH_THEME=\"daveverwer\"
+ZSH_THEME=\"dallas\"
 
 if [ \`tput colors\` = \"256\" ]; then  
   ZSH_THEME=\"robbyrussell\"  
