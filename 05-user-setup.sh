@@ -5,12 +5,6 @@ systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
 #ping google.com
 
-# install fonts, set console font
-sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
-sudo touch /etc/vconsole.conf
-sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
-setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
-
 # setup ntp
 timedatectl set-ntp true
 timedatectl status

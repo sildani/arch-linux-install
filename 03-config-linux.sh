@@ -53,7 +53,13 @@ passwd daniel
 # add daniel ALL=(ALL) ALL to sudoers file
 EDITOR=vim visudo
 
-# prep 05 script to use on reboot and user account login
+# install fonts, set console font
+sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
+sudo touch /etc/vconsole.conf
+sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
+setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
+
+# prep scripts for use after reboot and user account login
 cp /05-user-setup.sh /home/daniel/
 cp /06-ui-setup.sh /home/daniel/
 chown daniel:daniel /home/daniel/*.sh
