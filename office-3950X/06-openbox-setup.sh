@@ -1,10 +1,33 @@
 #!/bin/bash
 
-# NEED STUFF BEFORE CAN BE USED (SEE OTHER UI SETUP SCRIPT), EXIT!
+# required packages for script - setup for amd gpu
+sudo pacman -S openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu
+
+# setup display manager
+systemctl enable lightdm.service
+
+# create openbox config dir (so that we can configure bits before running openbox)
+mkdir -p ~/.config/openbox
+
+# setup application menu (archlinux-xdg-menu)
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+
+<openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
+
+<menu id=\"root-menu\" label=\"Openbox 3\">
+  <menu id=\"applications\" label=\"Applications\" execute=\"xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu\" />
+  <separator />
+  <item label=\"Log Out\">
+    <action name=\"Exit\">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>" >> ~/.config/openbox/menu.xml
+
+# NEED MORE STUFF BEFORE REST CAN BE USED (SEE OTHER UI SETUP SCRIPT), EXIT!
 exit
-
-
-sudo pacman -S openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu
 
 # theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
@@ -27,24 +50,6 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 
 # window tiling manager (aka gtile ??????)
 # is there a way to setup from command line?
-
-# fix the menu (archlinux-xdg-menu)
-
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-
-<openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
-
-<menu id=\"root-menu\" label=\"Openbox 3\">
-  <menu id=\"applications\" label=\"Applications\" execute=\"xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu\" />
-  <separator />
-  <item label=\"Log Out\">
-    <action name=\"Exit\">
-      <prompt>yes</prompt>
-    </action>
-  </item>
-</menu>
-
-</openbox_menu>" >> ~/.config/openbox/menu.xml
 
 # setup autostart every session
 echo "tint2 &
