@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# install fonts, set console font
+sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
+sudo touch /etc/vconsole.conf
+sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
+setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
+
 # set the timezone
 ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 hwclock --systohc
@@ -52,12 +58,6 @@ passwd daniel
 
 # add daniel ALL=(ALL) ALL to sudoers file
 EDITOR=vim visudo
-
-# install fonts, set console font
-sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
-sudo touch /etc/vconsole.conf
-sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
-setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # setup oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
