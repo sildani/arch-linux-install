@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install X, Xfce desktop environment, lightdm display manager, xdg user dirs
-sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs
+sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs archlinux-wallpaper
 
 # install suitable driver
 # list the devices then query packages for the right package
