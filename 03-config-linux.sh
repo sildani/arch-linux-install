@@ -46,6 +46,7 @@ echo "#######################################
 #                                     #
 #  Afterwards will put you in visudo  #
 #      copy root entry for user       #
+#                                     #
 #######################################"
 passwd daniel
 
