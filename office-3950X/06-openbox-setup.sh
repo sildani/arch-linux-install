@@ -1,16 +1,13 @@
 #!/bin/bash
 
 # required packages for script - setup for amd gpu
-sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix
+sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix htop
 
 # setup display manager
 systemctl enable lightdm.service
 
-# create openbox config dir (so that we can configure bits before running openbox)
-mkdir -p ~/.config/openbox
-
 # setup application menu (archlinux-xdg-menu)
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+mkdir -p ~/.config/openboxecho "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
 <openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
 
