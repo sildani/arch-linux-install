@@ -9,17 +9,6 @@ systemctl enable NetworkManager.service
 timedatectl set-ntp true
 timedatectl status
 
-# setup oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-. ~/.zshrc
-echo "
-ZSH_THEME=\"daveverwer\"
-
-if [ \`tput colors\` = \"256\" ]; then  
-  ZSH_THEME=\"robbyrussell\"  
-fi" >> ~/.zshrc
-
 # add bin to path
 echo "
 export PATH=~/bin:\$PATH" >> ~/.zshrc
