@@ -7,7 +7,8 @@ sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcm
 systemctl enable lightdm.service
 
 # setup application menu (archlinux-xdg-menu)
-mkdir -p ~/.config/openboxecho "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+mkdir -p ~/.config/openbox
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
 <openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
 
