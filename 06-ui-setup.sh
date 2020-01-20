@@ -34,6 +34,7 @@ mkdir ~/AUR && cd ~/AUR
 git clone https://aur.archlinux.org/google-chrome.git 
 cd google-chrome
 makepkg -si
+ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # install Code text editor and Tilix terminal emulator
 sudo pacman -S code tilix
@@ -63,6 +64,9 @@ echo "
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
 sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
 rm /tmp/numlock.tmp
+
+# add a vi shortcut that points to vim
+ln -s /usr/bin/vim ~/bin/vi
 
 # remove 06 script to leave a clean userspace
 rm ~/06-ui-setup.sh
