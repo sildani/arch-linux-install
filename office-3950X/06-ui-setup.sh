@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install X, Xfce desktop environment, lightdm display manager, xdg user dirs
-sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs archlinux-wallpaper
+sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper
 
 # install suitable driver
 sudo pacman -S xf86-video-amdgpu
@@ -57,6 +57,13 @@ alias gco=\"git add ./* && git commit -m\"
 alias gpl=\"git pull --rebase\"
 alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
+# setup numlock enabled by default
+echo "
+[Seat:*]
+greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
+sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
+rm /tmp/numlock.tmp
 
 # remove 06 script to leave a clean userspace
 rm ~/06-ui-setup.sh
