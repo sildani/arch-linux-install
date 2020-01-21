@@ -1,0 +1,515 @@
+org.gnome.desktop.app-folders folder-children @as []
+org.gnome.desktop.a11y.mouse dwell-gesture-single 'left'
+org.gnome.desktop.a11y.mouse dwell-gesture-double 'up'
+org.gnome.desktop.a11y.mouse dwell-gesture-drag 'down'
+org.gnome.desktop.a11y.mouse dwell-threshold 10
+org.gnome.desktop.a11y.mouse secondary-click-enabled false
+org.gnome.desktop.a11y.mouse dwell-mode 'window'
+org.gnome.desktop.a11y.mouse dwell-gesture-secondary 'right'
+org.gnome.desktop.a11y.mouse click-type-window-visible true
+org.gnome.desktop.a11y.mouse dwell-click-enabled false
+org.gnome.desktop.a11y.mouse dwell-time 1.2
+org.gnome.desktop.a11y.mouse secondary-click-time 1.2
+org.gnome.desktop.thumbnail-cache maximum-age 180
+org.gnome.desktop.thumbnail-cache maximum-size 512
+org.gnome.desktop.screensaver user-switch-enabled true
+org.gnome.desktop.screensaver color-shading-type 'solid'
+org.gnome.desktop.screensaver embedded-keyboard-command ''
+org.gnome.desktop.screensaver embedded-keyboard-enabled false
+org.gnome.desktop.screensaver status-message-enabled true
+org.gnome.desktop.screensaver show-full-name-in-top-bar true
+org.gnome.desktop.screensaver logout-command ''
+org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+org.gnome.desktop.screensaver idle-activation-enabled true
+org.gnome.desktop.screensaver lock-enabled true
+org.gnome.desktop.screensaver logout-enabled false
+org.gnome.desktop.screensaver primary-color '#023c88'
+org.gnome.desktop.screensaver logout-delay uint32 7200
+org.gnome.desktop.screensaver picture-opacity 100
+org.gnome.desktop.screensaver picture-options 'zoom'
+org.gnome.desktop.screensaver lock-delay uint32 0
+org.gnome.desktop.screensaver secondary-color '#5789ca'
+org.gnome.desktop.a11y.keyboard bouncekeys-delay 300
+org.gnome.desktop.a11y.keyboard togglekeys-enable false
+org.gnome.desktop.a11y.keyboard mousekeys-max-speed 10
+org.gnome.desktop.a11y.keyboard stickykeys-enable false
+org.gnome.desktop.a11y.keyboard mousekeys-init-delay 300
+org.gnome.desktop.a11y.keyboard bouncekeys-enable false
+org.gnome.desktop.a11y.keyboard enable false
+org.gnome.desktop.a11y.keyboard mousekeys-accel-time 300
+org.gnome.desktop.a11y.keyboard bouncekeys-beep-reject false
+org.gnome.desktop.a11y.keyboard feature-state-change-beep false
+org.gnome.desktop.a11y.keyboard mousekeys-enable false
+org.gnome.desktop.a11y.keyboard stickykeys-modifier-beep false
+org.gnome.desktop.a11y.keyboard slowkeys-enable false
+org.gnome.desktop.a11y.keyboard slowkeys-delay 300
+org.gnome.desktop.a11y.keyboard timeout-enable false
+org.gnome.desktop.a11y.keyboard slowkeys-beep-reject false
+org.gnome.desktop.a11y.keyboard stickykeys-two-key-off false
+org.gnome.desktop.a11y.keyboard slowkeys-beep-accept false
+org.gnome.desktop.a11y.keyboard slowkeys-beep-press false
+org.gnome.desktop.a11y.keyboard disable-timeout 200
+com.gexperts.Tilix.ProfilesList default '2b7c4080-0ddd-46c5-8f23-563fd3ba789d'
+com.gexperts.Tilix.ProfilesList list ['2b7c4080-0ddd-46c5-8f23-563fd3ba789d']
+org.gnome.desktop.search-providers disable-external false
+org.gnome.desktop.search-providers disabled @as []
+org.gnome.desktop.search-providers enabled @as []
+org.gnome.desktop.search-providers sort-order ['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+org.gnome.system.proxy.http use-authentication false
+org.gnome.system.proxy.http enabled false
+org.gnome.system.proxy.http authentication-password ''
+org.gnome.system.proxy.http port 8080
+org.gnome.system.proxy.http host ''
+org.gnome.system.proxy.http authentication-user ''
+org.gnome.desktop.peripherals.touchpad click-method 'fingers'
+org.gnome.desktop.peripherals.touchpad edge-scrolling-enabled false
+org.gnome.desktop.peripherals.touchpad disable-while-typing true
+org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+org.gnome.desktop.peripherals.touchpad send-events 'enabled'
+org.gnome.desktop.peripherals.touchpad speed 0.0
+org.gnome.desktop.peripherals.touchpad tap-and-drag true
+org.gnome.desktop.peripherals.touchpad natural-scroll true
+org.gnome.desktop.peripherals.touchpad middle-click-emulation false
+org.gnome.desktop.peripherals.touchpad left-handed 'mouse'
+org.gnome.desktop.peripherals.touchpad tap-to-click false
+org.gnome.desktop.default-applications.office.calendar exec 'evolution -c calendar'
+org.gnome.desktop.default-applications.office.calendar needs-term false
+org.gnome.desktop.wm.keybindings switch-group ['<Super>Above_Tab', '<Alt>Above_Tab']
+org.gnome.desktop.wm.keybindings begin-resize ['<Alt>F8']
+org.gnome.desktop.wm.keybindings switch-to-workspace-7 @as []
+org.gnome.desktop.wm.keybindings begin-move ['<Alt>F7']
+org.gnome.desktop.wm.keybindings move-to-side-w @as []
+org.gnome.desktop.wm.keybindings move-to-corner-nw @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-10 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-6 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-right ['<Control><Shift><Alt>Right']
+org.gnome.desktop.wm.keybindings always-on-top @as []
+org.gnome.desktop.wm.keybindings toggle-maximized ['<Alt>F10']
+org.gnome.desktop.wm.keybindings move-to-workspace-left ['<Control><Shift><Alt>Left']
+org.gnome.desktop.wm.keybindings switch-to-workspace-8 @as []
+org.gnome.desktop.wm.keybindings cycle-panels ['<Control><Alt>Escape']
+org.gnome.desktop.wm.keybindings move-to-workspace-11 @as []
+org.gnome.desktop.wm.keybindings lower @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-7 @as []
+org.gnome.desktop.wm.keybindings toggle-above @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Super><Shift>Page_Down', '<Control><Shift><Alt>Down']
+org.gnome.desktop.wm.keybindings switch-panels ['<Control><Alt>Tab']
+org.gnome.desktop.wm.keybindings minimize ['<Super>h']
+org.gnome.desktop.wm.keybindings cycle-windows ['<Alt>Escape']
+org.gnome.desktop.wm.keybindings switch-to-workspace-9 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-12 @as []
+org.gnome.desktop.wm.keybindings toggle-on-all-workspaces @as []
+org.gnome.desktop.wm.keybindings switch-input-source ['<Super>space', 'XF86Keyboard']
+org.gnome.desktop.wm.keybindings move-to-workspace-8 @as []
+org.gnome.desktop.wm.keybindings move-to-side-n @as []
+org.gnome.desktop.wm.keybindings maximize-horizontally @as []
+org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
+org.gnome.desktop.wm.keybindings set-spew-mark @as []
+org.gnome.desktop.wm.keybindings switch-windows-backward @as []
+org.gnome.desktop.wm.keybindings maximize-vertically @as []
+org.gnome.desktop.wm.keybindings move-to-corner-sw @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-9 @as []
+org.gnome.desktop.wm.keybindings maximize ['<Super>Up']
+org.gnome.desktop.wm.keybindings panel-main-menu ['<Alt>F1']
+org.gnome.desktop.wm.keybindings close ['<Alt>F4']
+org.gnome.desktop.wm.keybindings move-to-monitor-up ['<Super><Shift>Up']
+org.gnome.desktop.wm.keybindings raise-or-lower @as []
+org.gnome.desktop.wm.keybindings move-to-side-e @as []
+org.gnome.desktop.wm.keybindings cycle-windows-backward ['<Shift><Alt>Escape']
+org.gnome.desktop.wm.keybindings switch-to-workspace-1 ['<Super>Home']
+org.gnome.desktop.wm.keybindings move-to-monitor-right ['<Super><Shift>Right']
+org.gnome.desktop.wm.keybindings switch-windows @as []
+org.gnome.desktop.wm.keybindings panel-run-dialog ['<Alt>F2']
+org.gnome.desktop.wm.keybindings switch-panels-backward ['<Shift><Control><Alt>Tab']
+org.gnome.desktop.wm.keybindings unmaximize ['<Super>Down', '<Alt>F5']
+org.gnome.desktop.wm.keybindings switch-to-workspace-2 @as []
+org.gnome.desktop.wm.keybindings switch-applications ['<Super>Tab', '<Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-to-workspace-last ['<Super>End']
+org.gnome.desktop.wm.keybindings move-to-workspace-1 ['<Super><Shift>Home']
+org.gnome.desktop.wm.keybindings move-to-corner-ne @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-3 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Super>Page_Up', '<Control><Alt>Up']
+org.gnome.desktop.wm.keybindings move-to-side-s @as []
+org.gnome.desktop.wm.keybindings show-desktop @as []
+org.gnome.desktop.wm.keybindings move-to-center @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-2 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Control><Alt>Left']
+org.gnome.desktop.wm.keybindings switch-to-workspace-right ['<Control><Alt>Right']
+org.gnome.desktop.wm.keybindings raise @as []
+org.gnome.desktop.wm.keybindings move-to-corner-se @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-10 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-4 @as []
+org.gnome.desktop.wm.keybindings toggle-shaded @as []
+org.gnome.desktop.wm.keybindings cycle-group-backward ['<Shift><Alt>F6']
+org.gnome.desktop.wm.keybindings move-to-workspace-3 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Super>Page_Down', '<Control><Alt>Down']
+org.gnome.desktop.wm.keybindings cycle-panels-backward ['<Shift><Control><Alt>Escape']
+org.gnome.desktop.wm.keybindings move-to-monitor-left ['<Super><Shift>Left']
+org.gnome.desktop.wm.keybindings switch-applications-backward ['<Shift><Super>Tab', '<Shift><Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-to-workspace-11 @as []
+org.gnome.desktop.wm.keybindings switch-input-source-backward ['<Shift><Super>space', '<Shift>XF86Keyboard']
+org.gnome.desktop.wm.keybindings switch-to-workspace-5 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-4 @as []
+org.gnome.desktop.wm.keybindings move-to-monitor-down ['<Super><Shift>Down']
+org.gnome.desktop.wm.keybindings toggle-fullscreen @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-6 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-12 @as []
+org.gnome.desktop.wm.keybindings cycle-group ['<Alt>F6']
+org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Super><Shift>Page_Up', '<Control><Shift><Alt>Up']
+org.gnome.desktop.wm.keybindings move-to-workspace-last ['<Super><Shift>End']
+org.gnome.desktop.wm.keybindings switch-group-backward ['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']
+org.gnome.desktop.wm.keybindings move-to-workspace-5 @as []
+org.gnome.desktop.sound theme-name 'freedesktop'
+org.gnome.desktop.sound event-sounds true
+org.gnome.desktop.sound input-feedback-sounds false
+org.gnome.desktop.sound allow-volume-above-100-percent false
+org.gnome.desktop.thumbnailers disable @as []
+org.gnome.desktop.thumbnailers disable-all false
+org.gnome.system.proxy.ftp port 0
+org.gnome.system.proxy.ftp host ''
+org.gnome.system.locale region ''
+org.gtk.Demo fullscreen false
+org.gtk.Demo window-size (-1, -1)
+org.gtk.Demo color 'red'
+org.gtk.Demo maximized false
+org.gnome.desktop.notifications application-children @as []
+org.gnome.desktop.notifications show-banners true
+org.gnome.desktop.notifications show-in-lock-screen true
+com.gexperts.Tilix.Keybindings terminal-insert-password 'disabled'
+com.gexperts.Tilix.Keybindings win-switch-to-session-1 '<Ctrl><Alt>1'
+com.gexperts.Tilix.Keybindings terminal-find-next '<Ctrl><Shift>g'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-7 '<Alt>7'
+com.gexperts.Tilix.Keybindings terminal-copy-as-html 'disabled'
+com.gexperts.Tilix.Keybindings terminal-page-up '<Shift>Page_Up'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-left '<Alt>Left'
+com.gexperts.Tilix.Keybindings terminal-page-down '<Shift>Page_Down'
+com.gexperts.Tilix.Keybindings app-new-window '<Shift><Ctrl>N'
+com.gexperts.Tilix.Keybindings terminal-file-browser 'disabled'
+com.gexperts.Tilix.Keybindings terminal-title-style 'disabled'
+com.gexperts.Tilix.Keybindings terminal-insert-number 'disabled'
+com.gexperts.Tilix.Keybindings win-switch-to-session-2 '<Ctrl><Alt>2'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-8 '<Alt>8'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-down '<Alt>Down'
+com.gexperts.Tilix.Keybindings terminal-toggle-margin '<Ctrl><Alt>m'
+com.gexperts.Tilix.Keybindings terminal-zoom-out '<Ctrl>minus'
+com.gexperts.Tilix.Keybindings terminal-previous-prompt 'disabled'
+com.gexperts.Tilix.Keybindings terminal-copy '<Ctrl><Shift>c'
+com.gexperts.Tilix.Keybindings session-add-down '<Ctrl><Alt>d'
+com.gexperts.Tilix.Keybindings terminal-find-previous '<Ctrl><Shift>h'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-9 '<Alt>9'
+com.gexperts.Tilix.Keybindings win-fullscreen 'F11'
+com.gexperts.Tilix.Keybindings app-new-session '<Shift><Ctrl>T'
+com.gexperts.Tilix.Keybindings terminal-next-prompt 'disabled'
+com.gexperts.Tilix.Keybindings win-switch-to-next-session '<Ctrl>Page_Down'
+com.gexperts.Tilix.Keybindings win-switch-to-session-3 '<Ctrl><Alt>3'
+com.gexperts.Tilix.Keybindings terminal-close '<Shift><Ctrl>W'
+com.gexperts.Tilix.Keybindings win-switch-to-session-4 '<Ctrl><Alt>4'
+com.gexperts.Tilix.Keybindings terminal-profile-preference 'disabled'
+com.gexperts.Tilix.Keybindings session-save-as 'disabled'
+com.gexperts.Tilix.Keybindings session-save '<Shift><Ctrl>s'
+com.gexperts.Tilix.Keybindings session-name 'disabled'
+com.gexperts.Tilix.Keybindings terminal-add-bookmark 'disabled'
+com.gexperts.Tilix.Keybindings terminal-scroll-down '<Ctrl><Shift>Down'
+com.gexperts.Tilix.Keybindings terminal-sync-input-override 'disabled'
+com.gexperts.Tilix.Keybindings session-switch-to-next-terminal '<Ctrl>Tab'
+com.gexperts.Tilix.Keybindings app-shortcuts 'disabled'
+com.gexperts.Tilix.Keybindings terminal-paste-primary '<Shift>Insert'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-0 '<Alt>0'
+com.gexperts.Tilix.Keybindings win-switch-to-session-5 '<Ctrl><Alt>5'
+com.gexperts.Tilix.Keybindings win-switch-to-session-6 '<Ctrl><Alt>6'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-1 '<Alt>1'
+com.gexperts.Tilix.Keybindings terminal-advanced-paste 'disabled'
+com.gexperts.Tilix.Keybindings win-switch-to-session-7 '<Ctrl><Alt>7'
+com.gexperts.Tilix.Keybindings terminal-save 'disabled'
+com.gexperts.Tilix.Keybindings win-view-sidebar 'F12'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-up '<Alt>Up'
+com.gexperts.Tilix.Keybindings terminal-select-bookmark '<Ctrl><Shift>b'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-2 '<Alt>2'
+com.gexperts.Tilix.Keybindings session-synchronize-input 'disabled'
+com.gexperts.Tilix.Keybindings terminal-paste '<Ctrl><Shift>v'
+com.gexperts.Tilix.Keybindings win-switch-to-session-8 '<Ctrl><Alt>8'
+com.gexperts.Tilix.Keybindings session-close '<Shift><Ctrl>Q'
+com.gexperts.Tilix.Keybindings terminal-maximize '<Shift><Ctrl>X'
+com.gexperts.Tilix.Keybindings terminal-monitor-silence 'disabled'
+com.gexperts.Tilix.Keybindings session-resize-terminal-up '<Shift><Alt>Up'
+com.gexperts.Tilix.Keybindings session-add-auto '<Ctrl><Alt>a'
+com.gexperts.Tilix.Keybindings terminal-read-only 'disabled'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-3 '<Alt>3'
+com.gexperts.Tilix.Keybindings terminal-find '<Ctrl><Shift>f'
+com.gexperts.Tilix.Keybindings session-add-right '<Ctrl><Alt>r'
+com.gexperts.Tilix.Keybindings terminal-zoom-in '<Ctrl>plus'
+com.gexperts.Tilix.Keybindings session-resize-terminal-down '<Shift><Alt>Down'
+com.gexperts.Tilix.Keybindings session-open '<Shift><Ctrl>o'
+com.gexperts.Tilix.Keybindings app-preferences 'disabled'
+com.gexperts.Tilix.Keybindings terminal-layout 'disabled'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-4 '<Alt>4'
+com.gexperts.Tilix.Keybindings terminal-reset 'disabled'
+com.gexperts.Tilix.Keybindings win-switch-to-session-9 '<Ctrl><Alt>9'
+com.gexperts.Tilix.Keybindings terminal-zoom-normal '<Ctrl>0'
+com.gexperts.Tilix.Keybindings session-switch-to-previous-terminal '<Ctrl><Shift>Tab'
+com.gexperts.Tilix.Keybindings session-resize-terminal-left '<Shift><Alt>Left'
+com.gexperts.Tilix.Keybindings terminal-select-all '<Ctrl><Shift>a'
+com.gexperts.Tilix.Keybindings nautilus-open '<Ctrl><Alt>t'
+com.gexperts.Tilix.Keybindings win-reorder-next-session '<Ctrl><Shift>Page_Down'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-5 '<Alt>5'
+com.gexperts.Tilix.Keybindings win-reorder-previous-session '<Ctrl><Shift>Page_Up'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-right '<Alt>Right'
+com.gexperts.Tilix.Keybindings session-resize-terminal-right '<Shift><Alt>Right'
+com.gexperts.Tilix.Keybindings win-switch-to-session-0 '<Ctrl><Alt>0'
+com.gexperts.Tilix.Keybindings terminal-scroll-up '<Ctrl><Shift>Up'
+com.gexperts.Tilix.Keybindings session-switch-to-terminal-6 '<Alt>6'
+com.gexperts.Tilix.Keybindings win-switch-to-previous-session '<Ctrl>Page_Up'
+com.gexperts.Tilix.Keybindings terminal-reset-and-clear 'disabled'
+org.gnome.desktop.peripherals.trackball accel-profile 'default'
+org.gnome.desktop.peripherals.trackball middle-click-emulation false
+org.gnome.desktop.peripherals.trackball scroll-wheel-emulation-button 0
+org.gnome.desktop.peripherals.mouse middle-click-emulation false
+org.gnome.desktop.peripherals.mouse natural-scroll false
+org.gnome.desktop.peripherals.mouse speed 0.0
+org.gnome.desktop.peripherals.mouse accel-profile 'default'
+org.gnome.desktop.peripherals.mouse left-handed false
+org.gtk.Settings.FileChooser sort-column 'name'
+org.gtk.Settings.FileChooser last-folder-uri ''
+org.gtk.Settings.FileChooser date-format 'regular'
+org.gtk.Settings.FileChooser show-hidden false
+org.gtk.Settings.FileChooser sidebar-width 148
+org.gtk.Settings.FileChooser clock-format '24h'
+org.gtk.Settings.FileChooser window-position (-1, -1)
+org.gtk.Settings.FileChooser startup-mode 'recent'
+org.gtk.Settings.FileChooser expand-folders false
+org.gtk.Settings.FileChooser window-size (-1, -1)
+org.gtk.Settings.FileChooser show-type-column true
+org.gtk.Settings.FileChooser sort-order 'ascending'
+org.gtk.Settings.FileChooser type-format 'category'
+org.gtk.Settings.FileChooser show-size-column true
+org.gtk.Settings.FileChooser location-mode 'path-bar'
+org.gtk.Settings.FileChooser sort-directories-first false
+org.gnome.desktop.default-applications.terminal exec-arg '-x'
+org.gnome.desktop.default-applications.terminal exec 'gnome-terminal'
+org.gnome.system.proxy.https port 0
+org.gnome.system.proxy.https host ''
+org.gtk.Settings.EmojiChooser recent-emoji @a((auss)u) []
+org.gnome.desktop.privacy disable-microphone false
+org.gnome.desktop.privacy hide-identity false
+org.gnome.desktop.privacy recent-files-max-age -1
+org.gnome.desktop.privacy remove-old-temp-files false
+org.gnome.desktop.privacy disable-sound-output false
+org.gnome.desktop.privacy old-files-age uint32 30
+org.gnome.desktop.privacy remember-app-usage true
+org.gnome.desktop.privacy disable-camera false
+org.gnome.desktop.privacy remember-recent-files true
+org.gnome.desktop.privacy report-technical-problems false
+org.gnome.desktop.privacy remove-old-trash-files false
+org.gnome.desktop.privacy show-full-name-in-top-bar true
+org.gnome.desktop.privacy send-software-usage-stats false
+org.gnome.desktop.wm.preferences theme 'Adwaita'
+org.gnome.desktop.wm.preferences focus-new-windows 'smart'
+org.gnome.desktop.wm.preferences raise-on-click true
+org.gnome.desktop.wm.preferences num-workspaces 4
+org.gnome.desktop.wm.preferences disable-workarounds false
+org.gnome.desktop.wm.preferences titlebar-uses-system-font true
+org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 11'
+org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+org.gnome.desktop.wm.preferences auto-raise false
+org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
+org.gnome.desktop.wm.preferences resize-with-right-button false
+org.gnome.desktop.wm.preferences action-right-click-titlebar 'menu'
+org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+org.gnome.desktop.wm.preferences workspace-names @as []
+org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
+org.gnome.desktop.wm.preferences focus-mode 'click'
+org.gnome.desktop.wm.preferences button-layout 'appmenu:close'
+org.gnome.desktop.wm.preferences auto-raise-delay 500
+org.gnome.desktop.wm.preferences audible-bell true
+org.gnome.desktop.wm.preferences visual-bell false
+org.gtk.Settings.Debug enable-inspector-keybinding false
+org.gtk.Settings.Debug inspector-warning true
+org.gnome.desktop.session session-name 'gnome'
+org.gnome.desktop.session idle-delay uint32 300
+org.gnome.desktop.peripherals.tablet output ['', '', '']
+org.gnome.desktop.peripherals.tablet keep-aspect false
+org.gnome.desktop.peripherals.tablet area [0.0, 0.0, 0.0, 0.0]
+org.gnome.desktop.peripherals.tablet left-handed false
+org.gnome.desktop.peripherals.tablet mapping 'absolute'
+org.gnome.desktop.peripherals.touchscreen output ['', '', '']
+com.gexperts.Tilix.Settings enable-wide-handle false
+com.gexperts.Tilix.Settings advanced-paste-replace-tabs false
+com.gexperts.Tilix.Settings auto-hide-mouse false
+com.gexperts.Tilix.Settings quake-active-monitor true
+com.gexperts.Tilix.Settings warn-vte-config-issue true
+com.gexperts.Tilix.Settings control-click-titlebar false
+com.gexperts.Tilix.Settings app-title '${appName}: ${sessionName}'
+com.gexperts.Tilix.Settings quake-show-on-all-workspaces true
+com.gexperts.Tilix.Settings process-monitor false
+com.gexperts.Tilix.Settings background-image-scale 'bilinear'
+com.gexperts.Tilix.Settings bookmark-include-return true
+com.gexperts.Tilix.Settings terminal-title-style 'small'
+com.gexperts.Tilix.Settings quake-hide-headerbar false
+com.gexperts.Tilix.Settings use-overlay-scrollbar true
+com.gexperts.Tilix.Settings quake-hide-lose-focus-delay 150
+com.gexperts.Tilix.Settings use-tabs false
+com.gexperts.Tilix.Settings quake-height-percent 40
+com.gexperts.Tilix.Settings tab-position 'top'
+com.gexperts.Tilix.Settings prompt-on-new-session false
+com.gexperts.Tilix.Settings password-include-return true
+com.gexperts.Tilix.Settings focus-follow-mouse false
+com.gexperts.Tilix.Settings theme-variant 'dark'
+com.gexperts.Tilix.Settings recent-session-files @as []
+com.gexperts.Tilix.Settings accelerators-enabled true
+com.gexperts.Tilix.Settings quake-specific-monitor 0
+com.gexperts.Tilix.Settings custom-hyperlinks @as []
+com.gexperts.Tilix.Settings trigger-unlimit-lines false
+com.gexperts.Tilix.Settings window-save-state false
+com.gexperts.Tilix.Settings session-name 'Default'
+com.gexperts.Tilix.Settings triggers @as []
+com.gexperts.Tilix.Settings control-scroll-zoom false
+com.gexperts.Tilix.Settings menu-accelerator-enabled false
+com.gexperts.Tilix.Settings notify-on-process-complete true
+com.gexperts.Tilix.Settings advanced-paste-space-count 4
+com.gexperts.Tilix.Settings close-with-last-session true
+com.gexperts.Tilix.Settings quake-width-percent 100
+com.gexperts.Tilix.Settings quake-tab-position 'top'
+com.gexperts.Tilix.Settings copy-on-select false
+com.gexperts.Tilix.Settings background-image-mode 'scale'
+com.gexperts.Tilix.Settings enable-transparency true
+com.gexperts.Tilix.Settings background-image ''
+com.gexperts.Tilix.Settings quake-keep-on-top true
+com.gexperts.Tilix.Settings set-proxy-env true
+com.gexperts.Tilix.Settings quake-window-position 'top'
+com.gexperts.Tilix.Settings new-instance-mode 'new-window'
+com.gexperts.Tilix.Settings triggers-lines 256
+com.gexperts.Tilix.Settings quake-alignment 'center'
+com.gexperts.Tilix.Settings search-default-match-as-regex false
+com.gexperts.Tilix.Settings paste-advanced-default false
+com.gexperts.Tilix.Settings terminal-title-show-when-single false
+com.gexperts.Tilix.Settings search-default-match-entire-word false
+com.gexperts.Tilix.Settings window-style 'normal'
+com.gexperts.Tilix.Settings prompt-on-delete-profile true
+com.gexperts.Tilix.Settings prompt-on-close true
+com.gexperts.Tilix.Settings prompt-on-close-process true
+com.gexperts.Tilix.Settings unsafe-paste-alert true
+com.gexperts.Tilix.Settings paste-strip-first-char false
+com.gexperts.Tilix.Settings advanced-paste-replace-crlf false
+com.gexperts.Tilix.Settings window-state 0
+com.gexperts.Tilix.Settings sidebar-on-right false
+com.gexperts.Tilix.Settings encodings ['UTF-8']
+com.gexperts.Tilix.Settings quake-hide-lose-focus false
+com.gexperts.Tilix.Settings search-default-match-case false
+com.gexperts.Tilix.Settings middle-click-close false
+com.gexperts.Tilix.Settings search-default-wrap-around true
+org.gnome.desktop.a11y always-show-universal-access-status false
+org.gnome.desktop.a11y always-show-text-caret false
+org.gnome.desktop.default-applications.office.tasks exec 'evolution -c tasks'
+org.gnome.desktop.default-applications.office.tasks needs-term false
+org.freedesktop.ColorHelper display-whitepoint 6500
+org.freedesktop.ColorHelper profile-upload-uri 'http://www.hughski.com/profile-store.php'
+org.freedesktop.ColorHelper display-gamma 2.3999999999999999
+org.freedesktop.ColorHelper sample-delay 400
+org.gtk.Settings.ColorChooser custom-colors @a(dddd) []
+org.gtk.Settings.ColorChooser selected-color (false, 1.0, 1.0, 1.0, 1.0)
+org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '::1']
+org.gnome.system.proxy use-same-proxy true
+org.gnome.system.proxy mode 'none'
+org.gnome.system.proxy autoconfig-url ''
+org.gnome.desktop.peripherals.keyboard delay uint32 500
+org.gnome.desktop.peripherals.keyboard remember-numlock-state true
+org.gnome.desktop.peripherals.keyboard numlock-state false
+org.gnome.desktop.peripherals.keyboard repeat true
+org.gnome.desktop.peripherals.keyboard repeat-interval uint32 30
+org.gnome.system.proxy.socks port 0
+org.gnome.system.proxy.socks host ''
+org.gnome.desktop.input-sources xkb-options @as []
+org.gnome.desktop.input-sources mru-sources @a(ss) []
+org.gnome.desktop.input-sources show-all-sources false
+org.gnome.desktop.input-sources current uint32 0
+org.gnome.desktop.input-sources per-window false
+org.gnome.desktop.input-sources sources @a(ss) []
+org.gnome.desktop.a11y.magnifier scroll-at-edges false
+org.gnome.desktop.a11y.magnifier contrast-red 0.0
+org.gnome.desktop.a11y.magnifier cross-hairs-color '#ff0000'
+org.gnome.desktop.a11y.magnifier mouse-tracking 'proportional'
+org.gnome.desktop.a11y.magnifier cross-hairs-clip false
+org.gnome.desktop.a11y.magnifier contrast-blue 0.0
+org.gnome.desktop.a11y.magnifier lens-mode false
+org.gnome.desktop.a11y.magnifier contrast-green 0.0
+org.gnome.desktop.a11y.magnifier show-cross-hairs false
+org.gnome.desktop.a11y.magnifier brightness-green 0.0
+org.gnome.desktop.a11y.magnifier cross-hairs-opacity 0.66000000000000003
+org.gnome.desktop.a11y.magnifier invert-lightness false
+org.gnome.desktop.a11y.magnifier mag-factor 2.0
+org.gnome.desktop.a11y.magnifier brightness-red 0.0
+org.gnome.desktop.a11y.magnifier color-saturation 1.0
+org.gnome.desktop.a11y.magnifier brightness-blue 0.0
+org.gnome.desktop.a11y.magnifier cross-hairs-length 4096
+org.gnome.desktop.a11y.magnifier focus-tracking 'proportional'
+org.gnome.desktop.a11y.magnifier caret-tracking 'centered'
+org.gnome.desktop.a11y.magnifier cross-hairs-thickness 8
+org.gnome.desktop.a11y.magnifier screen-position 'full-screen'
+org.gnome.desktop.datetime automatic-timezone false
+org.gnome.desktop.interface gtk-color-palette 'black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
+org.gnome.desktop.interface toolkit-accessibility false
+org.gnome.desktop.interface can-change-accels false
+org.gnome.desktop.interface text-scaling-factor 1.0
+org.gnome.desktop.interface cursor-blink true
+org.gnome.desktop.interface clock-show-weekday false
+org.gnome.desktop.interface icon-theme 'Adwaita'
+org.gnome.desktop.interface gtk-im-preedit-style 'callback'
+org.gnome.desktop.interface menus-have-tearoff false
+org.gnome.desktop.interface scaling-factor uint32 0
+org.gnome.desktop.interface cursor-size 24
+org.gnome.desktop.interface gtk-im-module ''
+org.gnome.desktop.interface gtk-timeout-initial 200
+org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+org.gnome.desktop.interface clock-show-seconds false
+org.gnome.desktop.interface gtk-color-scheme ''
+org.gnome.desktop.interface clock-show-date true
+org.gnome.desktop.interface cursor-blink-time 1200
+org.gnome.desktop.interface toolbar-icons-size 'large'
+org.gnome.desktop.interface gtk-timeout-repeat 20
+org.gnome.desktop.interface enable-hot-corners true
+org.gnome.desktop.interface monospace-font-name 'Source Code Pro 10'
+org.gnome.desktop.interface toolbar-style 'both-horiz'
+org.gnome.desktop.interface overlay-scrolling true
+org.gnome.desktop.interface cursor-blink-timeout 10
+org.gnome.desktop.interface gtk-key-theme 'Default'
+org.gnome.desktop.interface toolbar-detachable false
+org.gnome.desktop.interface cursor-theme 'Adwaita'
+org.gnome.desktop.interface menubar-detachable false
+org.gnome.desktop.interface gtk-im-status-style 'callback'
+org.gnome.desktop.interface menubar-accel 'F10'
+org.gnome.desktop.interface document-font-name 'Cantarell 11'
+org.gnome.desktop.interface clock-format '24h'
+org.gnome.desktop.interface enable-animations true
+org.gnome.desktop.interface gtk-enable-primary-paste true
+org.gnome.desktop.interface locate-pointer false
+org.gnome.desktop.interface font-name 'Cantarell 11'
+org.gnome.desktop.interface show-battery-percentage false
+org.gnome.desktop.calendar show-weekdate false
+org.gnome.desktop.media-handling autorun-never false
+org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
+org.gnome.desktop.media-handling automount-open true
+org.gnome.desktop.media-handling autorun-x-content-ignore @as []
+org.gnome.desktop.media-handling automount true
+org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
+org.gnome.desktop.lockdown mount-removable-storage-devices-as-read-only false
+org.gnome.desktop.lockdown disable-command-line false
+org.gnome.desktop.lockdown disable-log-out false
+org.gnome.desktop.lockdown disable-printing false
+org.gnome.desktop.lockdown disable-lock-screen false
+org.gnome.desktop.lockdown disable-print-setup false
+org.gnome.desktop.lockdown disable-user-switching false
+org.gnome.desktop.lockdown disable-application-handlers false
+org.gnome.desktop.lockdown disable-save-to-disk false
+org.gnome.desktop.lockdown user-administration-disabled false
+org.gnome.desktop.background secondary-color '#5789ca'
+org.gnome.desktop.background picture-options 'zoom'
+org.gnome.desktop.background color-shading-type 'solid'
+org.gnome.desktop.background show-desktop-icons false
+org.gnome.desktop.background picture-opacity 100
+org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+org.gnome.desktop.background primary-color '#023c88'
+org.gnome.desktop.a11y.applications screen-keyboard-enabled false
+org.gnome.desktop.a11y.applications screen-magnifier-enabled false
+org.gnome.desktop.a11y.applications screen-reader-enabled false
+org.gnome.system.location enabled false
+org.gnome.system.location max-accuracy-level 'exact'
