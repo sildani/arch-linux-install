@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # required packages for script (assumes amd gpu)
-# TODO - do I really need xdg-user-dirs?
 sudo pacman -S xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix htop
 
 # setup display manager
