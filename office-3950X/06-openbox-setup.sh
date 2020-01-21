@@ -5,6 +5,7 @@ sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcm
 
 # setup display manager
 systemctl enable lightdm.service
+# TODO - configure lightdm background
 
 # setup application menu
 mkdir -p ~/.config/openbox
