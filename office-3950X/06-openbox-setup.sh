@@ -34,7 +34,7 @@ dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 # setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 # TODO - automate the staging of ~/triste-folly-theme-rc.xml
-cat ~/triste=folly-theme-rc.xml > ~/.config/openbox/rc.xml
+mv ~/triste=folly-theme-rc.xml ~/.config/openbox/rc.xml
 
 # setup taskbar
 rm -rf ~/.config/tint2
