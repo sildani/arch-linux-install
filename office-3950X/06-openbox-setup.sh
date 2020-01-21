@@ -25,6 +25,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </openbox_menu>" >> ~/.config/openbox/menu.xml
 
 # setup terminal
+# TODO - file replacement for tilix
 echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
@@ -44,12 +45,16 @@ git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2
 cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 # TODO - add further configuration to tint2rc
 
+# desktop wallpaper manager (nitrogen)
+# TODO - automate nitrogen setup
+
+# TODO - setup rofi (https://wiki.archlinux.org/index.php/Rofi)
+
 # setup session autostart
 echo "tint2 &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-# desktop wallpaper manager (nitrogen)
-# is there a way to setup from command line? Otherwise run nitrogen, add /usr/share/backgrounds, then configure an image, zoomed fill
+
 
 # theme gtk and qt windows (breeze and lxappearance)
 # is there a way to setup from command line? Otherwise, run lxappearance and configure manually
