@@ -2,7 +2,7 @@
 
 # required packages for script (assumes amd gpu)
 # TODO - do I really need xdg-user-dirs?
-sudo pacman -S xorg-server openbox obconf nitrogen tint2 breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix htop
+sudo pacman -S xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-amdgpu code tilix htop
 
 # setup display manager
 systemctl enable lightdm.service
@@ -38,6 +38,7 @@ dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
+# TODO - add window snapping to rc.xml keybinds area
 # TODO - automate the staging of these files
 mv ~/triste-folly-theme-rc.xml ~/.config/openbox/rc.xml
 
@@ -53,7 +54,7 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 # desktop wallpaper manager (nitrogen)
 # TODO - automate the staging of these files
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
-mv ~/nitrogen.cfg ~/
+mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
 # TODO - setup rofi (https://wiki.archlinux.org/index.php/Rofi)
 
