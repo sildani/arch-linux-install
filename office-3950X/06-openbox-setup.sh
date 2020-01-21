@@ -29,6 +29,8 @@ echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
+dconf write /com/gexperts/Tilix/terminal-title-show-when-single false
+dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # setup ob theme
