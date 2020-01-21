@@ -50,11 +50,12 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 
 # TODO - theme gtk and qt windows (breeze and lxappearance)
 # TODO - automate the staging of these files
-mv ~/gtk-2-gtkfilechooser.ini ~/.config/gtk-2.0/gtkfilechooser.ini
-mv ~/gtk-3-settings.ini ~/.config/gtk-3.0/settings.ini
+mkdir -p ~/.config/gtk-2.0 && mv ~/gtk-2-gtkfilechooser.ini ~/.config/gtk-2.0/gtkfilechooser.ini
+mkdir -p ~/.config/gtk-3.0 && mv ~/gtk-3-settings.ini ~/.config/gtk-3.0/settings.ini
 
 # desktop wallpaper manager (nitrogen)
 # TODO - automate the staging of these files
+mkdir -p ~/.config/nitrogen
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
