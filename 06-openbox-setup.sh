@@ -47,11 +47,6 @@ git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2
 cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 # TODO - add further configuration to tint2rc
 
-# TODO - theme gtk and qt windows (breeze and lxappearance)
-# TODO - automate the staging of these files
-# mkdir -p ~/.config/gtk-2.0 && mv ~/gtk-2-gtkfilechooser.ini ~/.config/gtk-2.0/gtkfilechooser.ini
-# mkdir -p ~/.config/gtk-3.0 && mv ~/gtk-3-settings.ini ~/.config/gtk-3.0/settings.ini
-
 # desktop wallpaper manager (nitrogen)
 # TODO - automate the staging of these files
 mkdir -p ~/.config/nitrogen
@@ -64,16 +59,17 @@ mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 echo "tint2 &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-
-
-
-
 # window tiling manager (aka gtile ??????)
 # is there a way to setup from command line?
 
 # TODO - bring over other things we do from 06-ui-setup.sh
 
-### NOT USED BELOW THIS LINE ###
+exit ### NOT USED BELOW THIS LINE ###
+
+# TODO - theme gtk and qt windows (breeze and lxappearance)
+# TODO - automate the staging of these files
+# mkdir -p ~/.config/gtk-2.0 && mv ~/gtk-2-gtkfilechooser.ini ~/.config/gtk-2.0/gtkfilechooser.ini
+# mkdir -p ~/.config/gtk-3.0 && mv ~/gtk-3-settings.ini ~/.config/gtk-3.0/settings.ini
 
 # terminal (rxvt)
 # sudo pacman -Sy rxvt-unicode
