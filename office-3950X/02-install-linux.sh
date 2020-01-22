@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # edit mirror list to move US mirrors to top of list
-pacman -S reflector
+pacman -Sy reflector
 sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # install Arch Linux onto disk + other base packages

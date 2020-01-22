@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # install X, Xfce desktop environment, lightdm display manager, xdg user dirs
-sudo pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper
+sudo pacman -Sy xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper
 
 # install suitable driver
-sudo pacman -S xf86-video-amdgpu
+sudo pacman -Sy xf86-video-amdgpu
 
 # setup audio
-sudo pacman -S alsa alsa-utils pulseaudio
+sudo pacman -Sy alsa alsa-utils pulseaudio
 
 # setup bluetooth
-sudo pacman -S bluez bluez-utils
+sudo pacman -Sy bluez bluez-utils
 systemctl enable bluetooth.service
 
 # enable lightdm service
@@ -30,7 +30,7 @@ makepkg -si
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # install Code text editor, Tilix terminal emulator, and htop monitor
-sudo pacman -S code tilix htop
+sudo pacman -Sy code tilix htop
 
 # add tilix config to avoid errors
 echo "

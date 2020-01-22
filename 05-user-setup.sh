@@ -14,7 +14,7 @@ echo "
 export PATH=~/bin:\$PATH" >> ~/.zshrc
 
 # install base devel and update the mirrorlist
-sudo pacman -S base-devel reflector
+sudo pacman -Sy base-devel reflector
 sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # remove 05 script to leave a clean userspace

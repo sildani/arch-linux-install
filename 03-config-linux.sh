@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install fonts, set console font
-sudo pacman -S gnu-free-fonts terminus-font noto-fonts-emoji
+sudo pacman -Sy gnu-free-fonts terminus-font noto-fonts-emoji
 sudo touch /etc/vconsole.conf
 sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
@@ -35,12 +35,12 @@ echo "#######################################
 passwd
 
 # setup grub
-pacman -S grub efibootmgr
+pacman -Sy grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # install other supporting programs
-pacman -S dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
+pacman -Sy dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
 
 # create user account
 useradd -m -s /bin/zsh daniel

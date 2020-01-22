@@ -76,7 +76,7 @@ nitrogen --restore" >> ~/.config/openbox/autostart
 ### NOT USED BELOW THIS LINE ###
 
 # terminal (rxvt)
-# sudo pacman -S rxvt-unicode
+# sudo pacman -Sy rxvt-unicode
 # echo "
 # \!--------------------xdefauls
 # urxvt*termName: rxvt
