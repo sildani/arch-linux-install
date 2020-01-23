@@ -78,14 +78,9 @@ cd yay
 makepkg -si
 
 # install Chrome AUR
-# makepkg.conf edit:
-#     un-comment MAKEFLAGS="-j2" and change the '2' to the number of processors you have
-# sudo vim /etc/makepkg.conf
-# mkdir ~/AUR && cd ~/AUR
-# git clone https://aur.archlinux.org/google-chrome.git 
-# cd google-chrome
-# makepkg -si
-# ln -s /usr/bin/google-chrome-stable ~/bin/chrome
+cd ~/AUR
+yay google-chrome
+ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # setup numlock enabled by default
 echo "
