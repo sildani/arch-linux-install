@@ -41,7 +41,9 @@ mv ~/rc.xml ~/.config/openbox/rc.xml
 # setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
-sed 's/panel_items = TSC/panel_items = LTSC/' ~/.config/tint2/minima/minima.tint2rc > ~/.config/tint2/tint2rc
+sed 's/panel_items = TSC/panel_items = LTSC/' ~/.config/tint2/minima/minima.tint2rc > /tmp/tint2rc
+sed 's/panel_position = bottom center horizontal/panel_position = top center horizontal/' /tmp/tint2rc > ~/.config/tint2/tint2rc
+rm /tmp/tint2rc
 
 # desktop wallpaper manager (nitrogen)
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
