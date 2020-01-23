@@ -283,6 +283,42 @@
       </action>
       <action name="MoveToEdgeEast"/>
     </keybind>
+    <keybind key="W-minus">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeWest"/>
+      <action name="MoveToEdgeNorth"/>
+    </keybind>
+    <keybind key="W-equal">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeEast"/>
+      <action name="MoveToEdgeNorth"/>
+    </keybind>
+    <keybind key="W-bracketright">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeEast"/>
+      <action name="MoveToEdgeSouth"/>
+    </keybind>
+    <keybind key="W-bracketleft">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeWest"/>
+      <action name="MoveToEdgeSouth"/>
+    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
