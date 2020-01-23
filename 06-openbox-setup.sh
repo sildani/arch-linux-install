@@ -39,7 +39,7 @@ dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 # TODO - add window snapping to rc.xml keybinds area
 # TODO - automate the staging of these files
-mv ~/triste-folly-theme-rc.xml ~/.config/openbox/rc.xml
+mv ~/rc.xml ~/.config/openbox/rc.xml
 
 # setup taskbar
 rm -rf ~/.config/tint2
@@ -52,8 +52,6 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 mkdir -p ~/.config/nitrogen
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
-
-# TODO - setup rofi (https://wiki.archlinux.org/index.php/Rofi)
 
 # setup session autostart
 echo "tint2 &
