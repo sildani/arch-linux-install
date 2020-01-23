@@ -92,6 +92,14 @@ rm /tmp/numlock.tmp
 # add a vi shortcut that points to vim
 ln -s /usr/bin/vim ~/bin/vi
 
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
 # TODO - clean up after yourself
 
 # prompt user exit shell (chroot)
