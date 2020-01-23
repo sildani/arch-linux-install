@@ -76,11 +76,11 @@ cd yay
 makepkg -si
 
 # install Chrome AUR
-yay google-chrome
+yay -aS --noconfirm --answerdiff=None google-chrome
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # install Alsa-Tray AUR
-yay alsa-tray
+yay -aS --noconfirm --answerdiff=None alsa-tray
 
 # setup numlock enabled by default
 echo "
