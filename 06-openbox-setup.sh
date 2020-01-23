@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # required packages for script
-sudo pacman -Sy xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware code tilix htop
+sudo pacman -Sy xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware code tilix htop rofi
 
 # setup display manager
 systemctl enable lightdm.service
