@@ -49,7 +49,7 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 
 # desktop wallpaper manager (nitrogen)
 # TODO - automate the staging of these files
-mv ~/wallpaper /usr/share/backgrounds/daniel
+sudo mv ~/wallpaper /usr/share/backgrounds/daniel
 mkdir -p ~/.config/nitrogen
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
