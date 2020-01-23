@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # required packages for script
-sudo pacman -Sy xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware code tilix htop rofi
+sudo pacman -Sy xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware code tilix htop rofi alsa alsa-utils pulseaudio bluez bluez-utils
 
 # setup display manager
 systemctl enable lightdm.service
@@ -26,7 +26,6 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </openbox_menu>" >> ~/.config/openbox/menu.xml
 
 # setup terminal
-# TODO - file replacement for tilix
 echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
@@ -37,18 +36,14 @@ dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
-# TODO - add window snapping to rc.xml keybinds area
-# TODO - automate the staging of these files
 mv ~/rc.xml ~/.config/openbox/rc.xml
 
 # setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
 cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
-# TODO - add further configuration to tint2rc
 
 # desktop wallpaper manager (nitrogen)
-# TODO - automate the staging of these files
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
 mkdir -p ~/.config/nitrogen
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
@@ -62,7 +57,55 @@ mv ~/config.rasi ~/.config/rofi/
 echo "tint2 &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-# TODO - bring over other things we do from 06-ui-setup.sh
+# setup bluetooth
+systemctl enable bluetooth.service
+
+# create user dirs
+xdg-user-dirs-update
+sudo pacman -Rn xdg-user-dirs
+
+# enable multi-processor package building (in preparation for building and installing AURs)
+cp /etc/makepkg.conf ~/
+sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
+sudo mv ~/makepkg.conf.new /etc/makepkg.conf
+rm ~/makepkg.conf
+mkdir ~/AUR
+
+# install yay
+cd ~/AUR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# install Chrome AUR
+# makepkg.conf edit:
+#     un-comment MAKEFLAGS="-j2" and change the '2' to the number of processors you have
+# sudo vim /etc/makepkg.conf
+# mkdir ~/AUR && cd ~/AUR
+# git clone https://aur.archlinux.org/google-chrome.git 
+# cd google-chrome
+# makepkg -si
+# ln -s /usr/bin/google-chrome-stable ~/bin/chrome
+
+# setup numlock enabled by default
+echo "
+[Seat:*]
+greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
+sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
+rm /tmp/numlock.tmp
+
+# add a vi shortcut that points to vim
+ln -s /usr/bin/vim ~/bin/vi
+
+# TODO - clean up after yourself
+
+# prompt user exit shell (chroot)
+echo "#######################################
+#                                     #
+#  Type \`reboot\` to reboot now and    #
+#  launch your new UI. :)             #
+#                                     #
+#######################################"
 
 exit ### NOT USED BELOW THIS LINE ###
 
