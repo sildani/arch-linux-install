@@ -53,10 +53,6 @@ mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 mkdir -p ~/.config/rofi
 mv ~/config.rasi ~/.config/rofi/
 
-# setup session autostart
-echo "tint2 &
-nitrogen --restore" >> ~/.config/openbox/autostart
-
 # setup bluetooth
 systemctl enable bluetooth.service
 
@@ -82,6 +78,10 @@ cd ~/AUR
 yay google-chrome
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
+# install Alsa-Tray AUR
+cd ~/AUR
+yay alsa-tray
+
 # setup numlock enabled by default
 echo "
 [Seat:*]
@@ -99,6 +99,11 @@ alias gco=\"git add ./* && git commit -m\"
 alias gpl=\"git pull --rebase\"
 alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
+# setup session autostart
+echo "tint2 &
+alsa-tray &
+nitrogen --restore" >> ~/.config/openbox/autostart
 
 # TODO - clean up after yourself
 
