@@ -264,10 +264,10 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <keybind key="A-F10">
+    <keybind key="C-A-W-Return">
       <action name="ToggleMaximize"/>
     </keybind>
-    <keybind key="W-Left">
+    <keybind key="C-A-W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -275,7 +275,7 @@
       </action>
       <action name="MoveToEdgeWest"/>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="C-A-W-Right">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -283,7 +283,7 @@
       </action>
       <action name="MoveToEdgeEast"/>
     </keybind>
-    <keybind key="W-minus">
+    <keybind key="C-A-W-minus">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <width>50%</width>
@@ -292,7 +292,7 @@
       <action name="MoveToEdgeWest"/>
       <action name="MoveToEdgeNorth"/>
     </keybind>
-    <keybind key="W-equal">
+    <keybind key="C-A-W-equal">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <width>50%</width>
@@ -301,7 +301,7 @@
       <action name="MoveToEdgeEast"/>
       <action name="MoveToEdgeNorth"/>
     </keybind>
-    <keybind key="W-bracketright">
+    <keybind key="C-A-W-bracketright">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <width>50%</width>
@@ -310,7 +310,7 @@
       <action name="MoveToEdgeEast"/>
       <action name="MoveToEdgeSouth"/>
     </keybind>
-    <keybind key="W-bracketleft">
+    <keybind key="C-A-W-bracketleft">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <width>50%</width>
