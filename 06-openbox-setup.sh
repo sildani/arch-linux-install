@@ -53,12 +53,13 @@ mkdir -p ~/.config/nitrogen
 mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
+# setup rofi
+mkdir -p ~/.config/rofi
+mv ~/config.rasi ~/.config/rofi/
+
 # setup session autostart
 echo "tint2 &
 nitrogen --restore" >> ~/.config/openbox/autostart
-
-# window tiling manager (aka gtile ??????)
-# is there a way to setup from command line?
 
 # TODO - bring over other things we do from 06-ui-setup.sh
 
