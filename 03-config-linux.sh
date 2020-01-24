@@ -57,7 +57,8 @@ echo "#######################################
 passwd daniel
 
 # add daniel ALL=(ALL) ALL to sudoers file
-EDITOR=vim visudo
+sudo sed 's/root ALL=(ALL) ALL/root ALL=(ALL) ALL\ndaniel ALL=(ALL) ALL/' /etc/sudoers > /tmp/sudoers
+sudo mv /tmp/sudoers /etc/sudoers
 
 # setup oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
