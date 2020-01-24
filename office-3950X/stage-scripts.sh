@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Stages the scripts for usage
+# stage disk partitioning
+cp ~/arch-linux-install/office-3950X/01-partition-disk.sh ~/01-partition-disk.sh
 
-mv ./01-partition-disk.sh ./01-partition-disk.sh.orig && chmod -x ./01-partition-disk.sh.orig
-cp ./office-3950X/01-partition-disk.sh .
-mv ./02-install-linux.sh ./02-install-linux.sh.orig && chmod -x ./02-install-linux.sh.orig
-cp ./office-3950X/02-install-linux.sh .
-mv ./06-ui-setup.sh ./06-ui-setup.sh.orig && chmod -x ./06-ui-setup.sh.orig
-cp ./office-3950X/06-ui-setup.sh .
+# stage linux install
+sed 's/pacstrap \/mnt base linux linux-firmware vim sudo/pacstrap \/mnt base linux linux-firmware vim sudo amd-ucode/' ~/arch-linux-install/02-install-linux.sh > /tmp/02-install-linux.sh
+mv /tmp/02-install-linux.sh ~/arch-linux-install/02-install-linux.sh
+
+# stage ui setup
+cp ~/arch-linux-install/office-3950X/06-ui-setup.sh ~/06-ui-setup.sh
