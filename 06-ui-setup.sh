@@ -1,42 +1,57 @@
 #!/bin/bash
 
-# install X, Xfce desktop environment, lightdm display manager, xdg user dirs
-sudo pacman -Sy xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper
+# required packages for script
+sudo pacman -Sy xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop
 
-# install suitable driver
-sudo pacman -Sy xf86-video-vmware
-
-# setup audio
-sudo pacman -Sy alsa alsa-utils pulseaudio
+# setup display manager
+systemctl enable lightdm.service
+echo "
+[Seat:*]
+greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
+sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
+rm /tmp/numlock.tmp
+# TODO - configure lightdm background
 
 # setup bluetooth
-sudo pacman -Sy bluez bluez-utils
 systemctl enable bluetooth.service
 
-# enable lightdm service
-systemctl enable lightdm.service
-
-# create common user directories
+# create user dirs
 xdg-user-dirs-update
+sudo pacman -Rn xdg-user-dirs
 
-# install Chrome AUR
-# makepkg.conf edit:
-#     un-comment MAKEFLAGS="-j2" and change the '2' to the number of processors you have
-sudo vim /etc/makepkg.conf
-mkdir ~/AUR && cd ~/AUR
-git clone https://aur.archlinux.org/google-chrome.git 
-cd google-chrome
-makepkg -si
-ln -s /usr/bin/google-chrome-stable ~/bin/chrome
-
-# install Code text editor, Tilix terminal emulator, and htop monitor
-sudo pacman -Sy code tilix htop
-
-# add tilix config to avoid errors
+# setup terminal
 echo "
 if [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi" >> ~/.zshrc
+dconf write /com/gexperts/Tilix/terminal-title-show-when-single false
+dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
+dconf write /com/gexperts/Tilix/theme-variant "'dark'"
+
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
+# enable multi-processor package building (in preparation for building and installing AURs)
+cp /etc/makepkg.conf ~/
+sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
+sudo mv ~/makepkg.conf.new /etc/makepkg.conf
+rm ~/makepkg.conf
+
+# install yay
+mkdir ~/AUR
+cd ~/AUR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# install Chrome AUR
+yay -aS --noconfirm --answerdiff=None google-chrome
+ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # add readme to desktop
 echo "From here on out, you can set up your system however you want it.
@@ -51,25 +66,10 @@ Some things I like to install / configure:
 
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
-# add git aliases
-echo "
-alias gst=\"git status\"
-alias gco=\"git add ./* && git commit -m\"
-alias gpl=\"git pull --rebase\"
-alias gps=\"git push\"
-alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
-
-# setup numlock enabled by default
-echo "
-[Seat:*]
-greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
-sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
-rm /tmp/numlock.tmp
-
 # add a vi shortcut that points to vim
 ln -s /usr/bin/vim ~/bin/vi
 
-# remove 06 script to leave a clean userspace
+# clean up
 rm ~/06-ui-setup.sh
 
 # prompt user exit shell (chroot)

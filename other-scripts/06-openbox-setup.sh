@@ -5,25 +5,19 @@ sudo pacman -Sy xorg-server openbox obconf nitrogen tint2 arc-gtk-theme breeze l
 
 # setup display manager
 systemctl enable lightdm.service
+echo "
+[Seat:*]
+greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
+sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
+rm /tmp/numlock.tmp
 # TODO - configure lightdm background
 
-# setup application menu
-mkdir -p ~/.config/openbox
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+# setup bluetooth
+systemctl enable bluetooth.service
 
-<openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
-
-<menu id=\"root-menu\" label=\"Openbox 3\">
-  <menu id=\"applications\" label=\"Applications\" execute=\"xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu\" />
-  <separator />
-  <item label=\"Log Out\">
-    <action name=\"Exit\">
-      <prompt>yes</prompt>
-    </action>
-  </item>
-</menu>
-
-</openbox_menu>" >> ~/.config/openbox/menu.xml
+# create user dirs
+xdg-user-dirs-update
+sudo pacman -Rn xdg-user-dirs
 
 # setup terminal
 echo "
@@ -33,6 +27,47 @@ fi" >> ~/.zshrc
 dconf write /com/gexperts/Tilix/terminal-title-show-when-single false
 dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
+
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
+# enable multi-processor package building (in preparation for building and installing AURs)
+cp /etc/makepkg.conf ~/
+sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
+sudo mv ~/makepkg.conf.new /etc/makepkg.conf
+rm ~/makepkg.conf
+
+# install yay
+mkdir ~/AUR
+cd ~/AUR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# install Chrome AUR
+yay -aS --noconfirm --answerdiff=None google-chrome
+ln -s /usr/bin/google-chrome-stable ~/bin/chrome
+
+# add readme to desktop
+echo "From here on out, you can set up your system however you want it.
+
+Some things I like to install / configure:
+
+- Look and feel
+  (desktop, taskbar, launcher, themes, fonts)
+- ACPI event controls
+- Gaming support (Wine, 3D Drivers, Lutris)
+- Clipboard manager
+
+See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
+
+# add a vi shortcut that points to vim
+ln -s /usr/bin/vim ~/bin/vi
 
 # setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
@@ -55,57 +90,33 @@ mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 mkdir -p ~/.config/rofi
 mv ~/config.rasi ~/.config/rofi/
 
-# setup bluetooth
-systemctl enable bluetooth.service
-
-# create user dirs
-xdg-user-dirs-update
-sudo pacman -Rn xdg-user-dirs
-
-# enable multi-processor package building (in preparation for building and installing AURs)
-cp /etc/makepkg.conf ~/
-sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
-sudo mv ~/makepkg.conf.new /etc/makepkg.conf
-rm ~/makepkg.conf
-mkdir ~/AUR
-
-# install yay
-cd ~/AUR
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-# install Chrome AUR
-yay -aS --noconfirm --answerdiff=None google-chrome
-ln -s /usr/bin/google-chrome-stable ~/bin/chrome
-
 # install Alsa-Tray AUR
 yay -aS --noconfirm --answerdiff=None alsa-tray
-
-# setup numlock enabled by default
-echo "
-[Seat:*]
-greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
-sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
-rm /tmp/numlock.tmp
-
-# add a vi shortcut that points to vim
-ln -s /usr/bin/vim ~/bin/vi
-
-# add git aliases
-echo "
-alias gst=\"git status\"
-alias gco=\"git add ./* && git commit -m\"
-alias gpl=\"git pull --rebase\"
-alias gps=\"git push\"
-alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup session autostart
 echo "tint2 &
 alsa-tray &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-# clean up after yourself
+# setup application menu
+mkdir -p ~/.config/openbox
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+
+<openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
+
+<menu id=\"root-menu\" label=\"Openbox 3\">
+  <menu id=\"applications\" label=\"Applications\" execute=\"xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu\" />
+  <separator />
+  <item label=\"Log Out\">
+    <action name=\"Exit\">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>" >> ~/.config/openbox/menu.xml
+
+# clean up
 rm ~/06-ui-setup.sh
 rm ~/06-ui-setup.sh.orig
 
@@ -117,7 +128,7 @@ echo "#######################################
 #                                     #
 #######################################"
 
-exit ### NOT USED BELOW THIS LINE ###
+### NOT USED BELOW THIS LINE ###
 
 # TODO - theme gtk and qt windows (breeze and lxappearance)
 # TODO - automate the staging of these files
