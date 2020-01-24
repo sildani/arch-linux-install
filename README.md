@@ -6,9 +6,11 @@ After getting into Arch Live CD, install Git, clone this repo, and start running
 
 The start of the process would look something like this:
 
-vim /etc/pacman.d/mirrorlist
-pacman -Sy git
-git clone https://github.com/sildani/arch-linux-install.git
-cd arch-linux-install
-./00-time-setup.sh
+1. vim /etc/pacman.d/mirrorlist
+1. pacman -Sy git
+1. git clone https://github.com/sildani/arch-linux-install.git
+1. cd arch-linux-install
+1. ./00-time-setup.sh
+1. (... and so on)
 
+You can optionally run ./other-scripts/openbox/stage-openbox.sh before running ./00-time-setup.sh to stage Openbox GUI instead of Xfce.
