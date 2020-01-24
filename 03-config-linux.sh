@@ -1,7 +1,12 @@
 #!/bin/bash
 
+# install packages required by this script (fonts, boot, other tools)
+pacman -Sy \
+gnu-free-fonts terminus-font noto-fonts-emoji \
+grub efibootmgr \
+dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
+
 # install fonts, set console font
-sudo pacman -Sy gnu-free-fonts terminus-font noto-fonts-emoji
 sudo touch /etc/vconsole.conf
 sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
@@ -27,12 +32,8 @@ echo "
 127.0.1.1 azeroth.localdomain azeroth" >> /etc/hosts
 
 # setup grub
-pacman -Sy grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-
-# install other supporting programs
-pacman -Sy dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
 
 # set root password
 echo "#######################################
