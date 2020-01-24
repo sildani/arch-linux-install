@@ -35,4 +35,4 @@ makepkg -si
 cd ~/
 
 # remove 05 script to leave a clean userspace
-rm ~/05-user-setup.sh
+rm ~/05-setup-user-account.sh

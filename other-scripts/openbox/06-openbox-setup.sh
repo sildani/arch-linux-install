@@ -108,7 +108,7 @@ alsa-tray &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
 # clean up
-rm ~/06-ui-setup.sh
+rm ~/06-setup-gui.sh
 rm -rf ~/arch-linux-install
 
 # prompt user to reboot

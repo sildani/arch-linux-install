@@ -9,5 +9,5 @@ sed 's/pacstrap \/mnt base linux linux-firmware vim sudo/pacstrap \/mnt base lin
 mv /tmp/02-install-linux.sh ~/arch-linux-install/02-install-linux.sh
 
 # stage ui setup
-sed 's/xf86-video-vmware/xf86-video-amdgpu/' ~/arch-linux-install/06-ui-setup.sh > /tmp/06-ui-setup.sh
-mv /tmp/06-ui-setup.sh ~/arch-linux-install/06-ui-setup.sh
+sed 's/xf86-video-vmware/xf86-video-amdgpu/' ~/arch-linux-install/06-setup-gui.sh > /tmp/06-setup-gui.sh
+mv /tmp/06-setup-gui.sh ~/arch-linux-install/06-setup-gui.sh

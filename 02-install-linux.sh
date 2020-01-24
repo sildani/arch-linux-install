@@ -11,7 +11,7 @@ pacstrap /mnt base linux linux-firmware vim sudo
 # generate file system table on new disk, and chroot into the new file system
 genfstab -U /mnt >> /mnt/etc/fstab
 cp ~/arch-linux-install/03-config-linux.sh /mnt
-cp ~/arch-linux-install/05-user-setup.sh /mnt
-cp ~/arch-linux-install/06-ui-setup.sh /mnt
+cp ~/arch-linux-install/05-setup-user-account.sh /mnt
+cp ~/arch-linux-install/06-setup-gui.sh /mnt
 cp -R ~/arch-linux-install/other-scripts /mnt/
 arch-chroot /mnt
