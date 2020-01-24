@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# NOTE: assumes 16G disk, use fdisk to get proper device
-
-# connect to network, if necessary
-#ip link
-#ip link set enp0s3 up
-#ping google.com
+# Partitions a disk as a GPT disk with an efi boot partition, a root partition, and a swap partition
+# Assumes 16GB disk, use fdisk to get proper device
 
 # partition disk where Arch Linux is being installed
 fdisk -l

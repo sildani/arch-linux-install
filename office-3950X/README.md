@@ -1,1 +1,0 @@
-The versions of the scripts here are overrides made for my desktop PC at home.
