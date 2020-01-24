@@ -75,7 +75,7 @@ ln -s /usr/bin/vim ~/bin/vi
 # clean up
 rm ~/06-ui-setup.sh
 
-# prompt user exit shell (chroot)
+# prompt user to reboot
 echo "#######################################
 #                                     #
 #  Type \`reboot\` to reboot now and    #

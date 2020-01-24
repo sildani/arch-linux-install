@@ -76,10 +76,6 @@ ln -s /usr/bin/vim ~/bin/vi
 git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
 cp -R ~/arch-linux-install/resources/openbox/* ~/
 
-# setup ob theme
-git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
-mv ~/rc.xml ~/.config/openbox/rc.xml
-
 # setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
@@ -100,13 +96,14 @@ mv ~/config.rasi ~/.config/rofi/
 # install Alsa-Tray AUR
 yay -aS --noconfirm --answerdiff=None alsa-tray
 
-# setup session autostart
-echo "tint2 &
-alsa-tray &
-nitrogen --restore" >> ~/.config/openbox/autostart
+# create openbox config dir
+mkdir -p ~/.config/openbox
+
+# setup ob theme
+git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
+mv ~/rc.xml ~/.config/openbox/rc.xml
 
 # setup application menu
-mkdir -p ~/.config/openbox
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
 <openbox_menu xmlns=\"http://openbox.org/3.4/menu\">
@@ -123,11 +120,16 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
 </openbox_menu>" >> ~/.config/openbox/menu.xml
 
+# setup session autostart
+echo "tint2 &
+alsa-tray &
+nitrogen --restore" >> ~/.config/openbox/autostart
+
 # clean up
 rm ~/06-ui-setup.sh
-rm ~/06-ui-setup.sh.orig
+rm -rf ~/arch-linux-install
 
-# prompt user exit shell (chroot)
+# prompt user to reboot
 echo "#######################################
 #                                     #
 #  Type \`reboot\` to reboot now and    #
