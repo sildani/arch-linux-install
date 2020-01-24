@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # required packages for script
-sudo pacman -Sy xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop
+sudo pacman -Sy \
+xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
+xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
+xfce4 xfce4-goodies
 
 # setup display manager
 systemctl enable lightdm.service
