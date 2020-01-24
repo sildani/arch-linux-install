@@ -105,7 +105,9 @@ echo "tint2 &
 alsa-tray &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-# TODO - clean up after yourself
+# clean up after yourself
+rm ~/06-ui-setup.sh
+rm ~/06-ui-setup.sh.orig
 
 # prompt user exit shell (chroot)
 echo "#######################################
