@@ -72,6 +72,10 @@ See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 # add a vi shortcut that points to vim
 ln -s /usr/bin/vim ~/bin/vi
 
+# grab resources this script depends on from the repo
+git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
+cp -R ~/arch-linux-install/resources/openbox/* ~/
+
 # setup ob theme
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 mv ~/rc.xml ~/.config/openbox/rc.xml
@@ -86,7 +90,7 @@ rm /tmp/tint2rc
 # desktop wallpaper manager (nitrogen)
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
 mkdir -p ~/.config/nitrogen
-mv ~/nitrogen-bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
+mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
 # setup rofi
