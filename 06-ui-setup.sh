@@ -45,13 +45,6 @@ sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
 sudo mv ~/makepkg.conf.new /etc/makepkg.conf
 rm ~/makepkg.conf
 
-# install yay
-mkdir ~/AUR
-cd ~/AUR
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 # install Chrome AUR
 yay -aS --noconfirm --answerdiff=None google-chrome
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
