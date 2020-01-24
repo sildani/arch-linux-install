@@ -15,12 +15,12 @@ sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
 rm /tmp/numlock.tmp
 # TODO - configure lightdm background
 
-# setup bluetooth
-sudo systemctl enable bluetooth.service
-
 # create user dirs
 xdg-user-dirs-update
 sudo pacman -Rn xdg-user-dirs
+
+# setup bluetooth
+sudo systemctl enable bluetooth.service
 
 # setup terminal
 echo "
@@ -30,14 +30,6 @@ fi" >> ~/.zshrc
 dconf write /com/gexperts/Tilix/terminal-title-show-when-single false
 dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
-
-# add git aliases
-echo "
-alias gst=\"git status\"
-alias gco=\"git add ./* && git commit -m\"
-alias gpl=\"git pull --rebase\"
-alias gps=\"git push\"
-alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # enable multi-processor package building (in preparation for building and installing AURs)
 cp /etc/makepkg.conf ~/
@@ -61,9 +53,6 @@ Some things I like to install / configure:
 - Clipboard manager
 
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
-
-# add a vi shortcut that points to vim
-ln -s /usr/bin/vim ~/bin/vi
 
 # grab resources this script depends on from the repo
 git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install

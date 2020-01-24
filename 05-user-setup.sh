@@ -8,9 +8,20 @@ sudo systemctl enable NetworkManager.service
 sudo timedatectl set-ntp true
 timedatectl status
 
+# add a vi shortcut that points to vim
+ln -s /usr/bin/vim ~/bin/vi
+
 # add bin to path
 echo "
 export PATH=~/bin:\$PATH" >> ~/.zshrc
+
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # install base devel and update the mirrorlist
 sudo pacman -Sy base-devel reflector
