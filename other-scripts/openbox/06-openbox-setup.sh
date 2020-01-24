@@ -7,7 +7,7 @@ xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
 openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu rofi
 
 # setup display manager
-systemctl enable lightdm.service
+sudo systemctl enable lightdm.service
 echo "
 [Seat:*]
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
@@ -16,7 +16,7 @@ rm /tmp/numlock.tmp
 # TODO - configure lightdm background
 
 # setup bluetooth
-systemctl enable bluetooth.service
+sudo systemctl enable bluetooth.service
 
 # create user dirs
 xdg-user-dirs-update

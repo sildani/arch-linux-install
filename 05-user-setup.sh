@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # setup the network
-# TODO - can we systemctl with sudo?
-systemctl start NetworkManager.service
-systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
+sudo systemctl enable NetworkManager.service
 
 # setup ntp
 timedatectl set-ntp true

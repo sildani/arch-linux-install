@@ -7,7 +7,7 @@ xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
 xfce4 xfce4-goodies
 
 # setup display manager
-systemctl enable lightdm.service
+sudo systemctl enable lightdm.service
 echo "
 [Seat:*]
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
@@ -16,7 +16,7 @@ rm /tmp/numlock.tmp
 # TODO - configure lightdm background
 
 # setup bluetooth
-systemctl enable bluetooth.service
+sudo systemctl enable bluetooth.service
 
 # create user dirs
 xdg-user-dirs-update
