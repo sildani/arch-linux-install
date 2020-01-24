@@ -4,9 +4,6 @@
 sudo pacman -Sy xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper
 
 # install suitable driver
-# list the devices then query packages for the right package
-#lspci | grep -e VGA -e 3D
-#pacman -Ss xf86-video
 sudo pacman -Sy xf86-video-vmware
 
 # setup audio
@@ -15,10 +12,6 @@ sudo pacman -Sy alsa alsa-utils pulseaudio
 # setup bluetooth
 sudo pacman -Sy bluez bluez-utils
 systemctl enable bluetooth.service
-
-# optionally run query to see if there are other vmware related packages you should install
-# install anything you like with sudo pacman -Sy package_name
-#pacman -Ss vmware
 
 # enable lightdm service
 systemctl enable lightdm.service
@@ -36,8 +29,8 @@ cd google-chrome
 makepkg -si
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
-# install Code text editor and Tilix terminal emulator
-sudo pacman -Sy code tilix
+# install Code text editor, Tilix terminal emulator, and htop monitor
+sudo pacman -Sy code tilix htop
 
 # add tilix config to avoid errors
 echo "
@@ -57,6 +50,14 @@ Some things I like to install / configure:
 - Clipboard manager
 
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
+
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup numlock enabled by default
 echo "

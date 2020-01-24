@@ -75,7 +75,7 @@ rm ~/06-ui-setup.sh
 # prompt user exit shell (chroot)
 echo "#######################################
 #                                     #
-#  Type \`reboot\` to reboot now and  #
+#  Type \`reboot\` to reboot now and    #
 #  launch your new UI. :)             #
 #                                     #
 #######################################"
