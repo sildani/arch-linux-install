@@ -26,14 +26,6 @@ echo "
 ::1       localhost
 127.0.1.1 azeroth.localdomain azeroth" >> /etc/hosts
 
-# set root password
-echo "#######################################
-#                                     #
-#        Setting root password        #
-#                                     #
-#######################################"
-passwd
-
 # setup grub
 pacman -Sy grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -41,6 +33,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # install other supporting programs
 pacman -Sy dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
+
+# set root password
+echo "#######################################
+#                                     #
+#        Setting root password        #
+#                                     #
+#######################################"
+passwd
 
 # create user account
 useradd -m -s /bin/zsh daniel
