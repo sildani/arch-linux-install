@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # setup the network
+# TODO - can we systemctl with sudo?
 systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
-#ping google.com
 
 # setup ntp
 timedatectl set-ntp true
@@ -14,6 +14,8 @@ echo "
 export PATH=~/bin:\$PATH" >> ~/.zshrc
 
 # install base devel and update the mirrorlist
+# TODO - can we use yay instead of pacman for noninteractive install?
+
 sudo pacman -Sy base-devel reflector
 sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
