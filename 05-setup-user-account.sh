@@ -30,7 +30,7 @@ sudo reflector --country "United States" --age 12 --protocol https --sort rate -
 # install yay
 git clone https://aur.archlinux.org/yay.git ~/.yay
 cd ~/.yay
-makepkg -si
+makepkg -si --noconfirm
 cd ~/
 
 # remove 05 script to leave a clean userspace
