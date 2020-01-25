@@ -24,11 +24,10 @@ alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # install base devel and update the mirrorlist
-sudo pacman -Sy base-devel reflector
+sudo pacman -Sy --noconfirm base-devel reflector
 sudo reflector --country "United States" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # install yay
-# TODO - can we use yay instead of pacman for noninteractive install from here on out?
 git clone https://aur.archlinux.org/yay.git ~/.yay
 cd ~/.yay
 makepkg -si

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # required packages for script
-sudo pacman -Sy \
+sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
 openbox obconf nitrogen tint2 arc-gtk-theme breeze lxappearance pcmanfm archlinux-xdg-menu rofi
@@ -17,7 +17,7 @@ rm /tmp/numlock.tmp
 
 # create user dirs
 xdg-user-dirs-update
-sudo pacman -Rn xdg-user-dirs
+sudo pacman -Rn --noconfirm xdg-user-dirs
 
 # setup bluetooth
 sudo systemctl enable bluetooth.service

@@ -10,7 +10,7 @@ exit
 # mkdir -p ~/.config/gtk-3.0 && mv ~/gtk-3-settings.ini ~/.config/gtk-3.0/settings.ini
 
 # terminal (rxvt)
-# sudo pacman -Sy rxvt-unicode
+# sudo pacman -Sy --noconfirm rxvt-unicode
 # echo "
 # \!--------------------xdefauls
 # urxvt*termName: rxvt

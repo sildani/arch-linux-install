@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install packages required by this script (fonts, boot, other tools)
-pacman -Sy \
+pacman -Sy --noconfirm \
 gnu-free-fonts terminus-font noto-fonts-emoji \
 grub efibootmgr \
 dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh

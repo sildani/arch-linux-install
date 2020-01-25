@@ -7,7 +7,7 @@ After getting into Arch Live CD, install Git, clone this repo, and start running
 The start of the process would look something like this:
 
 1. vim /etc/pacman.d/mirrorlist
-1. pacman -Sy git
+1. pacman -Sy --noconfirm git
 1. git clone https://github.com/sildani/arch-linux-install.git
 1. cd arch-linux-install
 1. ./00-time-setup.sh
