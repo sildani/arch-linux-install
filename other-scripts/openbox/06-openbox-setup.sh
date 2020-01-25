@@ -33,9 +33,7 @@ dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # enable multi-processor package building (in preparation for building and installing AURs)
 cp /etc/makepkg.conf ~/
-sed 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf > makepkg.conf.new
-sudo mv ~/makepkg.conf.new /etc/makepkg.conf
-rm ~/makepkg.conf
+sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf
 
 # install Chrome AUR
 yay -aS --noconfirm --answerdiff=None google-chrome
@@ -61,9 +59,7 @@ cp -R ~/arch-linux-install/resources/openbox/* ~/
 # setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
-sed 's/panel_items = TSC/panel_items = LTSC/' ~/.config/tint2/minima/minima.tint2rc > /tmp/tint2rc
-sed 's/panel_position = bottom center horizontal/panel_position = top center horizontal/' /tmp/tint2rc > ~/.config/tint2/tint2rc
-rm /tmp/tint2rc
+sed 's/panel_items = TSC/panel_items = LTSC/; s/panel_position = bottom center horizontal/panel_position = top center horizontal/' ~/.config/tint2/minima/minima.tint2rc > ~/.config/tint2/tint2rc
 
 # desktop wallpaper manager (nitrogen)
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
