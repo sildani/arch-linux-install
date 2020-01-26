@@ -41,7 +41,9 @@ echo "#######################################
 #        Setting root password        #
 #                                     #
 #######################################"
-passwd
+until passwd; do
+  sleep 1
+done
 
 # create user account
 useradd -m -s /bin/zsh daniel
@@ -52,7 +54,9 @@ echo "#######################################
 #        Setting user password        #
 #                                     #
 #######################################"
-passwd daniel
+until passwd daniel; do
+  sleep 1
+done
 
 # add daniel ALL=(ALL) ALL to sudoers file
 sudo sed -i 's/root ALL=(ALL) ALL/root ALL=(ALL) ALL\ndaniel ALL=(ALL) ALL/' /etc/sudoers
