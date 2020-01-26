@@ -32,8 +32,7 @@ dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
 
 # enable multi-processor package building (in preparation for building and installing AURs)
-cp /etc/makepkg.conf ~/
-sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' ~/makepkg.conf
+sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' /etc/makepkg.conf
 
 # install Chrome AUR
 yay -aS --noconfirm --answerdiff=None google-chrome
