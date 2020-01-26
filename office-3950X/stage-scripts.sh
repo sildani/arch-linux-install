@@ -7,4 +7,4 @@ sed -i 's/16GB disk/1TB disk/; s/parted \/dev\/sda/parted \/dev\/nvme1n1/; s/\/d
 sed -i 's/pacstrap \/mnt base linux linux-firmware vim sudo/pacstrap \/mnt base linux linux-firmware vim sudo amd-ucode/' ~/arch-linux-install/02-install-linux.sh
 
 # stage ui setup
-sed -i 's/xf86-video-vmware/xf86-video-amdgpu/' ~/arch-linux-install/06-setup-gui.sh
+sed -i 's/xf86-video-vmware/xf86-video-amdgpu/; s/-j4/-j16/' ~/arch-linux-install/06-setup-gui.sh
