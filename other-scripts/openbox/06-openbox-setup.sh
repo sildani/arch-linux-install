@@ -56,9 +56,9 @@ git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
 cp -R ~/arch-linux-install/resources/openbox/* ~/
 
 # setup taskbar
-rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
-sed 's/panel_items = TSC/panel_items = LTSC/; s/panel_position = bottom center horizontal/panel_position = top center horizontal/' ~/.config/tint2/minima/minima.tint2rc > ~/.config/tint2/tint2rc
+rm -rf ~/.config/tint2
+mv ~/tint2rc ~/.config/tint2/tint2rc
 
 # desktop wallpaper manager (nitrogen)
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
