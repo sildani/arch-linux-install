@@ -56,8 +56,8 @@ git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
 cp -R ~/arch-linux-install/resources/openbox/* ~/
 
 # setup taskbar
-git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
 rm -rf ~/.config/tint2
+git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
 mv ~/tint2rc ~/.config/tint2/tint2rc
 
 # desktop wallpaper manager (nitrogen)
