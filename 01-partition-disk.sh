@@ -1,7 +1,22 @@
 #!/bin/bash
 
 # Partitions a disk as a GPT disk with an efi boot partition, a root partition, and a swap partition
-# Assumes 16GB disk, use fdisk to get proper device
+
+# Script requires review before execution
+echo "#######################################
+#                                     #
+#  By default, this script assumes a  #
+#  16GB disk at /dev/sda. Use fdisk   #
+#  to get proper device, edit this    #
+#  script accordingly, and comment    #
+#  out or remove the exit command     #
+#  once you're ready.                 #
+#                                     #
+#######################################"
+exit
+
+# wipe the slate clean first
+dd if=/dev/zero of=/dev/sda bs=1M
 
 # partition disk where Arch Linux is being installed
 fdisk -l
