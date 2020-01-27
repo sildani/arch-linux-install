@@ -4,7 +4,8 @@
 sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm
+i3-wm i3status
+# other packages to consider: i3blocks
 
 # setup display manager
 sudo systemctl enable lightdm.service
