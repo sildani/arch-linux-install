@@ -54,17 +54,18 @@ See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 # grab resources this script depends on from the repo
 git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
 cp -R ~/arch-linux-install/resources/openbox/* ~/
-
-# setup taskbar
-rm -rf ~/.config/tint2
-git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
-mv ~/tint2rc ~/.config/tint2/tint2rc
+cp -R ~/arch-linux-install/resources/wallpaper ~/
 
 # desktop wallpaper manager (nitrogen)
 sudo mv ~/wallpaper /usr/share/backgrounds/daniel
 mkdir -p ~/.config/nitrogen
 mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
+
+# setup taskbar
+rm -rf ~/.config/tint2
+git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
+mv ~/tint2rc ~/.config/tint2/tint2rc
 
 # setup rofi
 mkdir -p ~/.config/rofi

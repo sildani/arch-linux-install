@@ -4,7 +4,7 @@
 sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm i3status
+i3-wm i3status nitrogen
 # other packages to consider: i3blocks
 
 # setup display manager
@@ -52,7 +52,16 @@ Some things I like to install / configure:
 
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
-# i3 stuff goes here
+# grab resources this script depends on from the repo
+git clone https://github.com/sildani/arch-linux-install ~/arch-linux-install
+cp -R ~/arch-linux-install/resources/i3/* ~/
+cp -R ~/arch-linux-install/resources/wallpaper ~/
+
+# desktop wallpaper manager (nitrogen)
+sudo mv ~/wallpaper /usr/share/backgrounds/daniel
+mkdir -p ~/.config/nitrogen
+mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
+mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
 # clean up
 rm ~/06-setup-gui.sh
