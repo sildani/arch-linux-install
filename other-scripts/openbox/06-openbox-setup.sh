@@ -62,14 +62,14 @@ mkdir -p ~/.config/nitrogen
 mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
+# setup rofi
+mkdir -p ~/.config/rofi
+mv ~/config.rasi ~/.config/rofi/
+
 # setup taskbar
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
 mv ~/tint2rc ~/.config/tint2/tint2rc
-
-# setup rofi
-mkdir -p ~/.config/rofi
-mv ~/config.rasi ~/.config/rofi/
 
 # install Alsa-Tray AUR
 yay -aS --noconfirm --answerdiff=None alsa-tray

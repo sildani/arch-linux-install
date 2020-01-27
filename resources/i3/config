@@ -182,3 +182,6 @@ bar {
 
 # restore desktop background
 exec nitrogen --restore
+
+# rofi keybind
+bindsym $mod+mod1+space exec rofi -show run
