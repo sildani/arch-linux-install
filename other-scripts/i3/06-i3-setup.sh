@@ -63,6 +63,10 @@ mkdir -p ~/.config/nitrogen
 mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
+# setup i3
+mkdir -p ~/.config/i3
+mv ~/config ~/.config/i3/config
+
 # clean up
 rm ~/06-setup-gui.sh
 

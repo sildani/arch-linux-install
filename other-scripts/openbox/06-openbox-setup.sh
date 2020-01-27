@@ -74,11 +74,9 @@ mv ~/config.rasi ~/.config/rofi/
 # install Alsa-Tray AUR
 yay -aS --noconfirm --answerdiff=None alsa-tray
 
-# create openbox config dir
-mkdir -p ~/.config/openbox
-
-# setup ob theme
+# setup openbox
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
+mkdir -p ~/.config/openbox
 mv ~/rc.xml ~/.config/openbox/rc.xml
 
 # setup application menu
