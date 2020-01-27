@@ -30,6 +30,7 @@ fi" >> ~/.zshrc
 dconf write /com/gexperts/Tilix/terminal-title-show-when-single false
 dconf write /com/gexperts/Tilix/terminal-title-style "'small'"
 dconf write /com/gexperts/Tilix/theme-variant "'dark'"
+dconf write /com/gexperts/Tilix/window-style "'borderless'"
 
 # enable multi-processor package building (in preparation for building and installing AURs)
 sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' /etc/makepkg.conf
