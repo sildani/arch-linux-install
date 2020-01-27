@@ -4,7 +4,7 @@
 sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm i3status nitrogen rofi
+i3-wm i3status nitrogen dmenu
 
 # setup display manager
 sudo systemctl enable lightdm.service
@@ -62,10 +62,6 @@ sudo mv ~/wallpaper /usr/share/backgrounds/daniel
 mkdir -p ~/.config/nitrogen
 mv ~/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
-
-# setup rofi
-mkdir -p ~/.config/rofi
-mv ~/config.rasi ~/.config/rofi/
 
 # setup i3status
 mkdir -p ~/.config/i3status
