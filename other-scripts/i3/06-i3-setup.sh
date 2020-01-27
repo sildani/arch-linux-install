@@ -67,6 +67,10 @@ mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 mkdir -p ~/.config/rofi
 mv ~/config.rasi ~/.config/rofi/
 
+# setup i3status
+mkdir -p ~/.config/i3status
+mv ~/i3status.conf ~/.config/i3status/config
+
 # setup i3
 mkdir -p ~/.config/i3
 mv ~/config ~/.config/i3/config
