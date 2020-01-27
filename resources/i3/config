@@ -183,3 +183,6 @@ bar {
 
 # restore desktop background
 exec --no-startup-id nitrogen --restore
+
+# window borders
+default_border pixel 0
