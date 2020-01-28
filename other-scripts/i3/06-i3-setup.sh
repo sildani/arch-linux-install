@@ -4,7 +4,7 @@
 sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xbindkeys
+i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xbindkeys dunst
 
 # setup display manager
 sudo systemctl enable lightdm.service
@@ -66,6 +66,10 @@ mv ~/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 # setup i3status
 mkdir -p ~/.config/i3status
 mv ~/i3status.conf ~/.config/i3status/config
+
+# setup dunst
+mkdir -p ~/.config/dunst
+mv ~/dunstrc ~/.config/dunst
 
 # setup i3
 mkdir -p ~/.config/i3
