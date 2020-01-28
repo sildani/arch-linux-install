@@ -183,6 +183,7 @@ bar {
 
 # restore desktop background
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id pasystray
 
 # window borders
-default_border pixel 0
+default_border pixel 1
