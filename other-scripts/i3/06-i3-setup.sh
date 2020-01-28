@@ -72,7 +72,7 @@ mkdir -p ~/.config/dunst
 mv ~/dunstrc ~/.config/dunst
 
 # setup pulse audio
-sudo sed -i 's/volume = merge/volume = ignore\nvolume-limit = 0.01/' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+sudo perl -0777 -i.original -pe 's/switch = mute\nvolume = merge/switch = mute\nvolume = ignore\nvolume-limit = 0.01/' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 
 # setup i3
 mkdir -p ~/.config/i3
