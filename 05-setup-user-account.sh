@@ -34,5 +34,5 @@ cd ~/.yay
 makepkg -si --noconfirm
 cd ~/
 
-# remove 05 script to leave a clean userspace
+# prompt user to reboot
 rm ~/05-setup-user-account.sh
