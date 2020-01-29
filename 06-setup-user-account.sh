@@ -30,4 +30,4 @@ makepkg -si --noconfirm
 cd ~/
 
 # clean up
-rm ~/05-setup-user-account.sh
+rm ~/06-setup-user-account.sh
