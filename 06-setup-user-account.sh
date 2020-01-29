@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# setup the network
-sudo systemctl start NetworkManager.service
-sudo systemctl enable NetworkManager.service
-sleep 5
-
 # setup ntp
 sudo timedatectl set-ntp true
 timedatectl status

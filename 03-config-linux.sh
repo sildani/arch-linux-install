@@ -77,8 +77,9 @@ chown -R daniel:daniel /home/daniel/.oh-my-zsh
 chown daniel:daniel /home/daniel/.zshrc
 
 # prep scripts for use after reboot and user account login
-mv /05-setup-user-account.sh /home/daniel/
-mv /06-setup-gui.sh /home/daniel/
+mv /05-setup-network.sh /home/daniel/
+mv /06-setup-user-account.sh /home/daniel/
+mv /07-setup-gui.sh /home/daniel/
 chown daniel:daniel /home/daniel/*.sh
 mkdir /home/daniel/bin
 chown daniel:daniel /home/daniel/bin
