@@ -4,6 +4,9 @@
 sudo systemctl start NetworkManager.service
 sudo systemctl enable NetworkManager.service
 
+# clean up
+rm ~/05-setup-network.sh
+
 # prompt user to check network
 echo "#######################################
 #                                     #
