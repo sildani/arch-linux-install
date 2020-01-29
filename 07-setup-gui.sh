@@ -53,6 +53,7 @@ See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
 # clean up
 rm ~/07-setup-gui.sh
+rm -rf ~/arch-linux-install
 
 # prompt user to reboot
 echo "#######################################

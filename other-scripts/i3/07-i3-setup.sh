@@ -79,7 +79,8 @@ mkdir -p ~/.config/i3
 mv ~/config ~/.config/i3/config
 
 # clean up
-rm ~/06-setup-gui.sh
+rm ~/07-setup-gui.sh
+rm -rf ~/arch-linux-install
 
 # prompt user to reboot
 echo "#######################################
