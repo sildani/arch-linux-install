@@ -16,7 +16,9 @@ echo "#######################################
 exit
 
 # wipe the slate clean first
+echo -n "Wiping disk... "
 dd if=/dev/zero of=/dev/sda bs=1M
+echo "DONE"
 
 # partition disk where Arch Linux is being installed
 fdisk -l
