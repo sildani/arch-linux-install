@@ -52,7 +52,7 @@ Some things I like to install / configure:
 See ~/bin/other-scripts for some options. Enjoy!" >> ~/Desktop/README.md
 
 # clean up
-rm ~/06-setup-gui.sh
+rm ~/07-setup-gui.sh
 
 # prompt user to reboot
 echo "#######################################
