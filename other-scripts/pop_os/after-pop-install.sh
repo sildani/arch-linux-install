@@ -47,5 +47,18 @@ cp resources/i3/config ~/.config/i3/config
 # setup pulse audio
 sudo perl -0777 -i.original -pe 's/switch = mute\nvolume = merge/switch = mute\nvolume = ignore\nvolume-limit = 0.01/' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 
+# creat and add ~/bin to path
+mkdir -p ~/bin
+echo "
+export PATH=~/bin:\$PATH" >> ~/.zshrc
+
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
 # reboot
 reboot
