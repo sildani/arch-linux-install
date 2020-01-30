@@ -34,5 +34,5 @@ cd ~/.yay
 makepkg -si --noconfirm
 cd ~/
 
-# prompt user to reboot
+# clean up
 rm ~/05-setup-user-account.sh
