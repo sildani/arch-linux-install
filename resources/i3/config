@@ -181,6 +181,9 @@ bar {
         status_command i3status
 }
 
+# i3lock config
+bindsym $mod+Escape exec --no-startup-id i3lock -i /usr/share/backgrounds/daniel/nick-nazzaro-underwater-2560x1440.png
+
 # autostart apps
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id pasystray
