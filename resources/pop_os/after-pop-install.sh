@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install core packages
-sudo apt install vim code i3 zsh nitrogen dunst pasystray
+sudo apt install vim code i3 zsh nitrogen dunst pasystray lxappearance
 
 # install Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
