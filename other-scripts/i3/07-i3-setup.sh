@@ -4,7 +4,7 @@
 sudo pacman -Sy --noconfirm \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
 xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xbindkeys dunst
+i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xbindkeys dunst xorg-evdev
 
 # setup display manager
 sudo systemctl enable lightdm.service
@@ -78,9 +78,8 @@ sudo perl -0777 -i.original -pe 's/switch = mute\nvolume = merge/switch = mute\n
 mkdir -p ~/.config/i3
 mv ~/config ~/.config/i3/config
 
-# setup X
-sudo Xorg :0 -configure
-sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
+# setup evdev as mouse driver for X
+mv ~/50-evdev.conf /usr/share/X11/xorg.conf.d/
 
 # clean up
 rm ~/07-setup-gui.sh
