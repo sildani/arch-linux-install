@@ -78,6 +78,10 @@ sudo perl -0777 -i.original -pe 's/switch = mute\nvolume = merge/switch = mute\n
 mkdir -p ~/.config/i3
 mv ~/config ~/.config/i3/config
 
+# setup X
+sudo Xorg :0 -configure
+sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
+
 # clean up
 rm ~/07-setup-gui.sh
 rm -rf ~/arch-linux-install

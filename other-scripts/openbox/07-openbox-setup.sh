@@ -102,10 +102,6 @@ echo "tint2 &
 alsa-tray &
 nitrogen --restore" >> ~/.config/openbox/autostart
 
-# seed default X config
-sudo Xorg :0 -configure
-sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
-
 # clean up
 rm ~/07-setup-gui.sh
 rm -rf ~/arch-linux-install
