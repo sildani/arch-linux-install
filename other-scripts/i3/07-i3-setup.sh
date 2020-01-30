@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # required packages for script
-sudo pacman -Sy --noconfirm \
+sudo pacman -Sy --noconfirm --needed \
 xorg-server lightdm lightdm-gtk-greeter xdg-user-dirs numlockx archlinux-wallpaper \
-xf86-video-vmware alsa alsa-utils pulseaudio bluez bluez-utils code tilix htop \
-i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xbindkeys dunst xorg-evdev
+xf86-video-vmware alsa alsa-utils pulseaudio pulseaudio-alsa bluez bluez-utils code tilix htop \
+i3-wm i3status i3lock nitrogen dmenu pasystray arc-gtk-theme breeze lxappearance pcmanfm lxrandr xorg-xev xorg-xinput xbindkeys dunst xf86-input-evdev
 
 # setup display manager
 sudo systemctl enable lightdm.service
@@ -36,7 +36,7 @@ dconf write /com/gexperts/Tilix/window-style "'borderless'"
 sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j4"/' /etc/makepkg.conf
 
 # install Chrome AUR
-yay -aS --noconfirm --answerdiff=None google-chrome
+yay -aS --noconfirm --needed --answerdiff=None google-chrome
 ln -s /usr/bin/google-chrome-stable ~/bin/chrome
 
 # add readme to desktop
@@ -79,7 +79,7 @@ mkdir -p ~/.config/i3
 mv ~/config ~/.config/i3/config
 
 # setup evdev as mouse driver for X
-mv ~/50-evdev.conf /usr/share/X11/xorg.conf.d/
+sudo mv ~/50-evdev.conf /usr/share/X11/xorg.conf.d/
 
 # clean up
 rm ~/07-setup-gui.sh
