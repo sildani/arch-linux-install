@@ -3,7 +3,7 @@
 # install packages required by this script (fonts, boot, other tools)
 pacman -Sy --noconfirm \
 gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji \
-grub efibootmgr \
+grub os-prober efibootmgr \
 dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
 
 # install fonts, set console font
@@ -33,6 +33,7 @@ echo "
 
 # setup grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+os-prober
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # set root password
