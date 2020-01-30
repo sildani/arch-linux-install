@@ -44,5 +44,8 @@ cp resources/i3/dunstrc ~/.config/dunst
 mkdir -p ~/.config/i3
 cp resources/i3/config ~/.config/i3/config
 
+# setup pulse audio
+sudo perl -0777 -i.original -pe 's/switch = mute\nvolume = merge/switch = mute\nvolume = ignore\nvolume-limit = 0.01/' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+
 # reboot
 reboot
