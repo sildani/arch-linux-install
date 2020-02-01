@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# ensure synchornization with time
+sudo timedatectl set-ntp true
+sudo timedatectl status
+
 # setup mirrors and update system
 sudo pacman-mirrors --country United_States && sudo pacman -Syyu
 
