@@ -12,7 +12,6 @@ echo "
 [Seat:*]
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
 sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
-rm /tmp/numlock.tmp
 # TODO - configure lightdm background
 
 # create user dirs
