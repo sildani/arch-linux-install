@@ -14,9 +14,9 @@ sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
 
 # setup oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
-cp /home/daniel/.oh-my-zsh/templates/zshrc.zsh-template /home/daniel/.zshrc
-sed -i 's/source \$ZSH\/oh-my-zsh.sh//' /home/daniel/.zshrc
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sed -i 's/source \$ZSH\/oh-my-zsh.sh//' ~/.zshrc
 echo "
 ZSH_THEME=\"dallas\"
 
@@ -24,7 +24,7 @@ if [ \`tput colors\` = \"256\" ]; then
   ZSH_THEME=\"robbyrussell\"  
 fi
 
-source \$ZSH/oh-my-zsh.sh" >> /home/daniel/.zshrc
+source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
 chsh -s /bin/zsh
 
 # add bin to path
