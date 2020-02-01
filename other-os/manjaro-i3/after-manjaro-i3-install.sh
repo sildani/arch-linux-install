@@ -4,8 +4,15 @@
 sudo timedatectl set-ntp true
 sudo timedatectl status
 
-# setup mirrors and update system
-sudo pacman-mirrors --country United_States && sudo pacman -Syyu
+# setup mirrors
+echo "[++] Updating mirrorlist... "
+sudo pacman-mirrors --country United_States
+echo "[++] DONE\n\n"
+
+# update system
+echo "[++] Updating system... "
+sudo pacman -Syyu
+echo "[++] DONE\n\n"
 
 # packages
 sudo pacman -Sy --needed --noconfirm base-devel nitrogen bluez bluez-utils blueman i3lock tilix
