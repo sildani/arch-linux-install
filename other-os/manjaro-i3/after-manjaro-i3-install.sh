@@ -105,3 +105,11 @@ sed -i 's/start_conky_maia/~\/bin\/start_conky_maia/g' ~/.i3/config
 
 # setup i3status
 cp ~/code/arch-linux-install/other-os/manjaro-i3/resources/i3status.conf ~/.i3status.conf
+
+# setup numlockx
+sudo pacman -Sy --needed --noconfirm numlockx
+echo "
+[Seat:*]
+greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
+sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
+echo "\nexec --no-startup-id numlockx" >> ~/.i3/config
