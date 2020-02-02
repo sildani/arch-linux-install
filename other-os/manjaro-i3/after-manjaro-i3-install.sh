@@ -125,3 +125,6 @@ For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d
 read -p "Copy the above to the clipboard and press any key to edit the file in vim..."
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 echo "DONE"
+
+# setup pulse audio
+install_pulse
