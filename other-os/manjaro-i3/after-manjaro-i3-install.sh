@@ -15,7 +15,7 @@ sudo pacman -Syyu
 echo "[++] DONE\n\n"
 
 # packages
-sudo pacman -Sy --needed --noconfirm base-devel nitrogen bluez bluez-utils blueman i3lock tilix
+sudo pacman -Sy --needed --noconfirm base-devel nitrogen bluez bluez-utils blueman i3lock tilix zip unzip
 
 # setup bluetooth
 sudo systemctl enable bluetooth.service
@@ -102,6 +102,7 @@ sed -i 's/\# exec --no-startup-id blueman-applet/exec --no-startup-id blueman-ap
 sed -i 's/position bottom/position top/g' ~/.i3/config
 sed -i 's/bindsym \$mod+Return exec terminal/bindsym \$mod+Return exec i3-sensible-terminal/g' ~/.i3/config
 sed -i 's/start_conky_maia/~\/bin\/start_conky_maia/g' ~/.i3/config
+
 
 # setup i3status
 cp ~/code/arch-linux-install/other-os/manjaro-i3/resources/i3status.conf ~/.i3status.conf
