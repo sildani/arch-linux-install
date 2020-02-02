@@ -128,3 +128,4 @@ echo "DONE"
 
 # setup pulse audio
 install_pulse
+echo "Use \$mod+Ctrl+m to open Audio settings"
