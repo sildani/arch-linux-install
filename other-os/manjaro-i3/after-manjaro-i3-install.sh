@@ -112,4 +112,5 @@ echo "
 [Seat:*]
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
 sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
-echo "\nexec --no-startup-id numlockx" >> ~/.i3/config
+echo "
+exec --no-startup-id numlockx" >> ~/.i3/config
