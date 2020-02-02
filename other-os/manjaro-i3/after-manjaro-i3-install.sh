@@ -114,3 +114,13 @@ greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
 sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
 echo "
 exec --no-startup-id numlockx" >> ~/.i3/config
+
+# reverse mouse wheel scroll
+echo "
+For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
+
+        Option \"NaturalScrolling\" \"True\"
+"
+read -p "Copy the above to the clipboard and press any key to edit the file in vim..."
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+echo "DONE"
