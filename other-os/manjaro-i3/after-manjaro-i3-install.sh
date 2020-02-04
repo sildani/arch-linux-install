@@ -128,4 +128,9 @@ echo "DONE"
 
 # setup pulse audio
 install_pulse
-echo "Use \$mod+Ctrl+m to open Audio settings"
+echo "
+Use \$mod+Ctrl+m to open Audio settings"
+
+# cue user to xfce-power-manager
+echo "
+Run xfce-power-manager to configure sleep/stanby settings"
