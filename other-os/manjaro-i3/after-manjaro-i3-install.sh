@@ -103,6 +103,8 @@ sed -i 's/position bottom/position top/g' ~/.i3/config
 sed -i 's/bindsym \$mod+Return exec terminal/bindsym \$mod+Return exec i3-sensible-terminal/g' ~/.i3/config
 sed -i 's/start_conky_maia/~\/bin\/start_conky_maia/g' ~/.i3/config
 
+# disable auto login if enabled
+sudo sed -i 's/^autologin-user=daniel/\#autologin-user=daniel/g' /etc/lightdm/lightdm.conf
 
 # setup i3status
 cp ~/code/arch-linux-install/other-os/manjaro-i3/resources/i3status.conf ~/.i3status.conf
