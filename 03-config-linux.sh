@@ -7,8 +7,8 @@ grub os-prober efibootmgr \
 dosfstools e2fsprogs ntfs-3g networkmanager zsh man-db man-pages texinfo git openssh
 
 # install fonts, set console font
-sudo touch /etc/vconsole.conf
-sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
+touch /etc/vconsole.conf
+bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # set the timezone
@@ -60,7 +60,7 @@ until passwd daniel; do
 done
 
 # add daniel ALL=(ALL) ALL to sudoers file
-sudo sed -i 's/root ALL=(ALL) ALL/root ALL=(ALL) ALL\ndaniel ALL=(ALL) ALL/' /etc/sudoers
+sed -i 's/root ALL=(ALL) ALL/root ALL=(ALL) ALL\ndaniel ALL=(ALL) ALL/' /etc/sudoers
 
 # setup oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/daniel/.oh-my-zsh
