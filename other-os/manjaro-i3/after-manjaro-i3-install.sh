@@ -136,3 +136,9 @@ Use \$mod+Ctrl+m to open Audio settings"
 # cue user to xfce-power-manager
 echo "
 Run xfce-power-manager to configure sleep/stanby settings"
+
+# install fonts
+sudo pacman -Sy --noconfirm gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji
+sudo touch /etc/vconsole.conf
+sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
+# sudo setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
