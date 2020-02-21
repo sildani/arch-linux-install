@@ -106,7 +106,8 @@ sed -i 's/smart_gaps on/\#smart_gaps on/' ~/.i3/config
 echo "
 exec --no-startup-id numlockx" >> ~/.i3/config
 echo "
-exec --no-startup-id flameshot" >> ~/.i3/config
+exec --no-startup-id flameshot
+bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.i3/config
 
 # disable auto login if enabled
 sudo sed -i 's/^autologin-user=daniel/\#autologin-user=daniel/g' /etc/lightdm/lightdm.conf
