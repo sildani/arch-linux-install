@@ -15,7 +15,7 @@ sudo pacman -Syyu
 echo "[++] DONE\n\n"
 
 # packages
-sudo pacman -Sy --needed --noconfirm base-devel nitrogen bluez bluez-utils blueman i3lock tilix zip unzip flameshot
+sudo pacman -Sy --needed --noconfirm base-devel nitrogen bluez bluez-utils blueman i3lock tilix zip unzip flameshot numlockx
 
 # setup bluetooth
 sudo systemctl enable bluetooth.service
@@ -103,7 +103,10 @@ sed -i 's/position bottom/position top/g' ~/.i3/config
 sed -i 's/bindsym \$mod+Return exec terminal/bindsym \$mod+Return exec i3-sensible-terminal/g' ~/.i3/config
 sed -i 's/start_conky_maia/~\/bin\/start_conky_maia/g' ~/.i3/config
 sed -i 's/smart_gaps on/\#smart_gaps on/' ~/.i3/config
-echo "exec --no-startup-id flameshot" >> ~/.i3/config
+echo "
+exec --no-startup-id numlockx" >> ~/.i3/config
+echo "
+exec --no-startup-id flameshot" >> ~/.i3/config
 
 # disable auto login if enabled
 sudo sed -i 's/^autologin-user=daniel/\#autologin-user=daniel/g' /etc/lightdm/lightdm.conf
@@ -112,13 +115,10 @@ sudo sed -i 's/^autologin-user=daniel/\#autologin-user=daniel/g' /etc/lightdm/li
 cp ~/code/arch-linux-install/other-os/manjaro-i3/resources/i3status.conf ~/.i3status.conf
 
 # setup numlockx
-sudo pacman -Sy --needed --noconfirm numlockx
 echo "
 [Seat:*]
 greeter-setup-script=/usr/bin/numlockx on" >> /tmp/numlock.tmp
 sudo bash -c 'cat /tmp/numlock.tmp >> /etc/lightdm/lightdm.conf'
-echo "
-exec --no-startup-id numlockx" >> ~/.i3/config
 
 # reverse mouse wheel scroll
 echo "
