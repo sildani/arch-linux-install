@@ -21,5 +21,8 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.
 # setup polybar
 cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/config/polybar/config
 
+# install software
+yay vivaldi
+
 # setup alsi on new shell
 echo "alsi -l" >> ~/.zshrc
