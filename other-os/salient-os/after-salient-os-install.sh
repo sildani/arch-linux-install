@@ -24,5 +24,9 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/conf
 # install software
 yay vivaldi
 
+# enable trim
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
+
 # setup alsi on new shell
 echo "alsi -l" >> ~/.zshrc
