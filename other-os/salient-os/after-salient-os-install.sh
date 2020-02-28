@@ -24,8 +24,12 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.
 # setup polybar
 cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
 
-# install software
+# install vivaldi
 yay -aS --noconfirm --needed --answerdiff=None vivaldi
+sudo /opt/vivaldi/update-ffmpeg
+sudo /opt/vivaldi/update-widevine
+
+# install visual studio code
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
 # enable trim
