@@ -22,7 +22,7 @@ mkdir -p ~/.config/morc_menu
 cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.config/morc_menu/
 
 # setup polybar
-cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/config/polybar/config
+cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
 
 # install software
 yay -aS --noconfirm --needed --answerdiff=None vivaldi
