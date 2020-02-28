@@ -85,6 +85,9 @@ for_window [title="TradeSkillMaster*"] floating enable
 for_window [title="TSM*"] floating enable
 for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 
+# setup xautolock
+sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
+
 # setup alsi on new shell
 echo "
 alsi -l" >> ~/.zshrc
