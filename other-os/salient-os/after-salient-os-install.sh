@@ -49,6 +49,15 @@ alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 # exec --no-startup-id flameshot
 # bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
 
+# setup xfce4-power-manager
+echo "
+#-------------------------------------------------------------------------
+#                          xfce4-power-manager                           |
+#-------------------------------------------------------------------------
+exec --no-startup-id xfce4-power-manager" >> ~/.config/i3/config
+echo "
+Run xfce-power-manager-settings to configure sleep/stanby settings"
+
 # reverse mouse wheel scroll
 echo "
 For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
