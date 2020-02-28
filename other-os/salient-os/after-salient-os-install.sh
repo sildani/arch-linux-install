@@ -37,4 +37,5 @@ alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup alsi on new shell
-echo "alsi -l" >> ~/.zshrc
+echo "
+alsi -l" >> ~/.zshrc
