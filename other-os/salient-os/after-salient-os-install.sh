@@ -28,5 +28,13 @@ yay vivaldi
 sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
 
+# add git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
 # setup alsi on new shell
 echo "alsi -l" >> ~/.zshrc
