@@ -41,13 +41,13 @@ alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup flameshot
-sudo pacman -Sy --noconfirm flameshot
-echo "
-#-------------------------------------------------------------------------
-#                               flameshot                                |
-#-------------------------------------------------------------------------
-exec --no-startup-id flameshot
-bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
+# sudo pacman -Sy --noconfirm flameshot
+# echo "
+# #-------------------------------------------------------------------------
+# #                               flameshot                                |
+# #-------------------------------------------------------------------------
+# exec --no-startup-id flameshot
+# bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
 
 # reverse mouse wheel scroll
 echo "
