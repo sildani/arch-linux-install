@@ -68,6 +68,15 @@ read -p "Copy the above to the clipboard and press any key to edit the file in v
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 echo "DONE"
 
+# custom floating window definitions
+echo "
+#-------------------------------------------------------------------------
+#                          custom window config                          |
+#-------------------------------------------------------------------------
+for_window [title="TradeSkillMaster*"] floating enable
+for_window [title="TSM*"] floating enable
+for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
+
 # setup alsi on new shell
 echo "
 alsi -l" >> ~/.zshrc
