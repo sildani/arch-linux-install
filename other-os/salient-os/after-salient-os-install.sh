@@ -58,6 +58,14 @@ exec --no-startup-id xfce4-power-manager" >> ~/.config/i3/config
 echo "
 Run xfce-power-manager-settings to configure sleep/stanby settings"
 
+# setup clipboard manager
+yay -aS --noconfirm --needed --answerdiff=None clipit
+echo "
+#-------------------------------------------------------------------------
+#                           clipboard manager                            |
+#-------------------------------------------------------------------------
+exec --no-startup-id clipit" >> ~/.config/i3/config
+
 # reverse mouse wheel scroll
 echo "
 For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
