@@ -37,6 +37,15 @@ alias gpl=\"git pull --rebase\"
 alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
+# setup flameshot
+sudo pacman -Sy --noconfirm flameshot
+echo "
+#-------------------------------------------------------------------------
+#                               flameshot                                |
+#-------------------------------------------------------------------------
+exec --no-startup-id flameshot
+bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
+
 # setup alsi on new shell
 echo "
 alsi -l" >> ~/.zshrc
