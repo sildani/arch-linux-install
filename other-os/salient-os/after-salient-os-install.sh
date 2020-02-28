@@ -18,5 +18,8 @@ bindsym \$mod+z exec --no-startup-id morc_menu" >> ~/.config/i3/config
 mkdir -p ~/.config/morc_menu
 cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.config/morc_menu/
 
+# setup polybar
+cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/config/polybar/config
+
 # setup alsi on new shell
 echo "alsi -l" >> ~/.zshrc
