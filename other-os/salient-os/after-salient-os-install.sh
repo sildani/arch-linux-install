@@ -23,6 +23,7 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/conf
 
 # install software
 yay vivaldi
+yay visual-studio-code-bin
 
 # enable trim
 sudo systemctl enable fstrim.timer
