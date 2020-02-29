@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# install vivaldi
+yay -aS --noconfirm --needed --answerdiff=None vivaldi
+sudo /opt/vivaldi/update-ffmpeg
+sudo /opt/vivaldi/update-widevine
+sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
+
+# install visual studio code
+yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -14,15 +23,6 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.
 
 # setup polybar
 cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
-
-# install vivaldi
-yay -aS --noconfirm --needed --answerdiff=None vivaldi
-sudo /opt/vivaldi/update-ffmpeg
-sudo /opt/vivaldi/update-widevine
-sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
-
-# install visual studio code
-yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
 # enable trim
 sudo systemctl enable fstrim.timer
