@@ -51,16 +51,6 @@ echo "
 #-------------------------------------------------------------------------
 exec --no-startup-id clipit" >> ~/.config/i3/config
 
-# reverse mouse wheel scroll
-echo "
-For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
-
-        Option \"NaturalScrolling\" \"True\"
-"
-read -p "Copy the above to the clipboard and press any key to edit the file in vim..."
-sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
-echo "DONE"
-
 # custom floating window definitions
 echo "
 #-------------------------------------------------------------------------
@@ -102,3 +92,13 @@ alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 # setup alsi on new zsh shell
 echo "
 alsi -l" >> ~/.zshrc
+
+# reverse mouse wheel scroll
+echo "
+For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
+
+        Option \"NaturalScrolling\" \"True\"
+"
+read -p "Copy the above to the clipboard and press any key to edit the file in vim..."
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+echo "DONE"
