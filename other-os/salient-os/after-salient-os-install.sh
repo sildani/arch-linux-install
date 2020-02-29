@@ -70,7 +70,8 @@ for_window [title="TradeSkillMaster*"] floating enable
 for_window [title="TSM*"] floating enable
 for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 
-# setup flameshot
+# setup screenshot support
+mkdir -p ~/Pictures/shots
 # sudo pacman -Sy --noconfirm flameshot
 # echo "
 # #-------------------------------------------------------------------------
