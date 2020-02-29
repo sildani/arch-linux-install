@@ -9,6 +9,19 @@ sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
 # install visual studio code
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
+# enable trim
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
+
+# setup polybar
+cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
+
+# setup xautolock
+sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
+
+# fix i3exit reference in i3 config
+sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -20,22 +33,6 @@ echo "
 bindsym \$mod+z exec --no-startup-id morc_menu" >> ~/.config/i3/config
 mkdir -p ~/.config/morc_menu
 cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.config/morc_menu/
-
-# setup polybar
-cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
-
-# enable trim
-sudo systemctl enable fstrim.timer
-sudo systemctl start fstrim.timer
-
-# setup flameshot
-# sudo pacman -Sy --noconfirm flameshot
-# echo "
-# #-------------------------------------------------------------------------
-# #                               flameshot                                |
-# #-------------------------------------------------------------------------
-# exec --no-startup-id flameshot
-# bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
 
 # setup xfce4-power-manager
 echo "
@@ -73,11 +70,14 @@ for_window [title="TradeSkillMaster*"] floating enable
 for_window [title="TSM*"] floating enable
 for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 
-# setup xautolock
-sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
-
-# fix i3exit reference in i3 config
-sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
+# setup flameshot
+# sudo pacman -Sy --noconfirm flameshot
+# echo "
+# #-------------------------------------------------------------------------
+# #                               flameshot                                |
+# #-------------------------------------------------------------------------
+# exec --no-startup-id flameshot
+# bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
 
 # change shell to zsh
 chsh -s /bin/zsh
