@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# set up zsh
-chsh -s /bin/zsh
-cp /etc/skel/.zshrc ~/.zshrc
-sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
-echo "
-powerline-daemon -q
-source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-export PATH=~/bin:\$PATH" >> ~/.zshrc
-
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -37,14 +27,6 @@ yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 # enable trim
 sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
-
-# add git aliases
-echo "
-alias gst=\"git status\"
-alias gco=\"git add ./* && git commit -m\"
-alias gpl=\"git pull --rebase\"
-alias gps=\"git push\"
-alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup flameshot
 # sudo pacman -Sy --noconfirm flameshot
@@ -97,6 +79,26 @@ sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.c
 # fix i3exit reference in i3 config
 sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 
-# setup alsi on new shell
+# change shell to zsh
+chsh -s /bin/zsh
+cp /etc/skel/.zshrc ~/.zshrc
+
+# setup powerlevel9k zsh theme
+sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
+echo "
+powerline-daemon -q
+source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+export PATH=~/bin:\$PATH" >> ~/.zshrc
+
+# add zsh git aliases
+echo "
+alias gst=\"git status\"
+alias gco=\"git add ./* && git commit -m\"
+alias gpl=\"git pull --rebase\"
+alias gps=\"git push\"
+alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
+
+# setup alsi on new zsh shell
 echo "
 alsi -l" >> ~/.zshrc
