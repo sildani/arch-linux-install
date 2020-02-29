@@ -94,8 +94,8 @@ for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 # setup xautolock
 sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
 
-# fix lock
-# sed -i 's/i3exit lock/\$HOME/bin/block/g' ~/.config/i3/config
+# fix i3exit reference in i3 config
+sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 
 # setup alsi on new shell
 echo "
