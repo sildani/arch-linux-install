@@ -28,6 +28,7 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.con
 yay -aS --noconfirm --needed --answerdiff=None vivaldi
 sudo /opt/vivaldi/update-ffmpeg
 sudo /opt/vivaldi/update-widevine
+sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
 
 # install visual studio code
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
