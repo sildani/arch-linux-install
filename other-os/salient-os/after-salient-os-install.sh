@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# setup mirrors
+echo "[++] Updating mirrorlist... "
+sudo pacman-mirrors --country United_States
+echo "[++] DONE\n\n"
+
+# update system
+echo "[++] Updating system... "
+sudo pacman -Syyu
+echo "[++] DONE\n\n"
+
 # install vivaldi
 yay -aS --noconfirm --needed --answerdiff=None vivaldi
 sudo /opt/vivaldi/update-ffmpeg
