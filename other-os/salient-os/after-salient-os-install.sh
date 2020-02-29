@@ -7,7 +7,8 @@ sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
 echo "
 powerline-daemon -q
 source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+export PATH=~/bin:\$PATH" >> ~/.zshrc
 
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
@@ -93,8 +94,8 @@ for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 # setup xautolock
 sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
 
-# setup lock
-sed -i 's/i3exit lock/\$HOME/bin/block/g' ~/.config/i3/config
+# fix lock
+# sed -i 's/i3exit lock/\$HOME/bin/block/g' ~/.config/i3/config
 
 # setup alsi on new shell
 echo "
