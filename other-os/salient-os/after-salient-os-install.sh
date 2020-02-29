@@ -73,13 +73,16 @@ for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 chsh -s /bin/zsh
 cp /etc/skel/.zshrc ~/.zshrc
 
+# put $HOME/bin on shell path
+echo "
+export PATH=~/bin:\$PATH" >> ~/.zshrc
+
 # setup powerlevel9k zsh theme
 sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
 echo "
 powerline-daemon -q
 source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-export PATH=~/bin:\$PATH" >> ~/.zshrc
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
 
 # add zsh git aliases
 echo "
