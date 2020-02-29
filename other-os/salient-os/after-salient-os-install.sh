@@ -64,7 +64,7 @@ for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 # sudo pacman -Sy --noconfirm flameshot
 # echo "
 # #-------------------------------------------------------------------------
-# #                               flameshot                                |
+# #                      flameshot (screenshot util)                       |
 # #-------------------------------------------------------------------------
 # exec --no-startup-id flameshot
 # bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
