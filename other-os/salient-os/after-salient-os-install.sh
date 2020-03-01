@@ -41,6 +41,9 @@ sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id start-pul
 # fix screen resolution (specific to AOC 27" display)
 sed -i 's/#exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --rate 60/exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91/g' ~/.config/i3/config
 
+# fix dpms settings (set display to go to sleep after 20 minutes)
+sed -i 's/#exec --no-startup-id xset dpms 0 0 1200/exec --no-startup-id xset dpms 0 0 1200/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -52,13 +55,6 @@ echo "
 bindsym \$mod+z exec --no-startup-id morc_menu" >> ~/.config/i3/config
 mkdir -p ~/.config/morc_menu
 cp ~/code/arch-linux-install/other-os/salient-os/resources/morc_menu_v1.conf ~/.config/morc_menu/
-
-# setup xfce4-power-manager
-echo "
-#-------------------------------------------------------------------------
-#                          xfce4-power-manager                           |
-#-------------------------------------------------------------------------
-exec --no-startup-id xfce4-power-manager" >> ~/.config/i3/config
 
 # setup clipboard manager
 yay -aS --noconfirm --needed --answerdiff=None clipit
