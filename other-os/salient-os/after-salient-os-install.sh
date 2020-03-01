@@ -29,6 +29,9 @@ cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.con
 # setup xautolock
 sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
 
+# fix keyboard rate entry
+sed -i 's/exec xset r rate 300 30/exec --no-startup-id xset r rate 300 30/g' ~/.config/i3/config
+
 # fix i3exit reference in i3 config
 sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 
