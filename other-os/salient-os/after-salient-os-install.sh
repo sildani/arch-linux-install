@@ -68,6 +68,14 @@ for_window [title="TradeSkillMaster*"] floating enable
 for_window [title="TSM*"] floating enable
 for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
 
+# set screen resolution (specific to AOC 27" display)
+echo "
+#-------------------------------------------------------------------------
+#                          set screen resolution                         |
+#-------------------------------------------------------------------------
+exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91
+for_window [title="TradeSkillMaster*"] floating enable" >> ~/.config/i3/config
+
 # setup screenshot support
 mkdir -p ~/Pictures/shots
 # sudo pacman -Sy --noconfirm flameshot
