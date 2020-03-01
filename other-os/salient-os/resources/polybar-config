@@ -658,7 +658,7 @@ interval = 1
 type = custom/script
 label-foreground = ${colors.focus}
 exec = echo ""
-click-left = ~/bin/i3exit lock &
+click-left = ~/bin/block
 
 ;-------------------------------------------------------------------------
 ; settings
