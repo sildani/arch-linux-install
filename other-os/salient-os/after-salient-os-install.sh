@@ -7,7 +7,7 @@ echo "[++] DONE\n\n"
 
 # update system
 echo "[++] Updating system... "
-sudo pacman -Syyu
+sudo pacman -Syyu --noconfirm
 echo "[++] DONE\n\n"
 
 # install vivaldi
