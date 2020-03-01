@@ -50,8 +50,6 @@ echo "
 #                          xfce4-power-manager                           |
 #-------------------------------------------------------------------------
 exec --no-startup-id xfce4-power-manager" >> ~/.config/i3/config
-echo "
-Run xfce-power-manager-settings to configure sleep/stanby settings"
 
 # setup clipboard manager
 yay -aS --noconfirm --needed --answerdiff=None clipit
