@@ -82,21 +82,33 @@ mkdir -p ~/Pictures/shots
 
 # change shell to zsh
 chsh -s /bin/zsh
-cp /etc/skel/.zshrc ~/.zshrc
+
+# setup oh-my-zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # put $HOME/bin on shell path
 echo "
+# put ~/bin on PATH
 export PATH=~/bin:\$PATH" >> ~/.zshrc
 
+# setup powerline support
+echo "
+# powerline plugin
+powerline-daemon -q
+source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
+
 # setup powerlevel9k zsh theme
+sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
 sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
 echo "
-powerline-daemon -q
-source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+# powerlevel9k theme
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()" >> ~/.zshrc
 
 # add zsh git aliases
 echo "
+# git aliases
 alias gst=\"git status\"
 alias gco=\"git add ./* && git commit -m\"
 alias gpl=\"git pull --rebase\"
@@ -105,6 +117,7 @@ alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # setup alsi on new zsh shell
 echo "
+# print sys info on new term
 alsi -l" >> ~/.zshrc
 
 # reverse mouse wheel scroll
