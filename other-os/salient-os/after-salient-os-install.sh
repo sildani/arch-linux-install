@@ -38,6 +38,9 @@ sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 # fix pulse audio entry
 # sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id pulseaudio --daemonize/g' ~/.config/i3/config
 
+# fix screen resolution (specific to AOC 27" display)
+sed -i 's/#exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --rate 60/exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -73,14 +76,6 @@ echo "
 for_window [title="TradeSkillMaster*"] floating enable
 for_window [title="TSM*"] floating enable
 for_window [title="run_in_term.sh"] floating enable"  >> ~/.config/i3/config
-
-# set screen resolution (specific to AOC 27" display)
-echo "
-#-------------------------------------------------------------------------
-#                          set screen resolution                         |
-#-------------------------------------------------------------------------
-exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91
-for_window [title="TradeSkillMaster*"] floating enable" >> ~/.config/i3/config
 
 # setup screenshot support
 mkdir -p ~/Pictures/shots
