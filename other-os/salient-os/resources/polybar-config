@@ -65,7 +65,7 @@ padding-right = 2
 
 modules-left = i3 mpd
 ;modules-center = date time
-modules-right = checkupdates info-trash fs mem cpu cputemp gputemp myvolume wired2 date time screen-lock powermenu
+modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 myvolume date time screen-lock powermenu
 
 tray-position = right
 tray-padding = 2
@@ -502,6 +502,24 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = echo $(ip route | grep '^default' | awk '{print $5}')
 tail = true
+
+;-------------------------------------------------------------------------
+; wired network - yet another alternate method
+;-------------------------------------------------------------------------
+[module/wired3]
+type = internal/network
+interface = enp9s0
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.focus}
+format-connected = <label-connected>
+label-connected =  %upspeed%  %downspeed%
+label-connected-foreground = ${colors.foreground}
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected = <label-disconnected>
+label-disconnected = down
+label-disconnected-foreground = ${colors.alert}
+
 
 ;-------------------------------------------------------------------------
 ; date and time - 3600 secs - update once an hour over 24 hours
