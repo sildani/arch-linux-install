@@ -36,7 +36,7 @@ sed -i 's/exec xset r rate 300 30/exec --no-startup-id xset r rate 300 30/g' ~/.
 sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 
 # fix pulse audio entry
-# sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id pulseaudio --daemonize/g' ~/.config/i3/config
+sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id start-pulseaudio-x11/g' ~/.config/i3/config
 
 # fix screen resolution (specific to AOC 27" display)
 sed -i 's/#exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --rate 60/exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91/g' ~/.config/i3/config
