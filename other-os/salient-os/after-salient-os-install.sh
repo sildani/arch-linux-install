@@ -132,3 +132,15 @@ For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d
 read -p "Copy the above to the clipboard and press any key to edit the file in vim..."
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 echo "DONE"
+
+# parting thoughts
+echo "
+Post-install script for Salient OS is finished!
+
+Consider reviewing the output, scanning for any errors that might have occurred.
+
+I also suggest to reboot now, although logging out and back in might be enough. (Run \`~/bin/i3exit logout\` to log out.)
+
+After rebooting or logging out and back in, run \`betterlockscreen -u /usr/share/background\` to update image cache for new resolution.
+
+Enjoy!"
