@@ -510,7 +510,7 @@ tail = true
 [module/date]
 type = internal/date
 interval = 3600
-date = "%d-%m-%Y"
+date = "%m-%d-%Y"
 date-alt = "%A, %B %d, %Y"
 ;format-prefix = " "
 format-prefix-foreground = ${colors.focus}
