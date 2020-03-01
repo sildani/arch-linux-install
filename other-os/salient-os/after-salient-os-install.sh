@@ -35,6 +35,9 @@ sed -i 's/exec xset r rate 300 30/exec --no-startup-id xset r rate 300 30/g' ~/.
 # fix i3exit reference in i3 config
 sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 
+# fix pulse audio entry
+# sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id pulseaudio --daemonize/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
