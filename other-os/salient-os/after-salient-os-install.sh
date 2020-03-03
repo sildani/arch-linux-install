@@ -143,4 +143,4 @@ echo "DONE"
 
 # update resolution and wallpapers
 xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91
-betterlockscreen -u /usr/share/background
+betterlockscreen -u /usr/share/backgrounds
