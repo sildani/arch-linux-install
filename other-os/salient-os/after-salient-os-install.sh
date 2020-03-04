@@ -45,6 +45,9 @@ sed -i 's/#exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --rate 60
 # fix dpms settings (set display to go to sleep after 20 minutes)
 sed -i 's/#exec --no-startup-id xset dpms 0 0 1200/exec --no-startup-id xset dpms 0 0 1200/g' ~/.config/i3/config
 
+# set max window size for floating windows
+sed -i 's/floating_maximum_size -1 x -1/floating_maximum_size 1920 x 1080/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
