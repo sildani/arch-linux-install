@@ -81,6 +81,14 @@ echo "
 #-------------------------------------------------------------------------
 gaps top 30"  >> ~/.config/i3/config
 
+# set the volume levels of the master and desktop devices
+echo "
+#-------------------------------------------------------------------------
+#                           alsa device setup                            |
+#-------------------------------------------------------------------------
+exec_always --no-startup-id amixer set Master 50%
+exec_always --no-startup-id amixer -c 2 set PCM 80%"  >> ~/.config/i3/config
+
 # setup screenshot support
 mkdir -p ~/Pictures/shots
 # sudo pacman -Sy --noconfirm flameshot
