@@ -48,6 +48,9 @@ sed -i 's/#exec --no-startup-id xset dpms 0 0 1200/exec --no-startup-id xset dpm
 # set max window size for floating windows
 sed -i 's/floating_maximum_size -1 x -1/floating_maximum_size 1920 x 1080/g' ~/.config/i3/config
 
+# change resize binding
+sed -i 's/bindsym Mod1+r/bindsym \$mod+r/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
@@ -91,6 +94,13 @@ echo "
 #-------------------------------------------------------------------------
 exec_always --no-startup-id amixer set Master 50%
 exec_always --no-startup-id amixer -c 2 set PCM 80%"  >> ~/.config/i3/config
+
+# update betterlockscreen image cache
+echo "
+#-------------------------------------------------------------------------
+#                      betterlockscreen image cache                      |
+#-------------------------------------------------------------------------
+exec --no-startup-id betterlockscreen -u /usr/share/backgrounds"  >> ~/.config/i3/config
 
 # setup screenshot support
 mkdir -p ~/Pictures/shots
