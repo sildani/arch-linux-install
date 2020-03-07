@@ -65,7 +65,7 @@ padding-right = 2
 
 modules-left = i3 mpd
 ;modules-center = date time
-modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 myvolume date time screen-lock powermenu
+modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time screen-lock powermenu
 
 tray-position = right
 tray-padding = 2
@@ -297,6 +297,16 @@ ramp-volume-2 = 
 ; Only applies if <ramp-volume> is used
 ramp-headphones-0 = 
 ramp-headphones-1 = 
+
+[module/pavolume]
+type = internal/pulseaudio
+interval = 1
+use-ui-max = false
+label-muted =   muted
+label-muted-foreground = ${colors.alert}
+format-volume = <label-volume>
+label-volume = %{A1:pavucontrol:} %{A} %percentage%%
+label-volume-foreground = ${colors.foreground}
 
 ;-------------------------------------------------------------------------
 ; cpu
