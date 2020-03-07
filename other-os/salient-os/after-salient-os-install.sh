@@ -112,6 +112,13 @@ mkdir -p ~/Pictures/shots
 # exec --no-startup-id flameshot
 # bindsym \$mod+Ctrl+Shift+s exec flameshot gui" >> ~/.config/i3/config
 
+# send notification to start up xfce4-notifyd
+echo "
+#-------------------------------------------------------------------------
+#                send notification to start xfce4-notifyd                |
+#-------------------------------------------------------------------------
+exec --no-startup-id notify-send \"i3wm\" \"i3wm is now loaded\""  >> ~/.config/i3/config
+
 # change shell to zsh
 chsh -s /bin/zsh
 
