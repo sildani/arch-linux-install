@@ -165,3 +165,12 @@ echo "DONE"
 # update resolution and wallpapers
 xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91
 betterlockscreen -u /usr/share/backgrounds
+
+# ssh config
+sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
+sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+sudo systemctl enable sshd
+sudo systemctl start sshd
