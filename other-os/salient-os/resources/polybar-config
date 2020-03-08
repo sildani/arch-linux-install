@@ -68,9 +68,9 @@ modules-left = i3 mpd
 modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time screen-lock powermenu
 
 tray-position = right
-tray-padding = 2
-#tray-transparent = false
-tray-background = ${colors.background-alt}
+;tray-padding = 2
+;tray-transparent = false
+;tray-background = ${colors.background-alt}
 
 ;-------------------------------------------------------------------------
 ; xwindow
