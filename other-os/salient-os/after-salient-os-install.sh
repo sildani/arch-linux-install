@@ -20,7 +20,7 @@ sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
 # install emoji font
-sudo pacman -S noto-fonts-emoji
+sudo pacman -S --noconfirm noto-fonts-emoji
 
 # enable trim
 sudo systemctl enable fstrim.timer
