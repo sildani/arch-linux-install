@@ -19,6 +19,9 @@ sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
 # install visual studio code
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
+# install emoji font
+sudo pacman -S noto-fonts-emoji
+
 # enable trim
 sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
