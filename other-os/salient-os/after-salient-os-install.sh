@@ -21,6 +21,7 @@ yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
 # install emoji font
 sudo pacman -S --noconfirm noto-fonts-emoji
+sudo cp ~/code/arch-linux-install/other-os/salient-os/resources/fonts-local.conf /etc/fonts/local.conf
 
 # enable trim
 sudo systemctl enable fstrim.timer
