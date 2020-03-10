@@ -96,8 +96,7 @@ echo "
 #-------------------------------------------------------------------------
 #                           alsa device setup                            |
 #-------------------------------------------------------------------------
-exec_always --no-startup-id amixer set Master 50%
-exec_always --no-startup-id amixer -c 2 set PCM 80%"  >> ~/.config/i3/config
+exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 2 set PCM 80%"  >> ~/.config/i3/config
 
 # update betterlockscreen image cache
 echo "
