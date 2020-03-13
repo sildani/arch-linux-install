@@ -55,6 +55,9 @@ sed -i 's/floating_maximum_size -1 x -1/floating_maximum_size 1920 x 1080/g' ~/.
 # change resize binding
 sed -i 's/bindsym Mod1+r/bindsym \$mod+r/g' ~/.config/i3/config
 
+# remove workspace assignments that come built-in
+sed 's/assign/#assign/g' ~/.config/i3/config
+
 # set up morc_menu
 git clone https://github.com/boruch-baum/morc_menu ~/code/morc_menu
 cd ~/code/morc_menu
