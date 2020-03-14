@@ -19,9 +19,15 @@ sed -i 's/chromium/vivaldi-stable/g' ~/.config/i3/config
 # install visual studio code
 yay -aS --noconfirm --needed --answerdiff=None visual-studio-code-bin
 
-# install blueman (bluetooth gui), setup bluetooth, and update grub
+# install blueman (bluetooth gui)
 yay -S --noconfirm --needed blueman
+
+# ensure bluetooth is enabled at boot
 sudo sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
+
+# configure to support xbox one wireless controller
+yay -aS --noconfirm --needed --answerdiff=None linux-headers
+yay -aS --noconfirm --needed --answerdiff=None xpadneo-dkms-git
 sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0"/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0 bluetooth.disable_ertm=1"/g' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
