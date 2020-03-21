@@ -155,12 +155,12 @@ echo "
 powerline-daemon -q
 source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
 
-# setup powerlevel9k zsh theme
+# setup powerlevel10k zsh theme
 sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
-sudo pacman -Sy --noconfirm zsh-theme-powerlevel9k
+sudo pacman -Sy --noconfirm zsh-theme-powerlevel10k
 echo "
-# powerlevel9k theme
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+# powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()" >> ~/.zshrc
 
 # add zsh git aliases
