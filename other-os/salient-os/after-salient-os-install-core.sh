@@ -39,9 +39,6 @@ sudo cp ~/code/arch-linux-install/other-os/salient-os/resources/fonts-local.conf
 sudo systemctl enable fstrim.timer
 sudo systemctl start fstrim.timer
 
-# setup polybar
-cp ~/code/arch-linux-install/other-os/salient-os/resources/polybar-config ~/.config/polybar/config
-
 # setup xautolock
 sed -i 's/#exec --no-startup-id xautolock/exec --no-startup-id xautolock/g' ~/.config/i3/config
 
@@ -54,15 +51,6 @@ sed -i 's/i3exit/\$HOME\/bin\/i3exit/g' ~/.config/i3/config
 # fix pulse audio entries
 sed -i 's/exec --no-startup-id pulseaudio --start/exec --no-startup-id start-pulseaudio-x11/g' ~/.config/i3/config
 sudo sed -i 's/^volume = merge/volume = off/g' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
-
-# fix screen resolution (specific to AOC 27" display)
-sed -i 's/#exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --rate 60/exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91/g' ~/.config/i3/config
-
-# fix dpms settings (set display to go to sleep after 20 minutes)
-sed -i 's/#exec --no-startup-id xset dpms 0 0 1200/exec --no-startup-id xset dpms 0 0 1200/g' ~/.config/i3/config
-
-# set max window size for floating windows
-sed -i 's/floating_maximum_size -1 x -1/floating_maximum_size 1920 x 1080/g' ~/.config/i3/config
 
 # change resize binding
 sed -i 's/bindsym Mod1+r/bindsym \$mod+r/g' ~/.config/i3/config
@@ -176,20 +164,6 @@ alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 echo "
 # print sys info on new term
 alsi -l" >> ~/.zshrc
-
-# reverse mouse wheel scroll
-echo -n "
-For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf, for the pointer InputClass section:
-
-        Option \"NaturalScrolling\" \"True\"
-"
-read -p "Copy the above to the clipboard and press any key to edit the file in vim... "
-sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
-echo "DONE"
-
-# update resolution and wallpapers
-xrandr --output DisplayPort-1 --mode 2560x1440 --rate 143.91
-betterlockscreen -u /usr/share/backgrounds
 
 # ssh config
 sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
