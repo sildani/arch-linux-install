@@ -26,3 +26,7 @@ echo "
 #-------------------------------------------------------------------------
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10"  >> ~/.config/i3/config
+
+# set up lock on suspend
+sudo cp ~/code/arch-linux-install/other-os/salient-os/resources/lock.service /etc/systemd/system/lock.service
+sudo systemctl enable lock.service
