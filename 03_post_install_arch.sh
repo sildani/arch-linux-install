@@ -36,6 +36,6 @@ sed -i "s/root ALL=(ALL) ALL/root ALL=(ALL) ALL\n$ali_username ALL=(ALL) ALL/g" 
 su -c "/04_post_install_arch.sh" -s /bin/sh $ali_username
 
 # clean up
-cp /02_install_arch.sh /tmp
-cp /03_post_install_arch.sh /tmp
-cp /04_post_install_arch.sh /tmp
+rm /02_install_arch.sh
+rm /03_post_install_arch.sh
+rm /04_post_install_arch.sh
