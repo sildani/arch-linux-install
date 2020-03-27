@@ -44,11 +44,11 @@ bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
 setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # enable numlock on boot
-yay -Sy --confirm systemd-numlockontty
+yay -Sy --noconfirm systemd-numlockontty
 sudo systemctl enable numLockOnTty
 
 # install xorg
-yay -Sy --confirm xorg-server
+yay -Sy --noconfirm xorg-server
 
 # install display driver
 echo -n "

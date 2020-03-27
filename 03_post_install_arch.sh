@@ -11,7 +11,7 @@ hwclock --systohc
 ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 
 # create user account
-pacman -Sy --confirm zsh
+pacman -Sy --noconfirm zsh
 echo "
 Creating user and setting password"
 echo -n "
@@ -23,7 +23,7 @@ until passwd $ali_username; do
 done
 
 # setup oh-my-zsh
-pacman -Sy --confirm git
+pacman -Sy --noconfirm git
 git clone git://github.com/robbyrussell/oh-my-zsh.git /home/$ali_username/.oh-my-zsh
 cp /home/$ali_username/.oh-my-zsh/templates/zshrc.zsh-template /home/$ali_username/.zshrc
 chown -R $ali_username:$ali_username /home/$ali_username/.oh-my-zsh
