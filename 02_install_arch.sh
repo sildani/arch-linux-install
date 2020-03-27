@@ -34,5 +34,5 @@ done
 
 # arch-chroot fin
 echo "
-Installation complete. Exit arch-chroot, reboot, log in as $ali_username, and then run sh 03_post_install_arch.sh to install a i3 and some helpful GUI tools.
+Installation complete. Exit arch-chroot, reboot, log in as root, and then run sh /03_post_install_arch.sh to install a i3 and some helpful GUI tools.
 "

@@ -50,7 +50,7 @@ case "$ali_microcode_required" in
 esac
 
 # install essential packages
-pacstrap /mnt base base-devel linux linux-firmware vim sudo $ali_microcode_pkg
+pacstrap /mnt base base-devel linux linux-firmware vim sudo networkmanager $ali_microcode_pkg
 
 # fstab (UUID)
 genfstab -U /mnt >> /mnt/etc/fstab

@@ -1,14 +1,14 @@
 #!/bin/bash
 
+# setup the network
+systemctl start NetworkManager.service
+systemctl enable NetworkManager.service
+sleep 3
+
 # set the clock and timezone
 timedatectl set-ntp true
 hwclock --systohc
 ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
-
-# setup the network
-systemctl start NetworkManager.service
-systemctl enable NetworkManager.service
-sleep 1
 
 # create user account
 pacman -Sy --confirm zsh
