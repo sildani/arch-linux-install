@@ -32,7 +32,7 @@ until passwd; do
   sleep 1
 done
 
-# arch-chroot fin
+# cue next step
 echo "
 Installation complete. Exit arch-chroot, reboot, log in as root, and then run sh /03_post_install_arch.sh to install a i3 and some helpful GUI tools.
 "
