@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# get the other install files
+wget https://raw.githubusercontent.com/sildani/arch-linux-install/iss1/02_install_arch.sh
+wget https://raw.githubusercontent.com/sildani/arch-linux-install/iss1/03_install_arch.sh
+
 # update system clock
 timedatectl set-ntp true
 
