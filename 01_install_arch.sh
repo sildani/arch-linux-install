@@ -59,7 +59,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cp ./02_install_arch.sh /mnt
 cp ./03_post_install_arch.sh /mnt
 read -p "
-Run 'arch-chroot /mnt' and then run 'sh 02_install_arch.sh' to continue installation.
+Run 'arch-chroot /mnt' and then run 'sh /02_install_arch.sh' to continue installation.
 
 Press enter to continue...
 "

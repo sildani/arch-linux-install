@@ -123,3 +123,6 @@ yay -Sy --noconfirm --needed wine wine-mono wine-gecko giflib lib32-giflib libpn
 
 # install printer support
 yay -Sy --noconfirm cups
+
+# install checkupdates
+yay -Sy --noconfirm checkupdates

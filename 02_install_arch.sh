@@ -66,7 +66,7 @@ sed -i "s/root ALL=(ALL) ALL/root ALL=(ALL) ALL\n$ali_username ALL=(ALL) ALL/g" 
 
 # cue next step
 read -p "
-Log in as $ali_username and run 'sh /03_post_install_arch.sh' to complete the installation.
+Run 'sudo su - $ali_username' and then run 'sh /03_post_install_arch.sh' to continue installation.
 
 Press enter to continue...
 "
