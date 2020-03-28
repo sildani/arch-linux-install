@@ -34,9 +34,19 @@ sudo reflector --country "United States" --age 12 --protocol https --sort rate -
 
 # install base packages
 yay -Sy --noconfirm \
-gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji ttf-unifont siji-git \
 openssh dosfstools e2fsprogs ntfs-3g \
 networkmanager man-db man-pages texinfo openssh
+
+# install fonts
+yay -Sy --noconfirm \
+gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji siji-git
+
+# install ttf fonts
+yay -Sy --noconfirm --skippgpcheck \
+ttf-ms-fonts ttf-ms-win10 ttf-unifont ttf-hack ttf-carlito
+ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto
+ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts
+ttf-tahoma ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 
 # set console font
 touch /etc/vconsole.conf
