@@ -32,7 +32,41 @@ until passwd; do
   sleep 1
 done
 
-# cue next step
+# setup the network
+systemctl start NetworkManager.service
+systemctl enable NetworkManager.service
+sleep 3
+
+# set the clock and timezone
+timedatectl set-ntp true
+hwclock --systohc
+ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
+
+# create user account
+pacman -Sy --noconfirm zsh
 echo "
-Installation complete. Exit arch-chroot, reboot, log in as root, and then run sh /03_post_install_arch.sh to install a i3 and some helpful GUI tools.
+Creating user and setting password"
+echo -n "
+Base user username: "
+read ali_username
+useradd -m -s /bin/zsh $ali_username
+until passwd $ali_username; do
+  sleep 1
+done
+
+# setup oh-my-zsh
+pacman -Sy --noconfirm git
+git clone git://github.com/robbyrussell/oh-my-zsh.git /home/$ali_username/.oh-my-zsh
+cp /home/$ali_username/.oh-my-zsh/templates/zshrc.zsh-template /home/$ali_username/.zshrc
+chown -R $ali_username:$ali_username /home/$ali_username/.oh-my-zsh
+chown $ali_username:$ali_username /home/$ali_username/.zshrc
+
+# add the user to sudoers file
+sed -i "s/root ALL=(ALL) ALL/root ALL=(ALL) ALL\n$ali_username ALL=(ALL) ALL/g" /etc/sudoers
+
+# cue next step
+read -p "
+Log in as $ali_username and run 'sh /03_post_install_arch.sh' to complete the installation.
+
+Press enter to continue...
 "

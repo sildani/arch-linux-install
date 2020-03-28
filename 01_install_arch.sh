@@ -55,10 +55,9 @@ pacstrap /mnt base base-devel linux linux-firmware vim sudo networkmanager $ali_
 # fstab (UUID)
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# stage the second file and prompt user to chroot
+# stage the next files and prompt user to chroot
 cp ./02_install_arch.sh /mnt
 cp ./03_post_install_arch.sh /mnt
-cp ./04_post_install_arch.sh /mnt
 read -p "
 Run 'arch-chroot /mnt' and then run 'sh 02_install_arch.sh' to continue installation.
 
