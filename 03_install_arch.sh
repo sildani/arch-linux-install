@@ -128,10 +128,12 @@ yay -Sy --noconfirm cups
 yay -Sy --noconfirm pacman-contrib
 
 # clean up files
-rm /02_install_arch.sh /03_install_arch.sh
+sudo rm /02_install_arch.sh /03_install_arch.sh
 
 # cue next step
 echo "
-Installation complete. Reboot and enjoy.
+Installation complete. Exit this shell, then exit chroot, then reboot.
+
+Enjoy! :)
 
 "
