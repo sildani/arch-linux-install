@@ -81,7 +81,7 @@ sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirr
 yay -Sy --noconfirm $ali_display_driver_pkgs
 
 # install i3 window manager + supporting tools
-yay -Sy --noconfirm i3-gaps i3lock dmenu polybar network-manager-applet
+yay -Sy --noconfirm i3-gaps i3lock i3status dmenu polybar network-manager-applet
 
 # install lightdm display manager
 yay -Sy --noconfirm lightdm lightdm-gtk-greeter
@@ -92,7 +92,7 @@ yay -Sy --noconfirm xdg-user-dirs
 xdg-user-dirs-update
 
 # archlinux-wallpaper
-# htop nitrogen pasystray arc-gtk-theme breeze lxappearance
+# nitrogen pasystray arc-gtk-theme breeze lxappearance
 # lxrandr xorg-xev xorg-xinput xbindkeys dunst xf86-input-evdev
 
 # install sound support
@@ -107,6 +107,9 @@ yay -Sy --noconfirm dunst
 
 # install terminal
 yay -Sy --noconfirm kitty
+
+# install htop
+yay -Sy --noconfirm htop
 
 # install file browser
 yay -Sy --noconfirm thunar
