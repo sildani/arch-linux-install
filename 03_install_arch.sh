@@ -127,9 +127,11 @@ yay -Sy --noconfirm cups
 # install pacman contrib (contains utlities like checkupdates)
 yay -Sy --noconfirm pacman-contrib
 
-# cue next step
-read -p "
-Run 'sudo su - $ali_username' and then run 'sh /03_post_install_arch.sh' to continue installation.
+# clean up files
+rm /02_install_arch.sh /03_install_arch.sh
 
-Press enter to continue...
+# cue next step
+echo "
+Installation complete. Reboot and enjoy.
+
 "
