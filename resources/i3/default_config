@@ -183,6 +183,7 @@ bindsym $mod+r mode "resize"
 # gaps and borders
 gaps inner 10
 gaps outer 0
+gaps top 30
 smart_borders on
 new_window pixel 1
 new_float normal
@@ -190,4 +191,5 @@ hide_edge_borders none
 workspace_auto_back_and_forth yes
 
 # polybar
-
+exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
+exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
