@@ -34,7 +34,7 @@ sudo reflector --country "United States" --age 12 --protocol https --sort rate -
 
 # install base packages
 yay -Sy --noconfirm \
-gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji bdf-unifont siji \
+gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji ttf-unifont siji-git \
 openssh dosfstools e2fsprogs ntfs-3g \
 networkmanager man-db man-pages texinfo openssh
 
