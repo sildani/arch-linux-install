@@ -91,10 +91,6 @@ sudo systemctl enable lightdm.service
 yay -Sy --noconfirm xdg-user-dirs
 xdg-user-dirs-update
 
-# archlinux-wallpaper
-# nitrogen pasystray arc-gtk-theme breeze lxappearance
-# lxrandr xorg-xev xorg-xinput xbindkeys dunst xf86-input-evdev
-
 # install sound support
 yay -Sy --noconfirm alsa-utils pulseaudio pulseaudio-alsa
 
@@ -129,6 +125,10 @@ yay -Sy --noconfirm cups
 
 # install pacman contrib (contains utlities like checkupdates)
 yay -Sy --noconfirm pacman-contrib
+
+# archlinux-wallpaper nitrogen pasystray dunst
+# lxappearance lxrandr arc-gtk-theme breeze
+# xorg-xev xorg-xinput xbindkeys
 
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh
