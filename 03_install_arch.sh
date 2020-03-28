@@ -124,5 +124,12 @@ yay -Sy --noconfirm --needed wine wine-mono wine-gecko giflib lib32-giflib libpn
 # install printer support
 yay -Sy --noconfirm cups
 
-# install checkupdates
-yay -Sy --noconfirm checkupdates
+# install pacman contrib (contains utlities like checkupdates)
+yay -Sy --noconfirm pacman-contrib
+
+# cue next step
+read -p "
+Run 'sudo su - $ali_username' and then run 'sh /03_post_install_arch.sh' to continue installation.
+
+Press enter to continue...
+"
