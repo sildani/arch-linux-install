@@ -64,9 +64,12 @@ chown $ali_username:$ali_username /home/$ali_username/.zshrc
 # add the user to sudoers file
 sed -i "s/root ALL=(ALL) ALL/root ALL=(ALL) ALL\n$ali_username ALL=(ALL) ALL/g" /etc/sudoers
 
+# run the rest of the commands as the base user
+su -c "sh /03_install_arch.sh" - daniel
+
 # cue next step
 read -p "
-Run 'sudo su - $ali_username' and then run 'sh /03_post_install_arch.sh' to continue installation.
+Installation complete. Reboot and enjoy.
 
 Press enter to continue...
 "
