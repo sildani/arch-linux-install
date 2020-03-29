@@ -42,11 +42,11 @@ yay -Sy --noconfirm \
 gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji siji-git
 
 # install ttf fonts
-yay -Sy --noconfirm --mflags "--skipchecksums --skippgpcheck" \
-ttf-ms-fonts ttf-ms-win10 ttf-unifont ttf-hack ttf-carlito \
+yay -Sy --noconfirm --nopgpfetch --mflags "--skipchecksums --skippgpcheck" \
+ttf-ms-fonts ttf-unifont ttf-hack ttf-carlito \
 ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto \
 ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts \
-ttf-tahoma ttf-monaco ttf-dejavu ttf-dejavu-sans-code
+ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 
 # set console font
 touch /etc/vconsole.conf
