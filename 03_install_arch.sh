@@ -42,7 +42,7 @@ yay -Sy --noconfirm \
 gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji siji-git
 
 # install ttf fonts
-yay -Sy --noconfirm --skippgpcheck \
+yay -Sy --noconfirm --mflags "--skipchecksums --skippgpcheck" \
 ttf-ms-fonts ttf-ms-win10 ttf-unifont ttf-hack ttf-carlito \
 ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto \
 ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts \
