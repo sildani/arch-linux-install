@@ -43,9 +43,9 @@ gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji siji-git
 
 # install ttf fonts
 yay -Sy --noconfirm --skippgpcheck \
-ttf-ms-fonts ttf-ms-win10 ttf-unifont ttf-hack ttf-carlito
-ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto
-ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts
+ttf-ms-fonts ttf-ms-win10 ttf-unifont ttf-hack ttf-carlito \
+ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto \
+ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts \
 ttf-tahoma ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 
 # set console font
@@ -58,7 +58,7 @@ yay -Sy --noconfirm systemd-numlockontty
 sudo systemctl enable numLockOnTty
 
 # install xorg
-yay -Sy --noconfirm xorg-server
+yay -Sy --noconfirm xorg-server xorg-xrandr
 
 # install display driver
 echo -n "
