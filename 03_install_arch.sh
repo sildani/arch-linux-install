@@ -165,8 +165,8 @@ case "$ali_display_driver_required" in
   ali_display_driver_pkgs=""
   ;;
 esac
-sed -i 's/#[multilib]/[multilib]/g' /etc/pacman.conf
-sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
+sudo sed -i 's/#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
+sudo sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
 yay -Sy --noconfirm $ali_display_driver_pkgs
 
 # install i3 window manager + supporting tools
@@ -224,6 +224,7 @@ archlinux-wallpaper elementary-wallpapers \
 deepin-wallpapers deepin-community-wallpapers
 
 # install screen locker
+yay -R --noconfirm i3lock
 yay -Sy --noconfirm betterlockscreen
 
 # install screen shot taker
