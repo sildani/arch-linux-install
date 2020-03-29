@@ -136,9 +136,31 @@ yay -Sy --noconfirm cups
 # install pacman contrib (contains utlities like checkupdates)
 yay -Sy --noconfirm pacman-contrib
 
-# archlinux-wallpaper nitrogen pasystray dunst
-# lxappearance lxrandr arc-gtk-theme breeze
-# xorg-xev xorg-xinput xbindkeys
+# install clipit
+yay -Sy --noconfirm clipit
+
+# install desktop wallpaper support
+yay -Sy --noconfirm feh \
+archlinux-wallpaper elementary-wallpapers \
+deepin-wallpapers deepin-community-wallpapers
+
+# install screen locker
+yay -Sy --noconfirm betterlockscreen
+
+# install screen shot taker
+yay -Sy --noconfirm flameshot
+
+# install ui themer
+yay -Sy --noconfirm lxappearance-gtk3
+
+# install starter ui themes
+yay -Sy --noconfirm \
+breeze-gtk breeze-icons
+arc-gtk-theme arc-icon-theme
+deepin-gtk-theme deepin-icon-theme
+
+# pasystray dunst
+# arc-gtk-theme breeze
 
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh

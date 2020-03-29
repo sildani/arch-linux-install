@@ -193,3 +193,43 @@ workspace_auto_back_and_forth yes
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
 exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
+
+# clipboard manager
+exec --no-startup-id clipit
+
+# floating window config
+for_window [title=TradeSkillMaster*] floating enable
+for_window [title=TSM*] floating enable
+for_window [title=run_in_term.sh] floating enable
+
+# audio setup
+exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 2 set PCM 80%
+
+# betterlockscreen setup
+exec --no-startup-id betterlockscreen -u /usr/share/backgrounds
+
+# screenshots
+exec --no-startup-id flameshot
+bindsym --release Print exec flameshot gui
+
+# wallpaper
+#feh --no-fehbg --bg-fill '/usr/share/backgrounds/01.jpg'
+
+# keybind for web browser
+bindsym $mod+backslash exec vivaldi-stable
+
+# workspace back and forth
+bindsym $mod+Tab workspace back_and_forth
+
+# system menu
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $HOME/.config/i3/i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/.config/i3/i3exit logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/.config/i3/i3exit suspend, mode "default"
+    bindsym r exec --no-startup-id $HOME/.config/i3/i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/.config/i3/i3exit shutdown, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Delete mode "$mode_system"
