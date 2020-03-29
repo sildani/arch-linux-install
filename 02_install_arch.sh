@@ -45,9 +45,9 @@ ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 # create user account
 pacman -Sy --noconfirm zsh
 echo "
-Creating user and setting password"
+Creating non-root user and setting password"
 echo -n "
-Base user username: "
+Username: "
 read ali_username
 useradd -m -s /bin/zsh $ali_username
 until passwd $ali_username; do
