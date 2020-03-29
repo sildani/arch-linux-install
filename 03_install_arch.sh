@@ -48,6 +48,32 @@ ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto \
 ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts \
 ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 
+# setup full-color emoji support
+mkdir -p ~/.fonts
+mkdir -p ~/.config/fontconfig/
+cat << 'EOF' > ~/.config/fontconfig/fonts.conf
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<match>
+ <test name="family"><string>sans-serif</string></test>
+ <edit name="family" mode="prepend" binding="strong">
+ <string>Noto Color Emoji</string>
+ </edit>
+ </match>
+<match>
+ <test name="family"><string>serif</string></test>
+ <edit name="family" mode="prepend" binding="strong">
+ <string>Noto Color Emoji</string>
+ </edit>
+ </match>
+<match>
+ <test name="family"><string>Apple Color Emoji</string></test>
+ <edit name="family" mode="prepend" binding="strong">
+ <string>Noto Color Emoji</string>
+ </edit>
+ </match>
+EOF
+fc-cache -f -v
+
 # set console font
 touch /etc/vconsole.conf
 bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
