@@ -52,25 +52,76 @@ ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 mkdir -p ~/.fonts
 mkdir -p ~/.config/fontconfig/
 cat << 'EOF' > ~/.config/fontconfig/fonts.conf
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<match>
- <test name="family"><string>sans-serif</string></test>
- <edit name="family" mode="prepend" binding="strong">
- <string>Noto Color Emoji</string>
- </edit>
- </match>
-<match>
- <test name="family"><string>serif</string></test>
- <edit name="family" mode="prepend" binding="strong">
- <string>Noto Color Emoji</string>
- </edit>
- </match>
-<match>
- <test name="family"><string>Apple Color Emoji</string></test>
- <edit name="family" mode="prepend" binding="strong">
- <string>Noto Color Emoji</string>
- </edit>
- </match>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <!-- Add emoji generic family -->
+  <alias binding="strong">
+    <family>emoji</family>
+    <default>
+      <family>Noto Color Emoji</family>
+    </default>
+  </alias>
+  <!-- Aliases for the other emoji fonts -->
+  <alias binding="strong">
+    <family>Apple Color Emoji</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Segoe UI Emoji</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Noto Color Emoji</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Android Emoji</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Emojisymbols</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Emojione Mozilla</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Twemoji Mozilla</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <alias binding="strong">
+    <family>Segoe Ui Symbol</family>
+    <prefer>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+  <!-- Do not allow any app to use Symbola, ever -->
+  <selectfont>
+    <rejectfont>
+      <pattern>
+        <patelt name="family">
+          <string>Symbola</string>
+        </patelt>
+      </pattern>
+    </rejectfont>
+  </selectfont>
+</fontconfig>
 EOF
 fc-cache -f -v
 
