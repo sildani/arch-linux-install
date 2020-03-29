@@ -165,8 +165,7 @@ case "$ali_display_driver_required" in
   ali_display_driver_pkgs=""
   ;;
 esac
-sudo sed -i 's/#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
-sudo sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
+sudo perl -0777 -i.original -pe 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
 yay -Sy --noconfirm $ali_display_driver_pkgs
 
 # install i3 window manager + supporting tools
