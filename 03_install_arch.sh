@@ -39,7 +39,9 @@ networkmanager man-db man-pages texinfo openssh
 
 # install fonts
 yay -Sy --noconfirm \
-gnu-free-fonts terminus-font noto-fonts noto-fonts-emoji siji-git
+gnu-free-fonts terminus-font noto-fonts \
+noto-fonts-emoji siji-git \
+python-fontawesome
 
 # install ttf fonts
 yay -Sy --noconfirm --nopgpfetch --mflags "--skipchecksums --skippgpcheck" \
