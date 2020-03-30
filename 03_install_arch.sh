@@ -241,11 +241,19 @@ deepin-gtk-theme deepin-icon-theme
 # arc-gtk-theme breeze
 
 # clean up files
-sudo rm /02_install_arch.sh /03_install_arch.sh
+sudo rm /02_install_arch.sh /03_install_arch.sh 
+
+# seed default i3 and polybar dotfiles for this install
+git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
+cd ~/.arch_linux_install && git checkout iss1 && cd ~/
+cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 
 # cue next step
 echo "
 Installation complete. Exit this shell, then exit chroot, then reboot.
+
+TODO: Don't forget to remove the line where I checkout iss1 branch when seeding i3 and polybar config!
 
 Enjoy! :)
 

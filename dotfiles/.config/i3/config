@@ -201,6 +201,7 @@ exec --no-startup-id clipit
 for_window [title=TradeSkillMaster*] floating enable
 for_window [title=TSM*] floating enable
 for_window [title=run_in_term.sh] floating enable
+for_window [class="(?i)pamac"] floating enable
 
 # audio setup
 exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 2 set PCM 80%
