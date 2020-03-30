@@ -244,13 +244,10 @@ polkit polkit-qt5 polkit-gnome gnome-keyring
 # install compton
 yay -Sy --noconfirm compton
 
-# pasystray dunst
-# arc-gtk-theme breeze
-
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh 
 
-# seed default i3 and polybar dotfiles for this install
+# seed default dotfiles for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
 cd ~/.arch_linux_install && git checkout iss1 && cd ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
@@ -258,11 +255,15 @@ cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
+# iss1 branch todo's
+# TODO: notifications
+# TODO: fix polybar config fonts
+# TODO: clean up checking out iss1 branch when seeding dotfiles
+# TODO: update readme
+
 # cue next step
 echo "
 Installation complete. Exit this shell, then exit chroot, then reboot.
-
-TODO: Don't forget to remove the line where I checkout iss1 branch when seeding i3 and polybar config!
 
 Enjoy! :)
 
