@@ -219,7 +219,7 @@ yay -Sy --noconfirm clipit
 
 # install desktop wallpaper support
 yay -Sy --noconfirm feh \
-archlinux-wallpaper elementary-wallpapers \
+archlinux-wallpaper elementary-wallpapers-git \
 deepin-wallpapers deepin-community-wallpapers
 
 # install screen locker
