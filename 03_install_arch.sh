@@ -241,6 +241,9 @@ deepin-gtk-theme deepin-icon-theme
 yay -Sy --noconfirm \
 polkit polkit-qt5 polkit-gnome gnome-keyring
 
+# install compton
+yay -Sy --noconfirm compton
+
 # pasystray dunst
 # arc-gtk-theme breeze
 

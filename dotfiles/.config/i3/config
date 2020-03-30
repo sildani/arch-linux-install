@@ -225,6 +225,9 @@ bindsym $mod+Tab workspace back_and_forth
 # polkit setup
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
+# compton setup
+exec --no-startup-id compton -b
+
 # system menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
