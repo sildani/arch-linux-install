@@ -213,7 +213,7 @@ exec --no-startup-id flameshot
 bindsym --release Print exec flameshot gui
 
 # wallpaper
-feh --no-fehbg --bg-fill '/usr/share/backgrounds/Luca Bravo.jpg'
+exec_always --no-startup-id feh --no-fehbg --bg-fill '/usr/share/backgrounds/Luca Bravo.jpg'
 
 # keybind for web browser
 bindsym $mod+backslash exec vivaldi-stable
