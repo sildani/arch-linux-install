@@ -233,8 +233,8 @@ yay -Sy --noconfirm lxappearance-gtk3
 
 # install starter ui themes
 yay -Sy --noconfirm \
-breeze-gtk breeze-icons
-arc-gtk-theme arc-icon-theme
+breeze-gtk breeze-icons \
+arc-gtk-theme arc-icon-theme \
 deepin-gtk-theme deepin-icon-theme
 
 # install polkit
@@ -255,6 +255,8 @@ git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
 cd ~/.arch_linux_install && git checkout iss1 && cd ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # cue next step
 echo "
