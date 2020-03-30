@@ -237,6 +237,10 @@ breeze-gtk breeze-icons
 arc-gtk-theme arc-icon-theme
 deepin-gtk-theme deepin-icon-theme
 
+# install polkit
+yay -Sy --noconfirm \
+polkit polkit-qt5 polkit-gnome gnome-keyring
+
 # pasystray dunst
 # arc-gtk-theme breeze
 
