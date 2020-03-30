@@ -203,6 +203,7 @@ for_window [title=(?i)TSM*] floating enable
 for_window [title=(?i)run_in_term.sh] floating enable
 for_window [class="(?i)pamac"] floating enable
 for_window [class="(?i)lxappearance"] floating enable
+for_window [class="(?i)thunar"] floating enable
 
 # audio setup
 exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 2 set PCM 80%
