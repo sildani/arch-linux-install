@@ -229,6 +229,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # compton setup
 exec --no-startup-id compton -b
 
+# file manager binding
+bindsym $mod+Shift+f exec thunar --class "float-window"
+
 # system menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
