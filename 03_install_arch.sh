@@ -259,6 +259,8 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 # TODO: notifications
 # TODO: fix polybar config fonts
 # TODO: clean up checking out iss1 branch when seeding dotfiles
+# TODO: powerlevel10k setup in zsh
+# TODO: install apps (separate file): lutris, steam, obs, gimp, 
 # TODO: update readme
 
 # cue next step
