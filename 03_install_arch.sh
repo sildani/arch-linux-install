@@ -169,7 +169,7 @@ sudo perl -0777 -i.original -pe 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mi
 yay -Sy --noconfirm $ali_display_driver_pkgs
 
 # install i3 window manager + supporting tools
-yay -Sy --noconfirm i3-gaps i3lock i3status dmenu polybar network-manager-applet
+yay -Sy --noconfirm i3-gaps i3status dmenu polybar network-manager-applet
 
 # install lightdm display manager
 yay -Sy --noconfirm lightdm lightdm-gtk-greeter
@@ -223,7 +223,6 @@ archlinux-wallpaper elementary-wallpapers-git \
 deepin-wallpapers deepin-community-wallpapers
 
 # install screen locker
-yay -R --noconfirm i3lock
 yay -Sy --noconfirm betterlockscreen
 
 # install screen shot taker
