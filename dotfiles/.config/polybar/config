@@ -65,8 +65,7 @@ padding-right = 2
 
 modules-left = i3 mpd
 ;modules-center = date time
-;modules-right = checkupdates fs mem cpu cputemp gputemp wired3 pavolume date time
-modules-right = checkupdates pavolume date time
+modules-right = checkupdates fs mem cpu cputemp gputemp wired3 pavolume date time
 
 tray-position = right
 ;tray-padding = 2

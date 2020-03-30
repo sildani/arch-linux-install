@@ -47,7 +47,7 @@ python-fontawesome
 yay -Sy --noconfirm --nopgpfetch --mflags "--skipchecksums --skippgpcheck" \
 ttf-ms-fonts ttf-unifont ttf-hack ttf-carlito \
 ttf-croscore ttf-caladea ttf-roboto-mono ttf-roboto \
-ttf-font-awesome ttf-ubuntu-font-family ttf-mac-fonts \
+ttf-font-awesome-4 ttf-ubuntu-font-family ttf-mac-fonts \
 ttf-monaco ttf-dejavu ttf-dejavu-sans-code
 
 # setup full-color emoji support
