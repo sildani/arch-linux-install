@@ -256,6 +256,7 @@ cd ~/.arch_linux_install && git checkout iss1 && cd ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # iss1 branch todo's
