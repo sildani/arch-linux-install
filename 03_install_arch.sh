@@ -196,7 +196,7 @@ yay -Sy --noconfirm kitty
 yay -Sy --noconfirm htop
 
 # install file browser
-yay -Sy --noconfirm thunar
+yay -Sy --noconfirm thunar gvfs
 
 # install web browser
 yay -Sy --noconfirm vivaldi
