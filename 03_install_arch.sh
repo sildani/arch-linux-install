@@ -195,7 +195,7 @@ yay -Sy --noconfirm kitty
 # install htop
 yay -Sy --noconfirm htop
 
-# install file browser
+# install file browser + basic file manager services
 yay -Sy --noconfirm thunar gvfs
 
 # install web browser
@@ -241,8 +241,11 @@ deepin-gtk-theme deepin-icon-theme
 yay -Sy --noconfirm \
 polkit polkit-qt5 polkit-gnome gnome-keyring
 
-# install compton
+# install compton (compositor)
 yay -Sy --noconfirm compton
+
+# install dunst (notiications)
+yay -Sy --noconfirm dunst
 
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh 
