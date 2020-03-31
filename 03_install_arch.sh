@@ -257,13 +257,17 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # iss1 branch todo's
 # TODO: notifications
-# TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: powerlevel10k setup in zsh
-# TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: use nproc to get the number of processors
+# TODO: set fstrim (for nvme drives)
 # TODO: enable sshd (to recover from another box on the LAN)
 # TODO: open links from other sources in Vivaldi
 # TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc.)
 # TODO: update readme
+# TODO: push all questions for input to the top
+# TODO: add lightdm theme
+# TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: clean up checking out iss1 branch when seeding dotfiles
 
 # cue next step
 echo "
