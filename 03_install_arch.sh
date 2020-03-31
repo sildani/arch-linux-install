@@ -235,7 +235,8 @@ yay -Sy --noconfirm lxappearance-gtk3
 yay -Sy --noconfirm \
 breeze-gtk breeze-icons \
 arc-gtk-theme arc-icon-theme \
-deepin-gtk-theme deepin-icon-theme
+deepin-gtk-theme deepin-icon-theme \
+gnome-icon-theme
 
 # install polkit
 yay -Sy --noconfirm \
