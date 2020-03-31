@@ -230,6 +230,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # compton setup
 exec --no-startup-id compton -b
 
+# dunst setup
+exec --no-startup-id dunst
+
 # file manager binding
 bindsym $mod+Shift+f exec thunar
 
