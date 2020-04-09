@@ -248,6 +248,9 @@ yay -Sy --noconfirm compton
 # install dunst (notiications)
 yay -Sy --noconfirm dunst
 
+# install pamac
+yay -Sy --noconfirm pamac
+
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh 
 
