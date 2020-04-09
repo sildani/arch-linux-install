@@ -16,22 +16,6 @@ alias gpl=\"git pull --rebase\"
 alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
-# setup powerline support
-echo "
-# powerline plugin
-powerline-daemon -q
-source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
-
-# setup powerlevel10k zsh theme
-sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
-sudo pacman -Sy --noconfirm zsh-theme-powerlevel10k
-echo "
-# powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=()
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
-
 # enable multi-processor package building
 echo -n "
 How many processors do you have? "
@@ -207,6 +191,22 @@ yay -Sy --noconfirm dunst
 
 # install terminal
 yay -Sy --noconfirm kitty
+
+# setup powerline support
+echo "
+# powerline plugin
+powerline-daemon -q
+source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
+
+# setup powerlevel10k zsh theme
+sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
+yay -Sy --noconfirm zsh-theme-powerlevel10k
+echo "
+# powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=()
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
 
 # install htop
 yay -Sy --noconfirm htop
