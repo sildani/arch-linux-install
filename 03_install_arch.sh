@@ -192,12 +192,6 @@ yay -Sy --noconfirm dunst
 # install terminal
 yay -Sy --noconfirm kitty
 
-# setup powerline support
-echo "
-# powerline plugin
-powerline-daemon -q
-source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
-
 # setup powerlevel10k zsh theme
 sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
 yay -Sy --noconfirm zsh-theme-powerlevel10k
