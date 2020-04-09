@@ -8,6 +8,10 @@ export PATH=~/bin:\$PATH" >> ~/.zshrc
 # add a vi shortcut that points to vim
 ln -s /usr/bin/vim ~/bin/vi
 
+# enable trim
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
+
 # add git aliases
 echo "
 alias gst=\"git status\"
@@ -272,9 +276,6 @@ cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # iss1 branch todo's
-# TODO: powerlevel10k setup in zsh
-# TODO: use nproc to get the number of processors
-# TODO: set fstrim (for nvme drives)
 # TODO: enable sshd (to recover from another box on the LAN)
 # TODO: open links from other sources in Vivaldi
 # TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc.)
@@ -282,7 +283,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 # TODO: push all questions for input to the top
 # TODO: add lightdm theme
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
-# TODO: make sure fs trim is enabled
+# TODO: use nproc to get the number of processors
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 
 # cue next step
