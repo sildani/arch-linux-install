@@ -263,8 +263,17 @@ yay -Sy --noconfirm dunst
 # install pamac
 yay -Sy --noconfirm pamac
 
+# ssh config
+sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
+sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
 # clean up files
-sudo rm /02_install_arch.sh /03_install_arch.sh 
+sudo rm /02_install_arch.sh /03_install_arch.sh
 
 # seed default dotfiles for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
@@ -276,7 +285,6 @@ cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # iss1 branch todo's
-# TODO: enable sshd (to recover from another box on the LAN)
 # TODO: open links from other sources in Vivaldi
 # TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc.)
 # TODO: update readme
