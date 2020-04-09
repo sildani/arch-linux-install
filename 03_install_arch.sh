@@ -16,6 +16,22 @@ alias gpl=\"git pull --rebase\"
 alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
+# setup powerline support
+echo "
+# powerline plugin
+powerline-daemon -q
+source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
+
+# setup powerlevel10k zsh theme
+sed -i 's/ZSH_THEME="robbyrussell"/# ZSH_THEME="robbyrussell"/g' ~/.zshrc
+sudo pacman -Sy --noconfirm zsh-theme-powerlevel10k
+echo "
+# powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=()
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
+
 # enable multi-processor package building
 echo -n "
 How many processors do you have? "
@@ -264,7 +280,6 @@ cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 
 # iss1 branch todo's
-# TODO: notifications
 # TODO: powerlevel10k setup in zsh
 # TODO: use nproc to get the number of processors
 # TODO: set fstrim (for nvme drives)
@@ -275,6 +290,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 # TODO: push all questions for input to the top
 # TODO: add lightdm theme
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: make sure fs trim is enabled
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 
 # cue next step
