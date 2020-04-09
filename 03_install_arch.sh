@@ -263,6 +263,12 @@ yay -Sy --noconfirm dunst
 # install pamac
 yay -Sy --noconfirm pamac
 
+# install file roller (file archive gui)
+yay -Sy --noconfirm file-roller
+
+# install nomacs (image viewer)
+yay -Ss --noconfirm nomacs
+
 # ssh config
 sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
@@ -283,6 +289,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 
 # iss1 branch todo's
 # TODO: open links from other sources in Vivaldi
