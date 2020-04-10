@@ -305,7 +305,6 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: review display sleep and auto lock screen after period of time
 # TODO: review audio set up
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: setup alsi on new term

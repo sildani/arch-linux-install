@@ -236,6 +236,10 @@ exec --no-startup-id dunst
 # file manager binding
 bindsym $mod+Shift+f exec thunar
 
+# set display sleep and auto lock
+exec --no-startup-id xset dpms 0 0 1200
+exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dimblur"
+
 # system menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
