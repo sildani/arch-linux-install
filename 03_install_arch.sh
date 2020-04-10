@@ -187,8 +187,17 @@ xdg-user-dirs-update
 yay -Sy --noconfirm alsa-utils pulseaudio pulseaudio-alsa
 
 # install bluetooth support
-yay -Sy --noconfirm bluez bluez-utils pulseaudio-bluetooth
+yay -Sy --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooth.service
+
+# ensure bluetooth is enabled at boot
+sudo sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
+
+# configure to support xbox one bluetooth wireless controller
+yay -aS --noconfirm --needed --answerdiff=None linux-headers
+yay -aS --noconfirm --needed --answerdiff=None xpadneo-dkms-git
+sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0"/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0 bluetooth.disable_ertm=1"/g' /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # desktop notifications
 yay -Sy --noconfirm dunst
@@ -296,11 +305,15 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: fix screen locker image
-# TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: review display sleep and auto lock screen after period of time
+# TODO: review audio set up
+# TODO: review setting resolution and refresh rate (don't think this is required)
+# TODO: setup alsi on new term
+# TODO: review reverse scrolling
 # TODO: use nproc to get the number of processors
-# TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: update readme
+# TODO: clean up checking out iss1 branch when seeding dotfiles
+# TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
 # TODO: push all questions for input to the top
 
 # cue next step
