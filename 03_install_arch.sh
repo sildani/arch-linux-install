@@ -292,14 +292,13 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 
 # iss1 branch todo's
-# TODO: open links from other sources in Vivaldi
-# TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc., maybe using xdg-open)
-# TODO: update readme
-# TODO: push all questions for input to the top
 # TODO: add lightdm theme
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
 # TODO: use nproc to get the number of processors
 # TODO: clean up checking out iss1 branch when seeding dotfiles
+# TODO: update readme
+# TODO: push all questions for input to the top
+
 
 # cue next step
 echo "
