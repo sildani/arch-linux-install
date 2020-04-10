@@ -176,7 +176,7 @@ yay -Sy --noconfirm $ali_display_driver_pkgs
 yay -Sy --noconfirm i3-gaps i3status dmenu polybar network-manager-applet
 
 # install lightdm display manager
-yay -Sy --noconfirm lightdm lightdm-gtk-greeter
+yay -Sy --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm.service
 
 # create user dir
@@ -290,10 +290,11 @@ cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
-cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
+sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 
 # iss1 branch todo's
 # TODO: add lightdm theme
+# TODO: fix screen locker image
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
 # TODO: use nproc to get the number of processors
 # TODO: clean up checking out iss1 branch when seeding dotfiles
