@@ -293,7 +293,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 
 # iss1 branch todo's
 # TODO: open links from other sources in Vivaldi
-# TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc.)
+# TODO: auto-open link in vivaldi (e.g., a torrent file, a pdf, etc., maybe using xdg-open)
 # TODO: update readme
 # TODO: push all questions for input to the top
 # TODO: add lightdm theme
