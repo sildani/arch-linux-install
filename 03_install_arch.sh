@@ -248,6 +248,7 @@ yay -Sy --noconfirm \
 breeze-gtk breeze-icons \
 arc-gtk-theme arc-icon-theme \
 deepin-gtk-theme deepin-icon-theme \
+qogir-gtk-theme-git qogir-icon-theme-git \
 gnome-icon-theme
 
 # install polkit
