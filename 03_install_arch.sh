@@ -292,6 +292,8 @@ cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
+sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
+sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
 # TODO: add lightdm theme
