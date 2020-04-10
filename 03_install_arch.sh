@@ -306,13 +306,13 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc
 
 # iss1 branch todo's
 # TODO: review audio set up
-# TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: setup alsi on new term
 # TODO: review reverse scrolling
 # TODO: use nproc to get the number of processors
 # TODO: update readme
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: push all questions for input to the top
 
 # cue next step
