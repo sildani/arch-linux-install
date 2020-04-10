@@ -281,7 +281,7 @@ sudo systemctl start sshd
 # clean up files
 sudo rm /02_install_arch.sh /03_install_arch.sh
 
-# seed default dotfiles for this install
+# seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
 cd ~/.arch_linux_install && git checkout iss1 && cd ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
@@ -290,6 +290,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
+cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 
 # iss1 branch todo's
 # TODO: add lightdm theme
@@ -298,7 +299,6 @@ cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: update readme
 # TODO: push all questions for input to the top
-
 
 # cue next step
 echo "
