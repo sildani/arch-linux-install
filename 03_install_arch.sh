@@ -296,7 +296,6 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: add lightdm theme
 # TODO: fix screen locker image
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
 # TODO: use nproc to get the number of processors
