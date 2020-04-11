@@ -311,7 +311,6 @@ sudo systemctl enable sshd
 
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
-cd ~/.arch_linux_install && git checkout iss1 && cd ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
@@ -322,12 +321,9 @@ sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/dani
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
-# iss1 branch todo's
-# TODO: update readme
-# TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
 # TODO: review setting resolution and refresh rate (don't think this is required)
-# TODO: push all questions for input to the top
+# TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
 
 # cue next step
 echo "

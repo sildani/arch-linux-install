@@ -1,16 +1,10 @@
 My personal scripts for installing Arch Linux.
 
-These are tailored made for a 16GB VM and my preferences.
+After getting into Arch Live CD, run the following commands:
 
-After getting into Arch Live CD, install Git, clone this repo, and start running the scripts one by one. Optionally, I suggest you edit /etc/pacman.d/mirrorlist ahead of installing git to put some servers local to you up at the top. However, my scripts automatically update the mirrorlist, so this is not required for full setup.
+1. wget https://raw.githubusercontent.com/sildani/arch-linux-install/01_install_arch.sh
+1. sh ./01_install_arch.sh
 
-The start of the process would look something like this:
+The first script will download the other scripts and guide you along the way. Follow the prompts/cues, and you'll be up and running in your own install of Arch Linux.
 
-1. vim /etc/pacman.d/mirrorlist
-1. pacman -Sy --noconfirm git
-1. git clone https://github.com/sildani/arch-linux-install.git
-1. cd arch-linux-install
-1. ./00-time-setup.sh
-1. (... and so on)
-
-You can optionally run ./other-scripts/openbox/stage-openbox.sh before running ./00-time-setup.sh to stage Openbox GUI instead of Xfce.
+This repo will be cloned into ~/arch_linux_install. I have lots of resources there if you're curious. If you're done exploring, feel free to remove - the active install does not depend on it.
