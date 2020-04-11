@@ -222,17 +222,6 @@ sudo /opt/vivaldi/update-ffmpeg
 # install text editor
 yay -Sy --noconfirm visual-studio-code-bin
 
-# install gaming apps / support
-yay -Sy --noconfirm --needed \
-wine wine-mono wine-gecko giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap \
-gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils \
-libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins \
-alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite \
-lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses \
-lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva \
-gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader \
-lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris steam
-
 # install printer support
 yay -Sy --noconfirm cups
 
@@ -289,6 +278,17 @@ echo "
 # print sys info on new term
 alsi -l" >> ~/.zshrc
 
+# install gaming apps / support
+yay -Sy --noconfirm --needed \
+wine wine-mono wine-gecko giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap \
+gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils \
+libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins \
+alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite \
+lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses \
+lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva \
+gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader \
+lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris steam
+
 # create hint file for reversing mouse scrolling
 echo "For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf (requires sudo), for the pointer/touchpad InputClass section:
 
@@ -321,7 +321,7 @@ sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/dani
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
-# TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
+# TODO: install apps (separate file): obs, gimp, torrent client, others?
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
 
