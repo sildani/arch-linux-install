@@ -315,6 +315,7 @@ sudo systemctl enable sshd
 
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
+cp -R ~/.arch_linux_install/dotfiles/.vimrc ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
