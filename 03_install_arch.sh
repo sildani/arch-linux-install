@@ -173,7 +173,7 @@ yay -Sy --noconfirm $ali_display_driver_pkgs
 yay -Sy --noconfirm i3-gaps i3status dmenu polybar network-manager-applet
 
 # install lightdm display manager
-yay -Sy --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+yay -Sy --noconfirm lightdm lightdm-settings lightdm-slick-greeter
 sudo systemctl enable lightdm.service
 
 # create user dir
@@ -313,7 +313,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/mimeapps.list ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
-sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
+sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
 # iss1 branch todo's
 # TODO: setup slick greeter
