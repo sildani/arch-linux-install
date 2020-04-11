@@ -289,6 +289,10 @@ lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt li
 gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader \
 lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris steam
 
+# install other software I like to use
+yay -Sy --noconfirm \
+obs-studio gimp zoom
+
 # create hint file for reversing mouse scrolling
 echo "For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf (requires sudo), for the pointer/touchpad InputClass section:
 
@@ -321,7 +325,7 @@ sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/dani
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
-# TODO: install apps (separate file): obs, gimp, torrent client, others?
+# TODO: torrent client
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
 
