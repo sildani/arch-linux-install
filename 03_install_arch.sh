@@ -21,10 +21,7 @@ alias gps=\"git push\"
 alias glo=\"git log --oneline --decorate --graph --all\"" >> ~/.zshrc
 
 # enable multi-processor package building
-echo -n "
-How many processors do you have? "
-read ali_num_procs
-sudo sed -i "s/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j$ali_num_procs\"/" /etc/makepkg.conf
+sudo sed -i "s/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$(nproc)\"/" /etc/makepkg.conf
 
 # install yay
 git clone https://aur.archlinux.org/yay.git ~/.yay
@@ -319,7 +316,6 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: use nproc to get the number of processors
 # TODO: setup slick greeter
 # TODO: update readme
 # TODO: clean up checking out iss1 branch when seeding dotfiles
