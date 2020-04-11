@@ -129,9 +129,9 @@ EOF
 fc-cache -f -v
 
 # set console font
-touch /etc/vconsole.conf
-bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
-setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
+sudo touch /etc/vconsole.conf
+sudo bash -c 'echo "FONT=ter-v16n.psf.gz" >> /etc/vconsole.conf'
+sudo setfont /usr/share/kbd/consolefonts/ter-v16n.psf.gz
 
 # enable numlock on boot
 yay -Sy --noconfirm systemd-numlockontty
@@ -224,7 +224,15 @@ sudo /opt/vivaldi/update-ffmpeg
 yay -Sy --noconfirm visual-studio-code-bin
 
 # install gaming apps / support
-yay -Sy --noconfirm --needed wine wine-mono wine-gecko giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris steam
+yay -Sy --noconfirm --needed \
+wine wine-mono wine-gecko giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap \
+gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils \
+libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins \
+alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite \
+lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses \
+lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva \
+gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader \
+lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris steam
 
 # install printer support
 yay -Sy --noconfirm cups
@@ -274,9 +282,10 @@ yay -Sy --noconfirm pamac
 yay -Sy --noconfirm file-roller
 
 # install nomacs (image viewer)
-yay -Ss --noconfirm nomacs
+yay -Sy --noconfirm nomacs
 
 # setup alsi on new zsh shell
+yay -Sy --noconfirm alsi
 echo "
 # print sys info on new term
 alsi -l" >> ~/.zshrc
@@ -290,6 +299,9 @@ read -p "
 For natural (reverse) scrolling, please see ~/reverse_scrolling.txt for more information. Press any key to continue.
 "
 
+# create trash dir
+mkdir -p ~/.local/share/Trash/files
+
 # ssh config
 sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
@@ -298,9 +310,6 @@ sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
 sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 sudo systemctl enable sshd
 sudo systemctl start sshd
-
-# clean up files
-sudo rm /02_install_arch.sh /03_install_arch.sh
 
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
@@ -316,6 +325,8 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
 # iss1 branch todo's
+# TODO: "sudo systemctl start fstrim.timer" not working in chroot
+# TODO: "sudo systemctl start sshd" not working in chroot
 # TODO: update readme
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
@@ -329,3 +340,6 @@ Installation complete. Exit this shell, then exit chroot, then reboot.
 Enjoy! :)
 
 "
+
+# clean up files
+sudo rm /02_install_arch.sh /03_install_arch.sh
