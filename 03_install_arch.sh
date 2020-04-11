@@ -279,6 +279,11 @@ yay -Sy --noconfirm file-roller
 # install nomacs (image viewer)
 yay -Ss --noconfirm nomacs
 
+# setup alsi on new zsh shell
+echo "
+# print sys info on new term
+alsi -l" >> ~/.zshrc
+
 # ssh config
 sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
@@ -305,7 +310,6 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: setup alsi on new term
 # TODO: review reverse scrolling
 # TODO: use nproc to get the number of processors
 # TODO: setup slick greeter
