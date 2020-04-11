@@ -184,7 +184,7 @@ yay -Sy --noconfirm xdg-user-dirs
 xdg-user-dirs-update
 
 # install sound support
-yay -Sy --noconfirm alsa-utils pulseaudio pulseaudio-alsa
+yay -Sy --noconfirm alsa-utils pulseaudio pulseaudio-alsa pavucontrol
 
 # install bluetooth support
 yay -Sy --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
@@ -305,10 +305,10 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 
 
 # iss1 branch todo's
-# TODO: review audio set up
 # TODO: setup alsi on new term
 # TODO: review reverse scrolling
 # TODO: use nproc to get the number of processors
+# TODO: setup slick greeter
 # TODO: update readme
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?

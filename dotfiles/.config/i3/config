@@ -205,7 +205,8 @@ for_window [class="(?i)pamac"] floating enable
 for_window [class="(?i)lxappearance"] floating enable
 for_window [class="(?i)thunar"] floating enable
 
-# audio setup
+# audio setup (use "aplay -l" command to get a list of card IDs)
+exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 1 set PCM 80%
 exec_always --no-startup-id amixer set Master 50%; sleep 1; amixer -c 2 set PCM 80%
 
 # betterlockscreen setup
