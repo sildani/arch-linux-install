@@ -10,7 +10,6 @@ ln -s /usr/bin/vim ~/bin/vi
 
 # enable trim
 sudo systemctl enable fstrim.timer
-sudo systemctl start fstrim.timer
 
 # add git aliases
 echo "
@@ -309,7 +308,6 @@ sudo sed -i 's/#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/g' /etc/ssh/sshd_con
 sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
 sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 sudo systemctl enable sshd
-sudo systemctl start sshd
 
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
@@ -325,8 +323,6 @@ sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lig
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
 
 # iss1 branch todo's
-# TODO: "sudo systemctl start fstrim.timer" not working in chroot
-# TODO: "sudo systemctl start sshd" not working in chroot
 # TODO: update readme
 # TODO: clean up checking out iss1 branch when seeding dotfiles
 # TODO: install apps (separate file): lutris, steam, obs, gimp, torrent client, others?
