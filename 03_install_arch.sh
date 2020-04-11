@@ -169,7 +169,7 @@ sudo perl -0777 -i.original -pe 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mi
 yay -Sy --noconfirm $ali_display_driver_pkgs
 
 # install i3 window manager + supporting tools
-yay -Sy --noconfirm i3-gaps i3status dmenu polybar network-manager-applet
+yay -Sy --noconfirm i3-gaps i3status dmenu-height polybar network-manager-applet
 
 # install lightdm display manager
 yay -Sy --noconfirm lightdm lightdm-settings lightdm-slick-greeter
