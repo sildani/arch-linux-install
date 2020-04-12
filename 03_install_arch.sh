@@ -137,7 +137,7 @@ yay -Sy --noconfirm systemd-numlockontty
 sudo systemctl enable numLockOnTty
 
 # install xorg
-yay -Sy --noconfirm xorg-server xorg-xrandr
+yay -Sy --noconfirm xorg-server xorg-xrandr xorg-xrdb
 
 # install display driver
 echo -n "
@@ -335,8 +335,8 @@ cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
-sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf 
-sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf 
+sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
