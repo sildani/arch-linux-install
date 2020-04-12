@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # get the other install files
-wget https://raw.githubusercontent.com/sildani/arch-linux-install/02_install_arch.sh
-wget https://raw.githubusercontent.com/sildani/arch-linux-install/03_install_arch.sh
+wget https://raw.githubusercontent.com/sildani/arch-linux-install/master/02_install_arch.sh
+wget https://raw.githubusercontent.com/sildani/arch-linux-install/master/03_install_arch.sh
 
 # update system clock
 timedatectl set-ntp true

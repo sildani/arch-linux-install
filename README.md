@@ -2,7 +2,7 @@ My personal scripts for installing Arch Linux.
 
 After getting into Arch Live CD, run the following commands:
 
-1. wget https://raw.githubusercontent.com/sildani/arch-linux-install/01_install_arch.sh
+1. wget https://raw.githubusercontent.com/sildani/arch-linux-install/master/01_install_arch.sh
 1. sh ./01_install_arch.sh
 
 The first script will download the other scripts and guide you along the way. Follow the prompts/cues, and you'll be up and running in your own install of Arch Linux.
