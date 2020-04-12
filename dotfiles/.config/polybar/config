@@ -23,7 +23,7 @@ wsfocus =			#4A8C94
 ;-------------------------------------------------------------------------
 
 [bar/example]
-monitor = ${env:MONITOR:}
+;monitor = ${env:MONITOR:}
 ;offset-x = 0%
 ;offset-y = 0%
 override-redirect = true
@@ -40,7 +40,7 @@ dim-value = 0.90
 enable-ipc = true
 fixed-center = true
 height = 30
-locale = en_GB.UTF-8
+locale = en_US.UTF-8
 width = 100%
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
@@ -63,7 +63,7 @@ module-margin-right = 1
 padding-left = 0
 padding-right = 2
 
-modules-left = i3 mpd
+modules-left = i3
 ;modules-center = date time
 modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time
 
