@@ -266,6 +266,9 @@ yay -Sy --noconfirm dunst
 # install pamac
 yay -Sy --noconfirm pamac
 
+# install pkgfile (for querying package metadata, to find which package a command belongs to)
+yay -Sy --noconfirm pkgfile
+
 # install file roller (file archive gui)
 yay -Sy --noconfirm file-roller
 
