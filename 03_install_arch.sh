@@ -327,6 +327,7 @@ sudo systemctl enable sshd
 
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
+cp ~/.arch_linux_install/resources/alsa/set_default_sound_settings.sh ~/bin/
 cp -R ~/.arch_linux_install/dotfiles/.vimrc ~/
 cp -R ~/.arch_linux_install/dotfiles/.vscode ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
