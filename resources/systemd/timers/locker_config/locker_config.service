@@ -2,7 +2,8 @@
 Description=Refreshes betterlockscreen backgrounds
 
 [Service]
-ExecStart=betterlockscreen -u /usr/share/backgrounds
+User=daniel
+ExecStart=/usr/bin/betterlockscreen -u /usr/share/backgrounds
 
 [Install]
 WantedBy=multi-user.target
