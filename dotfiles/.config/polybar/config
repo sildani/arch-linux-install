@@ -63,6 +63,7 @@ module-margin-right = 1
 padding-left = 0
 padding-right = 2
 
+; use the mpd module in modules-left to display music playing
 modules-left = i3
 ;modules-center = date time
 modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time
