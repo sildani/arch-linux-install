@@ -212,6 +212,9 @@ POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=()" >> ~/.zshrc
 # install htop
 yay -Sy --noconfirm htop
 
+# install rsync
+yay -Sy --noconfirm rsync
+
 # install file browser + basic file manager services
 yay -Sy --noconfirm thunar gvfs
 
