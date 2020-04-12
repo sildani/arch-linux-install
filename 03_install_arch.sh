@@ -190,9 +190,9 @@ sudo systemctl enable bluetooth.service
 sudo sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
 
 # configure to support xbox one bluetooth wireless controller
-yay -aS --noconfirm --needed --answerdiff=None linux-headers
-yay -aS --noconfirm --needed --answerdiff=None xpadneo-dkms-git
-sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0"/GRUB_CMDLINE_LINUX_DEFAULT="quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0 bluetooth.disable_ertm=1"/g' /etc/default/grub
+yay -Sy --noconfirm linux-headers
+yay -Sy --noconfirm xpadneo-dkms-git
+sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0 bluetooth.disable_ertm=1"/g' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # desktop notifications
