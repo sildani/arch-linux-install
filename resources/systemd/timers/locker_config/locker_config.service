@@ -1,0 +1,8 @@
+[Unit]
+Description=Refreshes betterlockscreen backgrounds
+
+[Service]
+ExecStart=betterlockscreen -u /usr/share/backgrounds
+
+[Install]
+WantedBy=multi-user.target

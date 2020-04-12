@@ -1,0 +1,10 @@
+[Unit] 
+Description=Says when to refresh betterlockscreen backgrounds
+
+[Timer] 
+OnCalendar=hourly
+Unit=locker_config.service
+Pesistent=true
+
+[Install] 
+WantedBy=basic.target

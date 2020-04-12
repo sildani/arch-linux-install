@@ -240,8 +240,10 @@ yay -Sy --noconfirm feh \
 archlinux-wallpaper elementary-wallpapers-git \
 deepin-wallpapers deepin-community-wallpapers
 
-# install screen locker
+# install screen locker (and associated service timer)
 yay -Sy --noconfirm betterlockscreen
+sudo cp ~/.arch_linux_install/resources/systemd/timers/locker_config/* /etc/systemd/system/
+sudo  systemctl enable locker_config.timer
 
 # install screen shot taker
 yay -Sy --noconfirm flameshot
