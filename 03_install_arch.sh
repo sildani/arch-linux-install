@@ -245,6 +245,9 @@ yay -Sy --noconfirm betterlockscreen
 sudo cp ~/.arch_linux_install/resources/systemd/timers/locker_config/* /etc/systemd/system/
 sudo  systemctl enable locker_config.timer
 
+# install autolocker
+yay -Sy --noconfirm xautolock
+
 # install screen shot taker
 yay -Sy --noconfirm flameshot
 
