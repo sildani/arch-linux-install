@@ -22,7 +22,7 @@ wsfocus =			#4A8C94
 ; Polybar
 ;-------------------------------------------------------------------------
 
-[bar/example]
+[bar/mybar]
 ;monitor = ${env:MONITOR:}
 ;offset-x = 0%
 ;offset-y = 0%
