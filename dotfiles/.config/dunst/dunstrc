@@ -180,7 +180,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -h 30 -p dunst:
+    dmenu = /usr/bin/dmenu -h 30 -fn "DejaVu Sans-10.5:Book" -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/vivaldi-stable -new-tab
