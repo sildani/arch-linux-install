@@ -181,6 +181,7 @@ xdg-user-dirs-update
 
 # install sound support
 yay -Sy --noconfirm alsa-utils pulseaudio pulseaudio-alsa pavucontrol
+sudo sed -i 's/^volume = merge/volume = off/g' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 
 # install bluetooth support
 yay -Sy --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
