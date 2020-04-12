@@ -240,10 +240,8 @@ yay -Sy --noconfirm feh \
 archlinux-wallpaper elementary-wallpapers-git \
 deepin-wallpapers deepin-community-wallpapers
 
-# install screen locker (and associated service timer)
+# install screen locker
 yay -Sy --noconfirm betterlockscreen
-sudo cp ~/.arch_linux_install/resources/systemd/timers/locker_config/* /etc/systemd/system/
-sudo  systemctl enable locker_config.timer
 
 # install autolocker
 yay -Sy --noconfirm xautolock
@@ -335,9 +333,13 @@ cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
+sudo cp ~/.arch_linux_install/resources/systemd/timers/locker_config/* /etc/systemd/system/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+
+# enable the betterlockscreen refresh timer
+sudo systemctl enable locker_config.timer
 
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
