@@ -326,6 +326,7 @@ sudo systemctl enable sshd
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
 cp ~/.arch_linux_install/resources/alsa/set_default_sound_settings.sh ~/bin/
+cp ~/.arch_linux_install/resources/betterlockscreen/betterlockscreen_update_bg.sh ~/bin/
 cp -R ~/.arch_linux_install/dotfiles/.vimrc ~/
 cp -R ~/.arch_linux_install/dotfiles/.vscode ~/
 cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
@@ -333,13 +334,9 @@ cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
-sudo cp ~/.arch_linux_install/resources/systemd/timers/locker_config/* /etc/systemd/system/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
-
-# enable the betterlockscreen refresh timer
-sudo systemctl enable locker_config.timer
 
 # TODO: review setting resolution and refresh rate (don't think this is required)
 # TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install

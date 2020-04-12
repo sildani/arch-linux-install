@@ -66,7 +66,7 @@ padding-right = 2
 ; use the mpd module in modules-left to display music playing
 modules-left = i3
 ;modules-center = date time
-modules-right = checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time
+modules-right = betterlockscreen-update checkupdates info-trash fs mem cpu cputemp gputemp wired3 pavolume date time
 
 tray-position = right
 ;tray-padding = 2
@@ -670,6 +670,16 @@ type = custom/script
 label-foreground = ${colors.focus}
 exec = echo ""
 click-left = ~/bin/block
+
+;-------------------------------------------------------------------------
+; betterlockscreen background update
+;-------------------------------------------------------------------------
+
+[module/betterlockscreen-update]
+type = custom/script
+exec = ~/bin/betterlockscreen_update_bg.sh
+label = 
+interval = 3600
 
 ;-------------------------------------------------------------------------
 ; settings
