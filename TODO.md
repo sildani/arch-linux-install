@@ -14,3 +14,4 @@ TODO
 # setup wow-backup-settings
 # pamac manager not showing featured software (when browsing by categories)
 # explore specrtwm (https://github.com/conformal/spectrwm)
+# linux kernel selection
