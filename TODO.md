@@ -2,7 +2,6 @@ TODO
 
 # enable numlock on boot
 # fix dmenu to (maybe make it more than 1 line?)
-# flameshot causes i3 spinning wheel
 # add yay -Sy --no-confirm teams to list of apps to install
 # add yay -Sy --no-confirm termdown to list of apps to install
 # add keybinding to i3 for showing window title (border directive)
@@ -13,3 +12,5 @@ TODO
 # add refresh rate upgrade to i3 (prompt for applicaiton)
 # add custom scripts to ~/bin (from github)
 # setup wow-backup-settings
+# pamac manager not showing featured software (when browsing by categories)
+# explore specrtwm (https://github.com/conformal/spectrwm)
