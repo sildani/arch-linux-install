@@ -201,9 +201,9 @@ exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
 exec --no-startup-id clipit
 
 # floating window config
-for_window [title=(?i)TradeSkillMaster*] floating enable
-for_window [title=(?i)TSM*] floating enable
-for_window [title=(?i)run_in_term.sh] floating enable
+for_window [title=TradeSkillMaster*] floating enable
+for_window [title=TSM*] floating enable
+for_window [title=run_in_term.sh] floating enable
 for_window [class="(?i)pamac"] floating enable
 for_window [class="(?i)lxappearance"] floating enable
 for_window [class="(?i)thunar"] floating enable
