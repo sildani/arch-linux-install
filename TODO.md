@@ -6,7 +6,6 @@ TODO
 # disable smart borders in i3gaps (should I?)
 # change font for window titles in i3
 # figure out why Visual Studio Code doesn't open from dmenu_enhanced (desktop shortcut?)
-# separate personal config separate from general config (such as the display res)
 # switch picom for compton
 # review setting resolution and refresh rate (don't think this is required)
 # review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
