@@ -2,6 +2,10 @@
 
 # Adds my custom scripts to my machine
 
+read -p "
+You need to have github ssh key set up for this script to work. If you haven't set that up yet, CTRL-C to exit, or press enter to continue...
+"
+
 ali_current_user=`whoami`
 ali_current_user_bin="/home/$ali_current_user/bin"
 ali_base_scripts_dir="/home/$ali_current_user/.scripts"
