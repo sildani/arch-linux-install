@@ -1,6 +1,5 @@
 TODO
 
-# enable numlock on boot
 # fix dmenu to (maybe make it more than 1 line?)
 # add keybinding to i3 for showing window title (border directive)
 # disable smart borders in i3gaps (should I?)

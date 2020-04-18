@@ -196,6 +196,9 @@ yay -Sy --noconfirm xpadneo-dkms-git
 sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet logo.nologo acpi_osi=Linux video.use_native_backlight=1 audit=0 bluetooth.disable_ertm=1"/g' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+# install numlockx
+yay -Sy --noconfirm numlockx
+
 # desktop notifications
 yay -Sy --noconfirm dunst
 
