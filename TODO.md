@@ -7,7 +7,7 @@ TODO
 # change font for window titles in i3
 # figure out why Visual Studio Code doesn't open from dmenu_enhanced (desktop shortcut?)
 # switch picom for compton
-# review setting resolution and refresh rate (don't think this is required)
+# review setting resolution and refresh rate (is there a way to do this when starting the X session, and/or is there another way to save this setting?)
 # review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
 # add custom scripts to ~/bin (from github)
 # setup wow-backup-settings
