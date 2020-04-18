@@ -636,7 +636,7 @@ label = %output%
 format-prefix = " "
 format-prefix-foreground = ${colors.focus}
 ;format-underline = ${colors.background-alt}
-click-left = /usr/bin/pamac-manager & disown | wc -l
+click-left = /usr/bin/pamac-manager --updates & disown | wc -l
 
 ;-------------------------------------------------------------------------
 ; kernel info
