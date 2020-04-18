@@ -6,7 +6,6 @@ TODO
 # disable smart borders in i3gaps (should I?)
 # change font for window titles in i3
 # figure out why Visual Studio Code doesn't open from dmenu_enhanced (desktop shortcut?)
-# set the default size of floating windows in i3
 # add custom scripts to ~/bin (from github)
 # setup wow-backup-settings
 # pamac manager not showing featured software (when browsing by categories)
