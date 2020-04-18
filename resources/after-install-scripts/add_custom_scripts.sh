@@ -2,16 +2,12 @@
 
 # Adds my custom scripts to my machine
 
-read -p "
-You need to have github ssh key set up for this script to work. If you haven't set that up yet, CTRL-C to exit, or press enter to continue...
-"
-
 ali_current_user=`whoami`
 ali_current_user_bin="/home/$ali_current_user/bin"
 ali_base_scripts_dir="/home/$ali_current_user/.scripts"
 ali_scripts_dir="$ali_base_scripts_dir/linux"
 
-git clone git@github.com:sildani/scripts.git $ali_base_scripts_dir
+git clone https://github.com/sildani/scripts $ali_base_scripts_dir
 
 ali_script_dir_listing=`ls $ali_scripts_dir`
 ali_scripts=( $ali_script_dir_listing )
