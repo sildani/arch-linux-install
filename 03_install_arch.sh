@@ -339,6 +339,29 @@ sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/dani
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
+# prompt to set video mode
+xrandr
+echo -n "
+Set xrandr in i3 config?
+
+Example: --output DisplayPort-1 --mode 2560x1440 --rate 120.00
+
+Hit enter to skip
+> "
+read ali_xrandr_command
+case "$ali_xrandr_command" in
+"")
+  echo ""
+  ;;
+*)
+  read -p "Adding \`xrandr $ali_xrandr_command\` to i3 config... press enter to continue"
+  echo "
+# video setup
+exec_always --no-startup-id xrandr $ali_xrandr_command
+" >> ~/.config/i3/config
+  ;;
+esac
+
 # cue next step
 echo "
 Installation complete. Exit this shell, then exit chroot, then reboot.
