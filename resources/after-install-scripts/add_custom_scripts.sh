@@ -18,4 +18,4 @@ for ali_script in ${ali_scripts[*]}; do
 done
 
 sudo git clone https://github.com/andreafabrizi/Dropbox-Uploader /usr/share/dropbox_uploader_git
-sudo ln -s /usr/share/dropbox_uploader_git/dropbox_uploader.sh /usrl/local/bin/dropbox_uploader
+sudo ln -s /usr/share/dropbox_uploader_git/dropbox_uploader.sh /usr/local/bin/dropbox_uploader
