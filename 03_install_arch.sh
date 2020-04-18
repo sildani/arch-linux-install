@@ -336,6 +336,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/dmenu-extended ~/.config/
+cp -R ~/.arch_linux_install/dotfiles/.config/Dharkael ~/.config/
 cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/daniel
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
