@@ -242,6 +242,7 @@ yay -Sy --noconfirm clipit
 yay -Sy --noconfirm feh \
 archlinux-wallpaper elementary-wallpapers-git \
 deepin-wallpapers deepin-community-wallpapers
+sudo ln -s /usr/share/wallpapers/deepin /usr/share/backgrounds/deepin-wallpaper
 
 # install screen locker
 yay -Sy --noconfirm betterlockscreen
