@@ -1,5 +1,6 @@
 TODO
 
+# pgp server issues - try a specific keyserver (see https://bbs.archlinux.org/viewtopic.php?id=252180)
 # fix dmenu to (maybe make it more than 1 line?)
 # add keybinding to i3 for showing window title (border directive)
 # disable smart borders in i3gaps (should I?)
