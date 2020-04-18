@@ -18,3 +18,5 @@ TODO
 # update the audio setup script - aplay -l | grep USB2.0 | head -1 | cut -b 5-6
 # separate personal config separate from general config (such as the display res)
 # switch picom for compton
+# review setting resolution and refresh rate (don't think this is required)
+# review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install

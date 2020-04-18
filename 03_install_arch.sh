@@ -339,9 +339,6 @@ sudo cp -R ~/.arch_linux_install/resources/wallpaper /usr/share/backgrounds/dani
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
-# TODO: review setting resolution and refresh rate (don't think this is required)
-# TODO: review all prompts for user input, improve by pushing all to top of scripts and letting user confirm ahead of continuing with install
-
 # cue next step
 echo "
 Installation complete. Exit this shell, then exit chroot, then reboot.
