@@ -301,7 +301,7 @@ lib32-vulkan-icd-loader lib32-mesa vulkan-radeon lib32-vulkan-radeon lutris stea
 
 # install other software I like to use
 yay -Sy --noconfirm \
-obs-studio gimp zoom wowmatrix transmission-gtk virtualbox
+obs-studio gimp zoom wowmatrix transmission-gtk virtualbox teams termdown
 
 # create hint file for reversing mouse scrolling
 echo "For natural (reverse) scrolling, add the following to /usr/share/X11/xorg.conf.d/40-libinput.conf (requires sudo), for the pointer/touchpad InputClass section:
