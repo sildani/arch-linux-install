@@ -45,7 +45,7 @@ ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 # create user account
 pacman -Sy --noconfirm zsh
 echo "
-Creating non-root user and setting password"
+Creating non-root user, setting password, adding to wheel group"
 echo -n "
 Username: "
 read ali_username
@@ -53,6 +53,7 @@ useradd -m -s /bin/zsh $ali_username
 until passwd $ali_username; do
   sleep 1
 done
+usermod -a -G wheel $ali_username
 
 # setup oh-my-zsh
 pacman -Sy --noconfirm git
