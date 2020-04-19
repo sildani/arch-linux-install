@@ -230,7 +230,9 @@ sudo /opt/vivaldi/update-ffmpeg
 yay -Sy --noconfirm visual-studio-code-bin
 
 # install printer support
-yay -Sy --noconfirm cups
+yay -Sy --noconfirm cups avahi nss-mdns
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl enable avahi-daemon.service
 
 # install pacman contrib (contains utlities like checkupdates)
 yay -Sy --noconfirm pacman-contrib
@@ -342,6 +344,7 @@ cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper/* /usr/share/backgrounds/
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+sudo cp -R ~/.arch_linux_install/resources/nss-mdns/etc/nsswitch.conf /etc/nsswitch.conf
 
 # cue next step
 echo "
