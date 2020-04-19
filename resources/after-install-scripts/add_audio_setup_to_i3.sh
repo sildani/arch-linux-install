@@ -22,6 +22,10 @@ sleep 1
 amixer -c `aplay -l | grep HD-Audio | head -1 | cut -b 5-6` set Master 63
 sleep 1
 amixer -c `aplay -l | grep USB2.0 | head -1 | cut -b 5-6` set PCM 80%
+sleep 1
+amixer -c `aplay -l | grep "Plantronics .Audio 478 USB" | head -1 | cut -b 5-6` set Speaker 90%
+sleep 1
+amixer -c `aplay -l | grep "Plantronics .Audio 478 USB" | head -1 | cut -b 5-6` set Mic 87%
 EOF
 
 chmod +x $ali_set_audio_script
