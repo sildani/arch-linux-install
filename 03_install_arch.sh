@@ -332,15 +332,15 @@ sudo systemctl enable sshd
 # seed default dotfiles and other resources for this install
 git clone https://github.com/sildani/arch-linux-install ~/.arch_linux_install
 cp ~/.arch_linux_install/resources/betterlockscreen/betterlockscreen_update_bg.sh ~/bin/
-cp -R ~/.arch_linux_install/dotfiles/.vimrc ~/
-cp -R ~/.arch_linux_install/dotfiles/.vscode ~/
-cp -R ~/.arch_linux_install/dotfiles/.config/i3 ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/polybar ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/kitty ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/dunst ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/dmenu-extended ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/Dharkael ~/.config/
-cp -R ~/.arch_linux_install/dotfiles/.config/compton.conf ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.vimrc ~/
+cp -R ~/.arch_linux_install/resources/dotfiles/.vscode ~/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/i3 ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/polybar ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/kitty ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/dunst ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/dmenu-extended ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/Dharkael ~/.config/
+cp -R ~/.arch_linux_install/resources/dotfiles/.config/compton.conf ~/.config/
 sudo cp -R ~/.arch_linux_install/resources/wallpaper/* /usr/share/backgrounds/
 sudo cp -R ~/.arch_linux_install/resources/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp -R ~/.arch_linux_install/resources/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
