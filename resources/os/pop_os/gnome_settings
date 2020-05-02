@@ -1,0 +1,119 @@
+[control-center]
+last-panel='sound'
+
+[desktop/app-folders/folders/Pop-Office]
+apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
+name='Office'
+translate=true
+
+[desktop/app-folders/folders/Pop-System]
+apps=['gnome-language-selector.desktop', 'gnome-session-properties.desktop', 'gnome-system-monitor.desktop', 'im-config.desktop', 'nm-connection-editor.desktop', 'nvidia-settings.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.PowerStats.desktop', 'org.gnome.seahorse.Application.desktop', 'software-properties-gnome.desktop', 'system76-driver.desktop', 'system76-firmware.desktop']
+name='System'
+translate=true
+
+[desktop/app-folders/folders/Pop-Utility]
+apps=['com.github.donadigo.eddy.desktop', 'com.system76.Popsicle.desktop', 'gucharmap.desktop', 'info.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.Extensions.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Screenshot.desktop', 'org.gnome.Totem.desktop', 'simple-scan.desktop', 'yelp.desktop']
+name='Utilities'
+translate=true
+
+[desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/pop/nick-nazzaro-space-blue.png'
+primary-color='#000000'
+secondary-color='#000000'
+
+[desktop/input-sources]
+sources=[('xkb', 'us')]
+xkb-options=['lv3:ralt_switch']
+
+[desktop/interface]
+clock-format='24h'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Pop-dark'
+
+[desktop/notifications]
+application-children=['io-elementary-appcenter', 'org-gnome-nautilus', 'vivaldi-stable', 'teams']
+show-banners=true
+
+[desktop/notifications/application/io-elementary-appcenter]
+application-id='io.elementary.appcenter.desktop'
+
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[desktop/notifications/application/teams]
+application-id='teams.desktop'
+
+[desktop/notifications/application/vivaldi-stable]
+application-id='vivaldi-stable.desktop'
+
+[desktop/peripherals/keyboard]
+numlock-state=true
+
+[desktop/peripherals/mouse]
+natural-scroll=true
+
+[desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[desktop/privacy]
+disable-microphone=false
+
+[desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/pop/nick-nazzaro-space-blue.png'
+primary-color='#000000'
+secondary-color='#000000'
+
+[desktop/wm/keybindings]
+switch-applications=['<Alt>Tab']
+switch-applications-backward=['<Shift><Alt>Tab']
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+
+[desktop/wm/preferences]
+focus-mode='mouse'
+
+[evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[gedit/preferences/editor]
+scheme='pop-dark'
+
+[mutter]
+workspaces-only-on-primary=true
+
+[nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[nautilus/window-state]
+initial-size=(1268, 1350)
+maximized=false
+
+[settings-daemon/plugins/media-keys]
+home=['<Shift><Super>f']
+screensaver=['<Super>Delete']
+terminal=['<Super>Return']
+www=['<Super>backslash']
+
+[shell]
+favorite-apps=@as []
+
+[shell/extensions/pop-shell]
+tile-by-default=true
+tile-enter=@as []
+
+[terminal/legacy/profiles:]
+default='666fdafe-f4f8-4938-9a15-e10eb1aede61'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '666fdafe-f4f8-4938-9a15-e10eb1aede61']
+
+[terminal/legacy/profiles:/:666fdafe-f4f8-4938-9a15-e10eb1aede61]
+font='MesloLGS NF 10'
+visible-name='Pop (Meslo Nerd Font)'
