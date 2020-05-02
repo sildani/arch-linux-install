@@ -77,6 +77,10 @@ echo "
 # print sys info on new term
 neofetch" >> ~/.zshrc
 
+# install printer support
+sudo apt install hplip
+
+# cue next steps to be done manually / optionally
 cat << 'EOF' > ~/apps_to_install.md
 ## Apps to install via Pop!_Shop
 
@@ -88,9 +92,10 @@ cat << 'EOF' > ~/apps_to_install.md
 ## Other things to install
 
 - [Vivaldi](https://vivaldi.com/download/)
-- [HPLIP (HP printer drivers)](https://developers.hp.com/hp-linux-imaging-and-printing)
 EOF
 
 echo "
+Check ~/apps_to_install.md for some next steps not yet automated.
+
 Done!
 "
