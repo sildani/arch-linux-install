@@ -80,6 +80,15 @@ neofetch" >> ~/.zshrc
 # install printer support
 sudo apt install hplip
 
+# enable sshd
+sudo apt install openssh-server
+sudo sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+sudo sed -i 's/#AddressFamily any/AddressFamily any/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/g' /etc/ssh/sshd_config
+sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
+sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+sudo systemctl restart sshd
+
 # cue next steps to be done manually / optionally
 cat << 'EOF' > ~/apps_to_install.md
 ## Apps to install via Pop!_Shop
