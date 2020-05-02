@@ -1,5 +1,5 @@
 [control-center]
-last-panel='sound'
+last-panel='wifi'
 
 [desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -33,11 +33,17 @@ gtk-im-module='gtk-im-context-simple'
 gtk-theme='Pop-dark'
 
 [desktop/notifications]
-application-children=['io-elementary-appcenter', 'org-gnome-nautilus', 'vivaldi-stable', 'teams']
+application-children=['io-elementary-appcenter', 'org-gnome-nautilus', 'vivaldi-stable', 'teams', 'indicator-sensors', 'net-lutris-lutris']
 show-banners=true
+
+[desktop/notifications/application/indicator-sensors]
+application-id='indicator-sensors.desktop'
 
 [desktop/notifications/application/io-elementary-appcenter]
 application-id='io.elementary.appcenter.desktop'
+
+[desktop/notifications/application/net-lutris-lutris]
+application-id='net.lutris.Lutris.desktop'
 
 [desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -78,9 +84,24 @@ switch-to-workspace-4=['<Super>4']
 [desktop/wm/preferences]
 focus-mode='mouse'
 
+[evince/default]
+window-ratio=(2.0718954248366015, 0.81691919191919193)
+
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[file-roller/ui]
+sidebar-width=200
+window-height=647
+window-width=1268
 
 [gedit/preferences/editor]
 scheme='pop-dark'
@@ -89,12 +110,12 @@ scheme='pop-dark'
 workspaces-only-on-primary=true
 
 [nautilus/preferences]
-default-folder-viewer='icon-view'
+default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
 search-view='list-view'
 
 [nautilus/window-state]
-initial-size=(1268, 1350)
+initial-size=(630, 647)
 maximized=false
 
 [settings-daemon/plugins/media-keys]
@@ -115,5 +136,10 @@ default='666fdafe-f4f8-4938-9a15-e10eb1aede61'
 list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '666fdafe-f4f8-4938-9a15-e10eb1aede61']
 
 [terminal/legacy/profiles:/:666fdafe-f4f8-4938-9a15-e10eb1aede61]
+background-transparency-percent=15
 font='MesloLGS NF 10'
+scrollbar-policy='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
 visible-name='Pop (Meslo Nerd Font)'
