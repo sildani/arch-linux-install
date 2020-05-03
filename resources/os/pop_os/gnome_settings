@@ -1,5 +1,5 @@
 [control-center]
-last-panel='wifi'
+last-panel='keyboard'
 
 [desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -19,7 +19,7 @@ translate=true
 [desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/pop/nick-nazzaro-space-blue.png'
+picture-uri='file:///usr/share/backgrounds/pop/nasa-53884.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -69,17 +69,9 @@ disable-microphone=false
 [desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/pop/nick-nazzaro-space-blue.png'
+picture-uri='file:///usr/share/backgrounds/pop/nasa-53884.jpg'
 primary-color='#000000'
 secondary-color='#000000'
-
-[desktop/wm/keybindings]
-switch-applications=['<Alt>Tab']
-switch-applications-backward=['<Shift><Alt>Tab']
-switch-to-workspace-1=['<Super>1']
-switch-to-workspace-2=['<Super>2']
-switch-to-workspace-3=['<Super>3']
-switch-to-workspace-4=['<Super>4']
 
 [desktop/wm/preferences]
 focus-mode='mouse'
@@ -106,6 +98,18 @@ window-width=1268
 [gedit/preferences/editor]
 scheme='pop-dark'
 
+[gnome-system-monitor]
+cpu-colors=[(uint32 0, '#e6194B'), (1, '#f58231'), (2, '#ffe119'), (3, '#bfef45'), (4, '#3cb44b'), (5, '#42d4f4'), (6, '#4363d8'), (7, '#911eb4'), (8, '#f032e6'), (9, '#fabebe'), (10, '#ffd8b1'), (11, '#fffac8'), (12, '#aaffc3'), (13, '#469990'), (14, '#000075'), (15, '#e6beff'), (16, '#f25915e815e8'), (17, '#f25915e815e8'), (18, '#f25915e815e8'), (19, '#f25915e815e8'), (20, '#f25915e815e8'), (21, '#f25915e815e8'), (22, '#f25915e815e8'), (23, '#f25915e815e8'), (24, '#f25915e815e8'), (25, '#f25915e815e8'), (26, '#f25915e815e8'), (27, '#f25915e815e8'), (28, '#f25915e815e8'), (29, '#f25915e815e8'), (30, '#f25915e815e8'), (31, '#f25915e815e8')]
+current-tab='resources'
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(1137, 830, 931, 350)
+
+[gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [mutter]
 workspaces-only-on-primary=true
 
@@ -118,18 +122,28 @@ search-view='list-view'
 initial-size=(630, 647)
 maximized=false
 
-[settings-daemon/plugins/media-keys]
-home=['<Shift><Super>f']
-screensaver=['<Super>Delete']
-terminal=['<Super>Return']
-www=['<Super>backslash']
+[settings-daemon/plugins/xsettings]
+antialiasing='grayscale'
+hinting='slight'
 
 [shell]
+command-history=['r']
+enabled-extensions=['alt-tab-raise-first-window@system76.com', 'always-show-workspaces@system76.com', 'batteryiconfix@kylecorry31.github.io', 'desktop-icons@csoriano', 'pop-shell@system76.com', 'pop-shop-details@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'clipboard-indicator@tudmotu.com']
 favorite-apps=@as []
 
+[shell/extensions/clipboard-indicator]
+clear-history=['<Primary><Shift><Alt>h']
+move-item-first=true
+next-entry=['<Primary><Shift><Alt>Down']
+prev-entry=['<Primary><Shift><Alt>Up']
+toggle-menu=['<Primary><Alt>h']
+
 [shell/extensions/pop-shell]
-tile-by-default=true
-tile-enter=@as []
+tile-by-default=false
+
+[shell/weather]
+automatic-location=true
+locations=@av []
 
 [terminal/legacy/profiles:]
 default='666fdafe-f4f8-4938-9a15-e10eb1aede61'
