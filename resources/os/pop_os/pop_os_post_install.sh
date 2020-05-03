@@ -93,10 +93,11 @@ sudo systemctl restart sshd
 cat << 'EOF' > ~/apps_to_install.md
 ## Apps to install via Pop!_Shop
 
+- Gnome Tweaks
 - Visual Studio Code
 - Lutris
 - Steam
-- ClipIt
+- [Clipboard Indicator](https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator)
 
 ## Other things to install
 
