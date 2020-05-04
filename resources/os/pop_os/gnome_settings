@@ -1,5 +1,5 @@
 [control-center]
-last-panel='keyboard'
+last-panel='sound'
 
 [desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -74,7 +74,7 @@ primary-color='#000000'
 secondary-color='#000000'
 
 [desktop/wm/preferences]
-focus-mode='mouse'
+focus-mode='click'
 
 [evince/default]
 window-ratio=(2.0718954248366015, 0.81691919191919193)
@@ -139,6 +139,8 @@ prev-entry=['<Primary><Shift><Alt>Up']
 toggle-menu=['<Primary><Alt>h']
 
 [shell/extensions/pop-shell]
+gap-inner=uint32 1
+gap-outer=uint32 1
 tile-by-default=false
 
 [shell/weather]
