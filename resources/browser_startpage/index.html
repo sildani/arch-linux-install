@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Icon lib: https://fontawesome.com/icons?d=gallery&m=free -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="search">
+        <input id="search-field" type="text" value="" placeholder="Search" name="search-field"
+            onkeypress="return search(event)" />
+    </div>
+    <div class="search-container-mobile" id="search-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="showSearch();return false;">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="search-container-mobile" id="hide-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="hideSearch();return false;">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="weather-container" id="weather">
+        <div class="row">
+            <a href="https://openweathermap.org/city/6332309" style="text-decoration: none; color: #fff">
+                <i id="weather-icon" class="inline wi"></i>
+                <div id="temp" class="inline"></div>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="clock">00:00</div>
+        <div id="date">Monday 10 April</div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title"><i class="fas fa-pencil-alt"></i> Every Day</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://mail.google.com/mail/u/0/">Mail</a>
+                    <a class="bookmark" href="https://news.google.com/foryou">News</a>
+                    <a class="bookmark" href="https://keep.google.com/u/0/">Notes</a>
+                    <a class="bookmark" href="https://www.youtube.com/channel/UC7bX_RrH3zbdp5V4j5umGgw">Study Music</a>
+                    <a class="bookmark" href="https://docs.google.com/spreadsheets/d/1GnX5GTv6_RDqpaoBGLhJklNa9Ve0NyxeY05en7SYIA4/edit">Children Chores</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title"><i class="far fa-bell"></i> Quick Ref</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://docs.google.com/spreadsheets/d/1BX1_gB2ayCQdHLJvr9ATxFHAXgQv0nuSh5O319a4Txo/edit">Finances</a>
+                    <a class="bookmark" href="https://docs.google.com/spreadsheets/d/15PrNOF63jW9QEjHAUs5sdYA34X_wdyvCzlBEpIfliH4/edit">WoW</a>
+                    <a class="bookmark" href="https://docs.google.com/spreadsheets/d/1_eKtg71HlSzKwfsUKpNhNa0xAGtEmseeXWRedCKUJSw/edit">AC:NH</a>
+                    <a class="bookmark" href="https://lastpass.com/?ac=1&lpnorefresh=1">LastPass</a>
+                    <a class="bookmark" href="https://www.linkedin.com/company/independent-purchasing-cooperative/">IPC on LinkedIn</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title"><i class="far fa-grin-tongue"></i> For Fun</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://www.youtube.com/">YouTube</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/all">Reddit</a>
+                    <a class="bookmark" href="https://www.miamiherald.com/sports/spt-columns-blogs/armando-salguero/">Dolphins Blog</a>
+                    <a class="bookmark" href="https://www.twitter.com/">Twitter</a>
+                    <a class="bookmark" href="https://www.twitch.tv/">Twitch</a>
+                    <a class="bookmark" href="https://www.patreon.com/home">Patreon</a>
+                    <a class="bookmark" href="https://itsfoss.com/">It's FOSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get current time and format
+        function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                //sec = date.getSeconds(),
+                hour = date.getHours();
+            return "" +
+                (hour < 10 ? ("0" + hour) : hour) + ":" +
+                (min < 10 ? ("0" + min) : min);// + ":" + 
+            //(sec < 10 ? ("0" + sec) : sec);
+        }
+        function getDate() {
+            let date = new Date(),
+                months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                cmonth = months[date.getMonth()],
+                days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                cday = days[date.getDay()],
+                cnum = date.getDate();
+            return "" + cday + " " + cnum + " " + cmonth;
+        }
+        window.onload = () => {
+            let xhr = new XMLHttpRequest();
+            // Request to open weather map
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=6332309&units=imperial&appid=e5622c48f9d9fffd1a6a6bfebad70026');
+            xhr.onload = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var prefix = "wi-";
+                        var today = new Date();
+                        var hour = today.getHours();
+                        var dn = "";
+                        if (hour > 6 && hour < 20) {
+                            dn = "";
+                        } else {
+                            dn = "night-";
+                        }
+                        let json = JSON.parse(xhr.responseText);
+                        console.log(json);
+                        var code = json.weather[0].id;
+                        wIcon = prefix + "owm-" + dn + code;
+                        console.log(wIcon);
+                        document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + "°";
+                        document.getElementById("weather-icon").classList.add(wIcon);
+                    } else {
+                        console.log('error msg: ' + xhr.status);
+                    }
+                }
+            }
+            xhr.send();
+            // Set up the clock and date
+            document.getElementById("clock").innerHTML = getTime();
+            document.getElementById("date").innerHTML = getDate();
+            // Set clock interval to tick clock
+            setInterval(() => {
+                document.getElementById("clock").innerHTML = getTime();
+            }, 1000);
+            setInterval(() => {
+                document.getElementById("date").innerHTML = getDate();
+            }, 100000);
+
+            /* Unsplash photo get
+            //Global Width and Height Variables
+            var w = Math.ceil(window.screen.width * window.devicePixelRatio * 0.896);
+            var h = Math.ceil(window.screen.height * window.devicePixelRatio * 0.896);
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/' + w + 'x' + h + '/?wallpapers")';
+            */
+
+            document.body.style.backgroundImage = 'url(./backgrounds/' + (Math.floor(Math.random() * 23)+1) + '.jpg)';
+            //document.body.style.backgroundImage = 'url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN)';
+        }
+
+        /*function onResize() {
+            var newW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var newH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            if (newW>w || newH>h) {
+                w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        }
+        
+        window.addEventListener('resize', onResize);*/
+
+        // Search on enter key event
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                document.getElementById('search-field').value = '';
+                switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
+                        if (val[0] == " ") {
+                            window.location.href = "https://google.com/search?q=" + val.substring(1);
+                        } else {
+                            window.location.href = "https://google.com/search?q=" + val;
+                        }
+                }
+            }
+        }
+        var sfield = document.getElementById("search-field");
+        var sback = document.getElementById("search");
+        sfield.oninput = function () {
+            /*sback.style.backgroundColor = '#272727';*/
+            var val = sfield.value;
+            console.log(val);
+            switch (val) {
+                case "steam":
+                case " steam":
+                    document.body.style.backgroundImage = 'url(https://images5.alphacoders.com/695/695356.jpg)';
+                    break;
+                case "photos":
+                case " photos":
+                case "photo":
+                case " photo":
+                    document.body.style.backgroundImage = 'url(https://www.technobezz.com/files/uploads/2014/06/wallpaper-on-the-Samsung-S5.jpg)';
+                    break;
+                case "wikipedia":
+                case " wikipedia":
+                case "wiki":
+                case " wiki":
+                    document.body.style.backgroundImage = 'url(http://www.glaad.org/sites/default/files/images/2014-08/wikipedia.jpg)';
+                    break;
+                default:
+                    //sback.style.backgroundColor = '#272727';
+                    //document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        };
+        document.addEventListener("keydown", event => {
+            if (event.keyCode == 32) {          // Spacebar code to open search
+                document.getElementById('search').style.display = 'flex';
+                document.getElementById('search-field').focus();
+            } else if (event.keyCode == 27) {   // Esc to close search
+                document.getElementById('search-field').value = '';
+                document.getElementById('search-field').blur();
+                document.getElementById('search').style.display = 'none';
+                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        });
+
+        function showSearch() {
+            document.getElementById('search-mobile').style.display = 'none';
+            document.getElementById('hide-mobile').style.display = 'flex';
+
+            document.getElementById('search').style.display = 'flex';
+            document.getElementById('search-field').focus();
+        }
+
+        function hideSearch() {
+            document.getElementById('search-field').value = '';
+            document.getElementById('search-field').blur();
+            document.getElementById('search').style.display = 'none';
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+
+            document.getElementById('search-mobile').style.display = 'flex';
+            document.getElementById('hide-mobile').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
