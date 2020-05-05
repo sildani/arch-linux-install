@@ -52,6 +52,13 @@ amixer -c \`aplay -l | grep USB2.0 | head -1 | cut -b 5-6\` set PCM 80%" >> ~/.p
 # vim
 sudo apt install vim
 
+# termdown
+sudo apt install python3-pip
+pip3 install termdown
+echo "
+# add pip3 installed package path to \$PATH
+PATH=\$PATH:~/.local/bin" >> ~/.zshrc
+
 # add custom scripts to /usr/local/bin
 git clone https://github.com/sildani/scripts ~/.scripts
 ali_script_dir_listing=`ls ~/.scripts/linux`
