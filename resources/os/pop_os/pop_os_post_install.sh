@@ -97,6 +97,9 @@ sudo sed -i 's/#ListenAddress ::/ListenAddress ::/g' /etc/ssh/sshd_config
 sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
+# enable freesync
+sudo cp ~/.arch_linux_install/resources/os/pop_os/r.conf /usr/share/X11/xorg.conf.d/
+
 # cue next steps to be done manually / optionally
 cat << 'EOF' > ~/apps_to_install.md
 ## Apps to install via Pop!_Shop
