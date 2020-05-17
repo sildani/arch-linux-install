@@ -48,6 +48,7 @@ sudo cp /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common /usr/sh
 sudo sed -i 's/^volume = merge/volume = off/g' /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 echo "
 amixer -c \`aplay -l | grep USB2.0 | head -1 | cut -b 5-6\` set PCM 80%" >> ~/.profile
+sudo apt install pavucontrol
 
 # vim
 sudo apt install vim
